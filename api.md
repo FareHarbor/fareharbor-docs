@@ -306,10 +306,10 @@ Note that `date`, `start-date`, and `end-date` should be in the format YYYY-MM-D
 
 Returns an array of `Availability` objects.
 
-## Creating Bookings
+## Bookings
 
-* `POST /companies/<shortname>/items/<Item.pk>availabilities/<Availability.pk>/bookings/`
-* `GET companies/<shortname>/bookings/<Booking.uuid>/`
+* `POST /companies/<shortname>/availabilities/<Availability.pk>/bookings/`
+* `GET /companies/<shortname>/bookings/<Booking.uuid>/`
 
 The result of both creating and retrieving a booking is a `Booking` object.
  
