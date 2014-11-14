@@ -284,7 +284,7 @@ All endpoints are rooted at `https://fareharbor.com/api/external/v1`.
 Returns a list of all companies for which you have permission to create bookings;
 note that this may include companies that have no bookable availabilities.
 
-Returns an array of `Company`
+Returns an array of `Company` objects.
 
 ## Items
 
