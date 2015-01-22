@@ -1,10 +1,6 @@
 FareHarbor External Integration API
 -----------------------------------
 
-**NOTE**: this document is a request for comment only, and does not
-specifically represent existing functionality nor does it guarantee
-any particular functionality will be built.
-
 # Requests
 
 ## Request Body
