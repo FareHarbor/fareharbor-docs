@@ -109,6 +109,23 @@ All datetimes are returned in ISO8601 format; for example `2013-02-04T06:21:36+0
 
 ## Schemas
 
+### Company
+
+* `shortname`: `string`
+
+  The company's ID.
+
+* `name`: `string`
+
+  The company's name.
+
+Example:
+
+    {
+      "shortname": "hawaiianadventures",
+      "name": "Hawaiian Adventures"
+    }
+    
 ### Items
 
 Items represent a particular kind of tour that the company offers.
