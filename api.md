@@ -159,28 +159,46 @@ Items represent a particular kind of tour that the company offers.
 
   A URL to the item's primary image.
 
-### Availabilities
+Example:
 
-Availability objects represent particular datetimes that an item goes out.
- 
-* `item`: `Item`
+    {
+      "pk": 1867,
+      "name": "Jet Ski Tour",
+      "headline": "Epic Jet Ski Tour",
+      "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup/dropoff at or near your hotel.",
+      "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+      "location": "Honolulu, HI",
+      "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+    }
 
-  The availability's item.
+### Customer Types
 
-* `start_at`: `datetime`
-* `end_at`: `datetime`
+Customer types represent different kinds of customers that might do an activity, for
+example "Adults", "Children", "Infants". Note however that FareHarbor companies use
+customer types to represent a range of different sorts of customers; for instance,
+some SCUBA companies use types like "Diver", "Snorkeler", and "Observer".
 
-  The availability's start and end time; note that this time can be arbitrarily long or short,
-  and that `start_at` can equal `end_at` for "point" availabilities.
+* `pk`: `number`
 
-* `available_capacity`: `number`
+  The customer type's unique ID.
 
-  The overall maximum number of customers that can currently book this availability;
-  this number will change over time as other customers book. 
+* `singular`: `string`
+* `plural`: `string`
 
-* `customer_type_rates`: `[ CustomerTypeRate ]`
+  The singular and plural forms of the name of this customer type; ex. "adult", "adults".
 
-  Pricing information for available customer types.
+* `note`: `string`
+
+  A brief note about this customer type that can be displayed to end users.
+
+Example:
+
+    {
+      "pk": 589,
+      "singular": "Adult",
+      "plural"; "Adults",
+      "note": "At least 18 years old."
+    }
 
 ### Customer Type Rates
 
@@ -209,26 +227,79 @@ The customer type being priced.
   Indicates that this customer type rate is "exclusive"; see below for how exclusivity
   affects bookability.
 
+Example:
 
-### Customer Types
+    {
+      "pk": 978,
+      "total": 20000,
+      "available_capacity": 10,
+      "is_exclusive": false,
+      "customer_type": {
+        "pk": 589,
+        "singular": "Adult",
+        "plural"; "Adults",
+        "note": "At least 18 years old."
+      }
+    }
 
-Customer types represent different kinds of customers that might do an activity, for
-example "Adults", "Children", "Infants". Note however that FareHarbor companies use
-customer types to represent a range of different sorts of customers; for instance,
-some SCUBA companies use types like "Diver", "Snorkeler", and "Observer".
+### Availabilities
 
+Availability objects represent particular datetimes that an item goes out.
+ 
 * `pk`: `number`
 
-  The customer type's unique ID.
+  The availabilities's unique ID.
 
-* `singular`: `string`
-* `plural`: `string`
+* `item`: `Item`
 
-  The singular and plural forms of the name of this customer type; ex. "adult", "adults".
+  The availability's item.
 
-* `note`: `string`
+* `start_at`: `datetime`
+* `end_at`: `datetime`
 
-  A brief note about this customer type that can be displayed to end users.
+  The availability's start and end time; note that this time can be arbitrarily long or short,
+  and that `start_at` can equal `end_at` for "point" availabilities.
+
+* `available_capacity`: `number`
+
+  The overall maximum number of customers that can currently book this availability;
+  this number will change over time as other customers book. 
+
+* `customer_type_rates`: `[ CustomerTypeRate ]`
+
+  Pricing information for available customer types.
+
+Example:
+
+    {
+      "pk": 4786,
+      "start_at": "2015-01-22T11:30:00",
+      "end_at": "2015-01-22T13:30:00",
+      "available_capacity": 10,
+      "item": {
+        "pk": 1867,
+        "name": "Jet Ski Tour",
+        "headline": "Epic Jet Ski Tour",
+        "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup/dropoff at or near your hotel.",
+        "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+        "location": "Honolulu, HI",
+        "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+      },
+      "customer_type_rates": [
+        {
+          "pk": 65675,
+          "total": 20000,
+          "available_capacity": 10,
+          "is_exclusive": false,
+          "customer_type": {
+            "pk": 978,
+            "singular": "Adult",
+            "plural"; "Adults",
+            "note": "At least 18 years old.""
+          }
+        }
+      ]
+    }
 
 ### Bookings
 
@@ -245,10 +316,6 @@ some SCUBA companies use types like "Diver", "Snorkeler", and "Observer".
 
   The availability to which this booking corresponds.
  
-* `item`: `Item`
-
-  The item to which this booking corresponds.
-
 * `contact`: `Contact`
 
   Contact information for this booking.  A contact consists of:
@@ -279,6 +346,78 @@ some SCUBA companies use types like "Diver", "Snorkeler", and "Observer".
   be the amount that the user of the API owes the vendor on this booking, if the vendor has opted
   to set up that information; otherwise it will be `null`.
 
+Example:
+
+    {
+      "pk": 6876876,
+      "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
+      "availability": {
+        "pk": 4786,
+        "start_at": "2015-01-22T11:30:00",
+        "end_at": "2015-01-22T13:30:00",
+        "available_capacity": 10,
+        "item": {
+          "pk": 1867,
+          "name": "Jet Ski Tour",
+          "headline": "Epic Jet Ski Tour",
+          "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup/dropoff at or near your hotel.",
+          "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+          "location": "Honolulu, HI",
+          "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+        },
+        "customer_type_rates": [
+          {
+            "pk": 65675,
+            "total": 20000,
+            "available_capacity": 10,
+            "is_exclusive": false,
+            "customer_type": {
+              "pk": 978,
+              "singular": "Adult",
+              "plural"; "Adults",
+              "note": "At least 18 years old.""
+            }
+          }
+        ]
+      },
+      "contact": {
+        "name": "Surfer Dude",
+        "phone": "443-222-1100",
+        "email": "surfer@dude.com"
+      },
+      "customers": [
+        {
+          "customer_type_rate": {
+            "pk": 65675,
+            "total": 20000,
+            "available_capacity": 10,
+            "is_exclusive": false,
+            "customer_type": {
+              "pk": 978,
+              "singular": "Adult",
+              "plural"; "Adults",
+              "note": "At least 18 years old.""
+            }
+          }
+        },
+        {
+          "customer_type_rate": {
+            "pk": 65675,
+            "total": 20000,
+            "available_capacity": 10,
+            "is_exclusive": false,
+            "customer_type": {
+              "pk": 978,
+              "singular": "Adult",
+              "plural"; "Adults",
+              "note": "At least 18 years old.""
+            }
+          }
+        }
+      ],
+      "invoice_price": null
+    }
+
 ### Capacities
 
 Note that availabilities have both an overall capacity, and customer type rates have an (optional) capacity.
@@ -299,14 +438,51 @@ note that this may include companies that have no bookable availabilities.
 
 Returns an array of `Company` objects.
 
+Example:
+
+    {
+      "companies": [
+        {
+          "shortname": "hawaiianadventures",
+          "name": "Hawaiian Adventures"
+        }, {
+          "shortname": "surflessonshawaii",
+          "name": "Surf Lessons Hawaii"
+        }
+      ]
+    }
+
 ## Items
 
 `GET /companies/<shortname>/items/`
 
-Returns a list of items for which you have permission to create bookings; again,
+Returns a list of items as for which you have permission to create bookings; again,
 note that this may include items that have no bookable availabilities.
 
 Returns an array of `Item` objects.
+
+    {
+      "items": [
+        {
+          "pk": 1867,
+          "name": "Jet Ski Tour",
+          "headline": "Epic Jet Ski Tour",
+          "description": "See Honolulu from a jet ski!",
+          "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+          "location": "Honolulu, HI",
+          "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+        },
+        { 
+          "pk": 1963,
+          "name": "Surfing 101",
+          "headline": "Learn to surf!",
+          "description": "This is an introductory lesson.",
+          "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+          "location": "Honolulu, HI",
+          "image_cdn_url": ""
+        }
+      ]
+    }
 
 ## Availabilities
 
@@ -319,23 +495,162 @@ Note that `date`, `start-date`, and `end-date` should be in the format YYYY-MM-D
 
 Returns an array of `Availability` objects.
 
+Example:
+
+    {
+      "availabilities": [
+        {
+          "pk": 4786,
+          "start_at": "2015-01-22T11:30:00",
+          "end_at": "2015-01-22T13:30:00",
+          "available_capacity": 10,
+          "item": {
+            "pk": 1867,
+            "name": "Jet Ski Tour",
+            "headline": "Epic Jet Ski Tour",
+            "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup/dropoff at or near your hotel.",
+            "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+            "location": "Honolulu, HI",
+            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+          },
+          "customer_type_rates": [
+            {
+              "pk": 65675,
+              "total": 20000,
+              "available_capacity": 10,
+              "is_exclusive": false,
+              "customer_type": {
+                "pk": 978,
+                "singular": "Adult",
+                "plural"; "Adults",
+                "note": "At least 18 years old.""
+              }
+            }
+          ]
+        },
+        {
+          "pk": 4787,
+          "start_at": "2015-01-22T13:30:00",
+          "end_at": "2015-01-22T15:30:00",
+          "available_capacity": 10,
+          "item": {
+            "pk": 1867,
+            "name": "Jet Ski Tour",
+            "headline": "Epic Jet Ski Tour",
+            "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup/dropoff at or near your hotel.",
+            "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+            "location": "Honolulu, HI",
+            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+          },
+          "customer_type_rates": [
+            {
+              "pk": 65675,
+              "total": 20000,
+              "available_capacity": 10,
+              "is_exclusive": false,
+              "customer_type": {
+                "pk": 978,
+                "singular": "Adult",
+                "plural"; "Adults",
+                "note": "At least 18 years old.""
+              }
+            }
+          ]
+        }
+      ]
+    }
+
 ## Bookings
 
 * `POST /companies/<shortname>/availabilities/<Availability.pk>/bookings/`
 * `GET /companies/<shortname>/bookings/<Booking.uuid>/`
 
 The result of both creating and retrieving a booking is a `Booking` object.
- 
+
+Example:
+
+    {
+      "booking": {
+        "pk": 6876876,
+        "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
+        "availability": {
+          "pk": 4786,
+          "start_at": "2015-01-22T11:30:00",
+          "end_at": "2015-01-22T13:30:00",
+          "available_capacity": 10,
+          "item": {
+            "pk": 1867,
+            "name": "Jet Ski Tour",
+            "headline": "Epic Jet Ski Tour",
+            "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup/dropoff at or near your hotel.",
+            "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
+            "location": "Honolulu, HI",
+            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+          },
+          "customer_type_rates": [
+            {
+              "pk": 65675,
+              "total": 20000,
+              "available_capacity": 10,
+              "is_exclusive": false,
+              "customer_type": {
+                "pk": 978,
+                "singular": "Adult",
+                "plural"; "Adults",
+                "note": "At least 18 years old.""
+              }
+            }
+          ]
+        },
+        "contact": {
+          "name": "Surfer Dude",
+          "phone": "443-222-1100",
+          "email": "surfer@dude.com"
+        },
+        "customers": [
+          {
+            "customer_type_rate": {
+              "pk": 65675,
+              "total": 20000,
+              "available_capacity": 10,
+              "is_exclusive": false,
+              "customer_type": {
+                "pk": 978,
+                "singular": "Adult",
+                "plural"; "Adults",
+                "note": "At least 18 years old.""
+              }
+            }
+          },
+          {
+            "customer_type_rate": {
+              "pk": 65675,
+              "total": 20000,
+              "available_capacity": 10,
+              "is_exclusive": false,
+              "customer_type": {
+                "pk": 978,
+                "singular": "Adult",
+                "plural"; "Adults",
+                "note": "At least 18 years old.""
+              }
+            }
+          }
+        ]
+      },
+      "invoice_price": null
+    }
+
 ### Request Schema
 
 When creating bookings use the customer type rate and custom field instance information
 contained in the availability to construct a request of the following form:
 
-* `voucher_number`: `string` (required)
+* `voucher_number`: `string`
 * `contact`: `dict`
-    * `name`: `string` (required)
-    * `phone`: `string` (required)
-    * `email`: `string` (required)
+    * `name`: `string`
+    * `phone`: `string`
+    * `email`: `string`
 * `customers`: `array`
     * `customer_type_rate`: `CustomerTypeRate.pk`
 
