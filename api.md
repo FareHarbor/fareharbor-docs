@@ -217,7 +217,7 @@ The customer type being priced.
 
   The price of a single customer of this type.
 
-* `available_capacity`: `number | null`
+* `capacity`: `number | null`
 
   The maximum number of customers of this type that can currently booking this availability;
   this number will change over time as other customers book. 
@@ -232,7 +232,7 @@ Example:
     {
       "pk": 978,
       "total": 20000,
-      "available_capacity": 10,
+      "capacity": 10,
       "is_exclusive": false,
       "customer_type": {
         "pk": 589,
@@ -260,7 +260,7 @@ Availability objects represent particular datetimes that an item goes out.
   The availability's start and end time; note that this time can be arbitrarily long or short,
   and that `start_at` can equal `end_at` for "point" availabilities.
 
-* `available_capacity`: `number`
+* `capacity`: `number`
 
   The overall maximum number of customers that can currently book this availability;
   this number will change over time as other customers book. 
@@ -275,7 +275,7 @@ Example:
       "pk": 4786,
       "start_at": "2015-01-22T11:30:00",
       "end_at": "2015-01-22T13:30:00",
-      "available_capacity": 10,
+      "capacity": 10,
       "item": {
         "pk": 1867,
         "name": "Jet Ski Tour",
@@ -289,7 +289,7 @@ Example:
         {
           "pk": 65675,
           "total": 20000,
-          "available_capacity": 10,
+          "capacity": 10,
           "is_exclusive": false,
           "customer_type": {
             "pk": 978,
@@ -355,7 +355,7 @@ Example:
         "pk": 4786,
         "start_at": "2015-01-22T11:30:00",
         "end_at": "2015-01-22T13:30:00",
-        "available_capacity": 10,
+        "capacity": 10,
         "item": {
           "pk": 1867,
           "name": "Jet Ski Tour",
@@ -369,7 +369,7 @@ Example:
           {
             "pk": 65675,
             "total": 20000,
-            "available_capacity": 10,
+            "capacity": 10,
             "is_exclusive": false,
             "customer_type": {
               "pk": 978,
@@ -390,7 +390,7 @@ Example:
           "customer_type_rate": {
             "pk": 65675,
             "total": 20000,
-            "available_capacity": 10,
+            "capacity": 10,
             "is_exclusive": false,
             "customer_type": {
               "pk": 978,
@@ -404,7 +404,7 @@ Example:
           "customer_type_rate": {
             "pk": 65675,
             "total": 20000,
-            "available_capacity": 10,
+            "capacity": 10,
             "is_exclusive": false,
             "customer_type": {
               "pk": 978,
@@ -503,7 +503,7 @@ Example:
           "pk": 4786,
           "start_at": "2015-01-22T11:30:00",
           "end_at": "2015-01-22T13:30:00",
-          "available_capacity": 10,
+          "capacity": 10,
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour",
@@ -517,7 +517,7 @@ Example:
             {
               "pk": 65675,
               "total": 20000,
-              "available_capacity": 10,
+              "capacity": 10,
               "is_exclusive": false,
               "customer_type": {
                 "pk": 978,
@@ -532,7 +532,7 @@ Example:
           "pk": 4787,
           "start_at": "2015-01-22T13:30:00",
           "end_at": "2015-01-22T15:30:00",
-          "available_capacity": 10,
+          "capacity": 10,
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour",
@@ -546,7 +546,7 @@ Example:
             {
               "pk": 65675,
               "total": 20000,
-              "available_capacity": 10,
+              "capacity": 10,
               "is_exclusive": false,
               "customer_type": {
                 "pk": 978,
@@ -577,7 +577,7 @@ Example:
           "pk": 4786,
           "start_at": "2015-01-22T11:30:00",
           "end_at": "2015-01-22T13:30:00",
-          "available_capacity": 10,
+          "capacity": 10,
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour",
@@ -591,7 +591,7 @@ Example:
             {
               "pk": 65675,
               "total": 20000,
-              "available_capacity": 10,
+              "capacity": 10,
               "is_exclusive": false,
               "customer_type": {
                 "pk": 978,
@@ -612,7 +612,7 @@ Example:
             "customer_type_rate": {
               "pk": 65675,
               "total": 20000,
-              "available_capacity": 10,
+              "capacity": 10,
               "is_exclusive": false,
               "customer_type": {
                 "pk": 978,
@@ -626,7 +626,7 @@ Example:
             "customer_type_rate": {
               "pk": 65675,
               "total": 20000,
-              "available_capacity": 10,
+              "capacity": 10,
               "is_exclusive": false,
               "customer_type": {
                 "pk": 978,
