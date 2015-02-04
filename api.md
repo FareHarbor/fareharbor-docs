@@ -657,7 +657,7 @@ contained in the availability to construct a request of the following form:
 Example:
 
     {
-      "voucher_number": "VLT-1123"
+      "voucher_number": "VLT-1123",
       "contact": {
         "name": "Surfer Dude",
         "phone": "443-222-1100",
