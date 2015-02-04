@@ -497,7 +497,7 @@ Returns an array of `Item` objects.
 ## Availabilities
 
 * `GET /companies/<shortname>/items/<item.pk>/availabilities/date/<date>/`
-* `GET /companies/<shortname>/items/<item.pk>/availabilities/date/<start-date>/<end-date>/`
+* `GET /companies/<shortname>/items/<item.pk>/availabilities/date-range/<start-date>/<end-date>/`
 
 Returns possibly-bookable availabilities for `date`, or for the range `start-date` through `end-date`.
 Note that possibly-bookable availabilies include those for which customers are requested to "call to book".
