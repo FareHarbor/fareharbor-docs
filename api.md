@@ -663,7 +663,7 @@ When creating bookings use the customer type rate and custom field instance info
 contained in the availability to construct a request of the following form:
 
 * `voucher_number`: `string`
-* `contact`: `dict`
+* `contact`: `object`
     * `name`: `string`
     * `phone`: `string`
     * `email`: `string`
