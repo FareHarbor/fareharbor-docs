@@ -299,7 +299,7 @@ Example:
             "pk": 978,
             "singular": "Adult",
             "plural"; "Adults",
-            "note": "At least 18 years old.""
+            "note": "At least 18 years old."
           }
         }
       ]
