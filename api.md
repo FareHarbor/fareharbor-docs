@@ -467,6 +467,8 @@ note that this may include items that have no bookable availabilities.
 
 Returns an array of `Item` objects.
 
+Example:
+
     {
       "items": [
         {
