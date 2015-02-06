@@ -14,15 +14,13 @@ An app key and a user key are required to authenicate requests. These keys can
 be specified as headers (`X-FareHarbor-API-App` and `X-FareHarbor-API-User`) or
 parameters (`api-app` and `api-user`).
 
-Keys sent as headers:
+Keys sent as headers (recommended):
 
     GET /api/external/v1/companies/ HTTP/1.1
     Host: fareharbor.com
     X-FareHarbor-API-App: APP-KEY
     X-FareHarbor-API-User: USER-KEY
 
-Using curl:
-    
     $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/
 
 Keys sent as parameters:
@@ -30,9 +28,9 @@ Keys sent as parameters:
     GET /api/external/v1/companies/?api-app=APP-KEY&api-user=USER-KEY HTTP/1.1
     Host: fareharbor.com
 
-Using curl:
-
     $ curl https://fareharbor.com/api/external/v1/companies/?api-app=APP-KEY&api-user=USER-KEY
+
+This should only be used in server to server scenarios.
 
 ### App Key
 
