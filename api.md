@@ -6,7 +6,7 @@ FareHarbor External Integration API
 ## Request Body
 
 Some requests (particularly the `POST` to create a booking) require a body.
-The body should be JSON.
+The body should be a JSON object.
 
 ## Authentication
 
