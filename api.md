@@ -10,14 +10,41 @@ The body should be a JSON object.
 
 ## Authentication
 
+An app key and a user key are required to authenicate requests. These keys can
+be specified as headers (`X-FareHarbor-API-App` and `X-FareHarbor-API-User`) or
+parameters (`api-app` and `api-user`).
+
+Keys sent as headers:
+
+    GET /api/external/v1/companies/ HTTP/1.1
+    Host: fareharbor.com
+    X-FareHarbor-API-App: APP-KEY
+    X-FareHarbor-API-User: USER-KEY
+
+Using curl:
+    
+    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/
+
+Keys sent as parameters:
+
+    GET /api/external/v1/companies/?api-app=APP-KEY&api-user=USER-KEY HTTP/1.1
+    Host: fareharbor.com
+
+Using curl:
+
+    $ curl https://fareharbor.com/api/external/v1/companies/?api-app=APP-KEY&api-user=USER-KEY
+
+### App Key
+
+Please contact support@fareharbor.com to request an app key.
+
+### User Key
+
 Each FareHarbor user has a revocable API key associated with them, viewable
-in a the Dashboard > Settings > Users section.  We suggest you create a
+in a the Dashboard > Settings > Users section. We suggest you create a
 new user for your company (perhaps named "api"), and use the API key
 for that user with all requests. This will allow you to track all API
-actions via the user's history.
-
-To authenticate a particular request, simply set the `X-FareHarbor-API` header
-to your API key.
+actions via the user's history. 
 
 # Responses
 
