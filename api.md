@@ -48,20 +48,43 @@ actions via the user's history.
 
 ## General Structure
 
-All successful responses have the following form:
+The body of every response is a JSON object. 
 
-* `data`: `json`
+### Success response
 
-The descriptions of schemas below assume that the request was successful
-and describe the content of `data`.
+* `<singular type>`: `object`
+
+or 
+
+* `<plural type>`: `array`
+
+Example:
+
+    {
+      "companies": [
+        {
+          "shortname": "hawaiianadventures",
+          "name": "Hawaiian Adventures"
+        }
+      ]
+    }
+
+### Error response
  
-All error responses have the following form:
-
 * `error`: `string`
+
+A message describing the error.
+
 * `status`: `number`
 
-Where `error` contains a message describing the error, and `status` is the same
-as the HTTP status code.
+The HTTP status code for the response.
+
+Example:
+
+    {
+      "error": "Method not allowed",
+      "status": 405
+    }
 
 ## Error Codes
 
