@@ -153,7 +153,7 @@ Example:
       "name": "Hawaiian Adventures"
     }
     
-### Items
+### Item
 
 Items represent a particular kind of tour that the company offers.
 
@@ -200,7 +200,7 @@ Example:
       "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
     }
 
-### Customer Types
+### Customer Type
 
 Customer types represent different kinds of customers that might do an activity, for
 example "Adults", "Children", "Infants". Note however that FareHarbor companies use
@@ -229,7 +229,7 @@ Example:
       "note": "At least 18 years old."
     }
 
-### Customer Type Rates
+### Customer Type Rate
 
 Customer type rates set capacity, pricing information, and custom fields
 for customer types on a particular availability. 
@@ -271,7 +271,7 @@ Example:
       }
     }
 
-### Availabilities
+### Availability
 
 Availability objects represent particular datetimes that an item goes out.
  
@@ -332,7 +332,7 @@ Example:
       ]
     }
 
-### Bookings
+### Booking
 
 * `pk`: `number`
 
