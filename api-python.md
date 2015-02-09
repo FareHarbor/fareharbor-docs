@@ -29,104 +29,111 @@ http://docs.python-requests.org/en/latest/user/install/#install
 
 # Listing companies
 
-	companies_url = '%s/companies/' % ROOT_URL
-	
-	print companies_url
+    companies_url = '%s/companies/' % ROOT_URL
+    
+    print companies_url
 
-	response = requests.get(companies_url, headers=HEADERS)
+    response = requests.get(companies_url, headers=HEADERS)
 
-	companies = json.parse(response.text)
+    response_data = json.loads(response.text)
+    companies = response_data['companies']
 
-	for company in companies:
-    	print company
+    for company in companies:
+        print company
 
 # Listing items for a company
 
-	company = companies[0]
-	
-	items_url = '%s/companies/%s/items/' % (ROOT_URL, company['shortname'],)
-	
-	print items_url
+    company = companies[0]
+    
+    items_url = '%s/companies/%s/items/' % (ROOT_URL, company['shortname'],)
+    
+    print items_url
 
-	response = requests.get(items_url, headers=HEADERS)
+    response = requests.get(items_url, headers=HEADERS)
 
-	items = json.parse(response.text)
+    response_data = json.loads(response.text)
+    items = response_data['items']
 
-	for item in items:
-    	print item
-    	
+    for item in items:
+        print item
+        
 # Listing availabilities for an item
 
-	item = items[0]
-	
-	availabilities_url = '%s/companies/%s/items/%i/availabilities/date/2015-12-01/' % (
-	    ROOT_URL, 
-	    company['shortname'],
-	    item['pk'],
-	)
-	
-	print availabilities_url
-	
-	response = requests.get(availabilities_url, headers=HEADERS)
-	
-	availabilities = json.parse(response.text)
-	
-	for availability in availabilities:
-		print availability
-		
+    item = items[0]
+    
+    availabilities_url = '%s/companies/%s/items/%i/availabilities/date/2015-12-01/' % (
+        ROOT_URL, 
+        company['shortname'],
+        item['pk'],
+    )
+    
+    print availabilities_url
+    
+    response = requests.get(availabilities_url, headers=HEADERS)
+    
+    response_data = json.loads(response.text)
+    availabilities = response_data['availabilities']
+    
+    for availability in availabilities:
+        print availability
+        
 # Listing customer type rates for an availability
 
-	availability = availabilities[0]
-	
-	customer_type_rates = availability['customer_type_rates']
-	
-	for customer_type_rate in customer_type_rates:
-		print customer_type_rate
-		
+    availability = availabilities[0]
+    
+    customer_type_rates = availability['customer_type_rates']
+    
+    for customer_type_rate in customer_type_rates:
+        print customer_type_rate
+        
 # Creating a booking for an availability
 
-	customer_type_rate = customer_type_rates[0]
+    customer_type_rate = customer_type_rates[0]
 
-	book_url = '%s/companies/%s/availabilities/%i/bookings/' % (
-		ROOT_URL,
-		company['shortname'],
-		availability['pk'],
-	)
-	
-	print book_url
-	
-	data = {
-		'contact': {
-			'name': 'John Doe',
-			'phone': '415-098-1234',
-			'email': 'johndoe@gmail.com'
-		},
-		'customers': {
-			'customer_type_rate': customer_type_rate['pk']
-		}
-	}
-	
-	response = requests.post(book_url, data=data, headers=HEADERS)
-	
-	booking = json.parse(response.text)
-	
-	print booking
-	
+    book_url = '%s/companies/%s/availabilities/%i/bookings/' % (
+        ROOT_URL,
+        company['shortname'],
+        availability['pk'],
+    )
+    
+    print book_url
+    
+    request_data = {
+        'contact': {
+            'name': 'John Doe',
+            'phone': '415-098-1234',
+            'email': 'johndoe@gmail.com'
+        },
+        'customers': [
+            {
+                'customer_type_rate': customer_type_rate['pk']
+            }
+        ],
+        "voucher_number": "V-35791209"
+    }
+    request_data = json.dumps(request_data)
+
+    response = requests.post(book_url, data=request_data, headers=HEADERS)
+    
+    response_data = json.loads(response.text)
+    booking = response_data['booking']
+    
+    print booking
+    
 # Retrieving a booking
 
-	booking_url = '%s/companies/%s/bookings/%s/' % (
-		ROOT_URL, 
-		company['shortname'],
-		booking['uuid'],
-	)
+    booking_url = '%s/companies/%s/bookings/%s/' % (
+        ROOT_URL, 
+        company['shortname'],
+        booking['uuid'],
+    )
 
-	print booking_url
+    print booking_url
 
-	response = requests.get(booking_url, headers=HEADERS)
-	
-	booking = json.parse(response.text)
-	
-	print booking
-	
-
-
+    response = requests.get(booking_url, headers=HEADERS)
+    
+    response_data = json.loads(response.text)
+    booking = response_data['booking']
+        
+    print booking
+    
