@@ -101,6 +101,8 @@ are the ones you are most likely to encounter.
 
 * 500: Internal Server Error
 
+  An unexpected error occured.
+
 * 503: Service Unavailable
 
   FareHarbor is temporarily unavailable, but will return within a few minutes.
