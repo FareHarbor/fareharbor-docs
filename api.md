@@ -153,9 +153,13 @@ of HTML is allowed; all other HTML entities are escaped.
 All currency amounts are returned as an integer number of USD cents. So, for instance,
 `1425` means $14.25 USD.
 
+* `field`: `number`
+
 ## Datetime fields
 
 All datetimes are returned in ISO8601 format; for example `2013-02-04T06:21:36+0000`
+
+* `field`: `string`
 
 ## Schemas
 
