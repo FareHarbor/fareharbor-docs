@@ -469,7 +469,11 @@ note that this may include companies that have no bookable availabilities.
 
 Returns an array of `Company` objects.
 
-Example:
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/
+
+Example response:
 
     {
       "companies": [
@@ -492,7 +496,11 @@ note that this may include items that have no bookable availabilities.
 
 Returns an array of `Item` objects.
 
-Example:
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/
+
+Example response:
 
     {
       "items": [
@@ -532,7 +540,11 @@ Note that `date`, `start-date`, and `end-date` should be in the format YYYY-MM-D
 
 Returns an array of `Availability` objects.
 
-Example:
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/1867/availabilities/date/2015-01-022/
+
+Example response:
 
     {
       "availabilities": [
@@ -608,7 +620,31 @@ Example:
 
 The result of both creating and retrieving a booking is a `Booking` object.
 
-Example:
+Example request:
+
+    $ curl -X POST \
+    -H "X-FareHarbor-API-App: APP-KEY" \
+    -H "X-FareHarbor-API-User: USER-KEY" \
+    -d \
+    '{
+       "contact": {
+         "name": "John Doe", 
+         "phone": "415-789-4563", 
+         "email": "johndoe@example.com"
+       }, 
+       "customers": [
+         {
+           "customer_type_rate": 65675
+         },
+         {
+           "customer_type_rate": 65675
+         }
+       ],
+       "voucher_number": "V-35791209"
+    }' \
+    https://fareharbor.com/api/external/v1/companies/hawaiianadventures/availabilities/4786/bookings/
+
+Example response:
 
     {
       "booking": {
@@ -646,9 +682,9 @@ Example:
           ]
         },
         "contact": {
-          "name": "Surfer Dude",
-          "phone": "443-222-1100",
-          "email": "surfer@dude.com"
+          "name": "John Doe",
+          "phone": "415-789-4563",
+          "email": "johndoe@example.com"
         },
         "customers": [
           {
@@ -702,9 +738,9 @@ Example:
     {
       "voucher_number": "VLT-1123",
       "contact": {
-        "name": "Surfer Dude",
+        "name": "John Doe",
         "phone": "443-222-1100",
-        "email": "surfer@dude.com"
+        "email": "johndoe@example.com"
       },
       "customers": [
         {
