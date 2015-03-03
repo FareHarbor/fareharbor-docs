@@ -258,8 +258,8 @@ Example:
 
 ### Customer Type Rate
 
-Customer type rates set capacity, pricing information, and custom fields
-for customer types on a particular availability. 
+Customer type rates set capacity and pricing information for customer types on
+a particular availability. 
 
 * `pk`: `number`
 
