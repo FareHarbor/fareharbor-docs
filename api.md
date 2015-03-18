@@ -179,7 +179,21 @@ Example:
       "shortname": "hawaiianadventures",
       "name": "Hawaiian Adventures"
     }
-    
+
+### Image
+
+* `pk`: `number`
+
+  The image's unique ID.
+
+* `gallery`: `string`
+
+  The image's gallery name.
+
+* `image_cdn_url`: `string`
+
+  The image's URL.
+
 ### Item
 
 Items represent a particular kind of tour that the company offers.
@@ -213,6 +227,10 @@ Items represent a particular kind of tour that the company offers.
 
   A URL to the item's primary image.
 
+* `images`: `[ Image ]`
+
+  An array of `Image` objects associated with the item.
+
 Example:
 
     {
@@ -224,7 +242,14 @@ Example:
       "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
       "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
       "location": "Honolulu, HI",
-      "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+      "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/",
+      "images": [
+        {
+          "pk": 687,
+          "gallery": "carousel",
+          "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+        }
+      ]
     }
 
 ### Customer Type
@@ -528,7 +553,14 @@ Example response:
           "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
           "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
           "location": "Honolulu, HI",
-          "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+          "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/",
+          "images": [
+            {
+              "pk": 687,
+              "gallery": "carousel",
+              "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+            }
+          ]
         },
         { 
           "pk": 1963,
@@ -539,7 +571,8 @@ Example response:
           "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
           "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
           "location": "Honolulu, HI",
-          "image_cdn_url": ""
+          "image_cdn_url": "",
+          "images": []
         }
       ]
     }
