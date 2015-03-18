@@ -16,7 +16,7 @@ http://phphttpclient.com/
 
 ## Root URL
 
-    $root_url = "https://fareharbor.com/api/external/v1";
+    $root_url = "https://test.fareharbor.com/api/external/v1";
 
 # Listing companies
 

@@ -25,7 +25,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
 
 ## Root URL
 
-    ROOT_URL = 'https://fareharbor.com/api/external/v1'
+    ROOT_URL = 'https://test.fareharbor.com/api/external/v1'
 
 # Listing companies
 
