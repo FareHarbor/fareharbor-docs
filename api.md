@@ -308,7 +308,7 @@ Availability objects represent particular datetimes that an item goes out.
 
 * `item`: `Item`
 
-  The availability's item.
+  The availability's item (minimal version).
 
 * `start_at`: `datetime`
 * `end_at`: `datetime`
@@ -334,14 +334,7 @@ Example:
       "capacity": 10,
       "item": {
         "pk": 1867,
-        "name": "Jet Ski Tour",
-        "headline": "Epic Jet Ski Tour",
-        "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.",
-        "description_safe_html": "\u003cp\u003eWe are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.\u003c\/p\u003e",
-        "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
-        "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
-        "location": "Honolulu, HI",
-        "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+        "name": "Jet Ski Tour"
       },
       "customer_type_rates": [
         {
@@ -416,14 +409,7 @@ Example:
         "capacity": 10,
         "item": {
           "pk": 1867,
-          "name": "Jet Ski Tour",
-          "headline": "Epic Jet Ski Tour",
-          "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.",
-          "description_safe_html": "\u003cp\u003eWe are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.\u003c\/p\u003e",
-          "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
-          "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
-          "location": "Honolulu, HI",
-          "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+          "name": "Jet Ski Tour"
         },
         "customer_type_rates": [
           {
@@ -584,14 +570,7 @@ Example response:
           "capacity": 10,
           "item": {
             "pk": 1867,
-            "name": "Jet Ski Tour",
-            "headline": "Epic Jet Ski Tour",
-            "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.",
-            "description_safe_html": "\u003cp\u003eWe are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.\u003c\/p\u003e",
-            "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
-            "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
-            "location": "Honolulu, HI",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+            "name": "Jet Ski Tour"
           },
           "customer_type_rates": [
             {
@@ -615,14 +594,7 @@ Example response:
           "capacity": 10,
           "item": {
             "pk": 1867,
-            "name": "Jet Ski Tour",
-            "headline": "Epic Jet Ski Tour",
-            "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.",
-            "description_safe_html": "\u003cp\u003eWe are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.\u003c\/p\u003e",
-            "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
-            "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
-            "location": "Honolulu, HI",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+            "name": "Jet Ski Tour"
           },
           "customer_type_rates": [
             {
@@ -686,14 +658,7 @@ Example response:
           "capacity": 10,
           "item": {
             "pk": 1867,
-            "name": "Jet Ski Tour",
-            "headline": "Epic Jet Ski Tour",
-            "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.",
-            "description_safe_html": "\u003cp\u003eWe are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.\u003c\/p\u003e",
-            "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
-            "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
-            "location": "Honolulu, HI",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+            "name": "Jet Ski Tour"
           },
           "customer_type_rates": [
             {

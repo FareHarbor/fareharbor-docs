@@ -76,13 +76,6 @@ Response:
           ],
           "end_at": "2015-02-01T10:30:00",
           "item": {
-            "cancellation_policy": "If you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.",
-            "cancellation_policy_safe_html": "\u003cp\u003eIf you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.\u003c\/p\u003e",
-            "description": "We’ll take you on two thrilling tank dives.",
-            "description_safe_html": "\u003cp\u003eWe\u2019ll take you on two thrilling tank dives.\u003c\/p\u003e",
-            "headline": "",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/lYsz2SeTaS8s5oRMxO6b",
-            "location": "",
             "name": "Wreck & Reef Dive",
             "pk": 28
           },
@@ -117,13 +110,6 @@ Response:
           ],
           "end_at": "2015-02-01T10:30:00",
           "item": {
-            "cancellation_policy": "If you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.",
-            "cancellation_policy_safe_html": "\u003cp\u003eIf you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.\u003c\/p\u003e",
-            "description": "We’ll take you on two thrilling tank dives.",
-            "description_safe_html": "\u003cp\u003eWe\u2019ll take you on two thrilling tank dives.\u003c\/p\u003e",
-            "headline": "",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/lYsz2SeTaS8s5oRMxO6b",
-            "location": "",
             "name": "Wreck & Reef Dive",
             "pk": 28
           },
@@ -147,13 +133,6 @@ Response:
           ],
           "end_at": "2015-02-13T10:30:00",
           "item": {
-            "cancellation_policy": "If you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.",
-            "cancellation_policy_safe_html": "\u003cp\u003eIf you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.\u003c\/p\u003e",
-            "description": "We’ll take you on two thrilling tank dives.",
-            "description_safe_html": "\u003cp\u003eWe\u2019ll take you on two thrilling tank dives.\u003c\/p\u003e",
-            "headline": "",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/lYsz2SeTaS8s5oRMxO6b",
-            "location": "",
             "name": "Wreck & Reef Dive",
             "pk": 28
           },
@@ -209,13 +188,6 @@ Response:
           ],
           "end_at": "2015-02-01T10:30:00",
           "item": {
-            "cancellation_policy": "If you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.",
-            "cancellation_policy_safe_html": "\u003cp\u003eIf you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.\u003c\/p\u003e",
-            "description": "We’ll take you on two thrilling tank dives.",
-            "description_safe_html": "\u003cp\u003eWe\u2019ll take you on two thrilling tank dives.\u003c\/p\u003e",
-            "headline": "",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/lYsz2SeTaS8s5oRMxO6b",
-            "location": "",
             "name": "Wreck & Reef Dive",
             "pk": 28
           },
@@ -275,13 +247,6 @@ Response:
           ],
           "end_at": "2015-02-01T10:30:00",
           "item": {
-            "cancellation_policy": "If you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.",
-            "cancellation_policy_safe_html": "\u003cp\u003eIf you cancel your reservation outside 48 hours of dive trip, 100% refund will be given.\u003c\/p\u003e",
-            "description": "We’ll take you on two thrilling tank dives.",
-            "description_safe_html": "\u003cp\u003eWe\u2019ll take you on two thrilling tank dives.\u003c\/p\u003e",
-            "headline": "",
-            "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/lYsz2SeTaS8s5oRMxO6b",
-            "location": "",
             "name": "Wreck & Reef Dive",
             "pk": 28
           },
