@@ -185,6 +185,14 @@ Example:
 * `image_cdn_url`: `string`
 
   The image's URL.
+  
+Example:
+
+    {
+      "pk": 687,
+      "gallery": "carousel",
+      "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+    }
 
 ### Item
 
