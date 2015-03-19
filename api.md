@@ -32,17 +32,9 @@ Keys sent as parameters:
 
 This should only be used in server to server scenarios.
 
-### App Key
+### Requesting Keys
 
-Please contact support@fareharbor.com to request an app key.
-
-### User Key
-
-Each FareHarbor user has a revocable API key associated with them, viewable
-in a the Dashboard > Settings > Users section. We suggest you create a
-new user for your company (perhaps named "api"), and use the API key
-for that user with all requests. This will allow you to track all API
-actions via the user's history. 
+Please contact support@fareharbor.com to request keys.
 
 # Responses
 
