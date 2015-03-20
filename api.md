@@ -381,12 +381,15 @@ Example:
 
 * `pk`: `number`
 
-  The booking's unique ID; this is the customer's "ticket number", and is used
-  only for rendering.
+  The booking's unique ID.
 
 * `uuid`: `string`
 
   The booking's universally unique identifier; used to access the booking via the API.
+
+* `display_id`: `string`
+
+  The customer's "ticket number;" used only for rendering.
 
 * `availability`: `Availability`
 
