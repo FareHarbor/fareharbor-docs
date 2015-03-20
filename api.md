@@ -785,6 +785,54 @@ Example:
       ]
     }
 
+#### Validation
+
+The following JSON schema is used to validate requests:
+
+    {
+      "type": "object",
+      "properties": {
+        "contact": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string",
+              "maxLength": 256
+            },
+            "name": {
+              "type": "string",
+              "maxLength": 128
+            },
+            "phone": {
+              "type": "string",
+              "maxLength": 32
+            }
+          },
+          "required": ["email", "name", "phone"]
+        },
+        "customers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "customer_type_rate": {
+                "type": "number"
+              }
+            },
+            "required": ["customer_type_rate"]
+          },
+          "minItems": 1
+        },
+        "voucher_number": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "required": ["contact", "customers", "voucher_number"]
+    }
+
+For more information regarding JSON schemas, see: http://json-schema.org/
+
 ### Bookability
 
 When creating a booking, several properties about the availability and the booking request must hold
