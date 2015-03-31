@@ -172,6 +172,118 @@ Example:
       "name": "Hawaiian Adventures"
     }
 
+### Planned: Extended Option
+
+Extended options are applicable to custom fields of type `extended-option`.
+
+* `pk`: `number`
+
+  The extended option's unique ID.
+
+* `name`: `string`
+
+  The extended option's name.
+
+* `description`: `markdown`
+
+  The extended option's description.
+
+* `modifier_kind`: `string`
+
+  Can be `offset` or `percentage`. Determines whether an offset or percentage
+  is used when the total is adjusted or set.
+
+* `modifier_type`: `string`
+
+  Can be `adjust` or `set`. Determines whether the total is adjusted or set.
+
+* `offset`: `amount`
+
+  When `modifier_type` is `adjust`: a positive or negative amount value.
+
+  When `modifier_type` is `set`: a positive amount value.
+
+  Only applicable when `modifier_kind` is `offset`.
+
+* `percentage`: `number`
+
+  When `modifier_type` is `adjust`: a number between -100 and 100 inclusive.
+
+  When `modifier_type` is `set`: a number between 0 and 100 inclusive.
+
+  Only applicable when `modifier_kind` is `percentage`.
+
+* `is_always_per_customer`: `bool`
+
+  Whether pricing should be applied to each customer (when the customer field
+  is at the booking level).
+
+* `is_taxable`: `bool`
+
+  Whether the cost of this option should affect the taxable total of a booking.
+
+### Planned: Custom Field
+
+* `pk`: `number`
+
+  The custom field's unique ID.
+
+* `type`: `string`
+
+  The custom field's type. Supported types: `yes-no`, `short`, `long`, and
+  `extended-option`.
+
+* `is_required`: `bool`
+
+  Indicates whether the custom field requires a value.
+
+* `description`: `markdown`
+
+  The custom field's description.
+
+* `name`: `string`
+
+  The name of the custom field.
+
+* `booking_notes`: `markdown`
+
+  Notes for the customer specific to the custom field. 
+
+* `offset`: `amount`
+
+  A positive or negative amount value.
+
+* `extended_options`: `[ ExtendedOption ]`
+
+  A list the custom field's extended options. This will only be provided
+  for custom fields that have type `extended-option`.
+
+### Planned: Custom Field Instance
+
+* `pk`: `number`
+
+  The custom field instance's unique ID.
+
+* `custom_field`: `CustomField`
+
+  The custom field associated with the custom field instance.
+
+* `customer_type`: `CustomerType | null`
+
+  The customer type associated with the custom field instance.
+
+### Planned: Custom Field Value
+
+* `custom_field`: `CustomField.pk`
+
+  A valid Custom Field pk.
+
+* `value`: `string`
+
+  A string up to 2048 characters. If the custom field is of type `yes-no`, 
+  "true" or "false" must be specified. If the custom field is of type 
+  `extended-option`, an extended option pk must be specified.
+
 ### Image
 
 * `pk`: `number`
@@ -230,6 +342,10 @@ Items represent a particular kind of tour that the company offers.
 * `images`: `[ Image ]`
 
   An array of `Image` objects associated with the item.
+
+* Planned: `custom_field_instances`: `[ CustomFieldInstance ]`
+
+  A list of custom field instances for the item.
 
 Example:
 
@@ -418,6 +534,14 @@ Example:
     * `customer_type_rate`: `CustomerTypeRate`
     
       The customer type rate to which this customer corresponds.
+
+    * Planned: `custom_field_values`: `[ CustomFieldValue ]`
+
+      A list of custom field values for the customer.
+
+* Planned: `custom_field_values`: `[ CustomFieldValue ]`
+
+  A list of custom field values for the booking.
 
 * `invoice_price`: `amount | null`
 
@@ -785,6 +909,55 @@ Example:
       ]
     }
 
+#### Planned: Custom Field Values 
+
+Booking custom fields:
+
+  Values for booking custom fields are specified by including a
+  `custom_field_values` property at the root level with the following form:
+
+  * `custom_field_values`: `array`
+    * `custom_field`: `CustomField.pk`
+    * `value`: `string`
+
+Customer custom fields:
+
+  Values for customer custom fields are specified by including a 
+  `custom_field_values` property at the customer level with the following form:
+
+  * `customers`: `array`
+    * `custom_field_values`: `array`
+      * `custom_field`: `CustomField.pk`
+       * `value`: `string`
+
+Example:
+
+    {
+       "contact": {
+         "name": "John Doe",
+         "phone": "415-789-4563",
+         "email": "johndoe@example.com"
+       },
+       "customers": [
+         {
+           "customer_type_rate": 8964453,
+           "custom_field_values": [
+             {
+               "custom_field": 123,
+               "value": "true"
+             }
+           ]
+         }
+       ],
+       "custom_field_values": [
+         {
+           "custom_field": 456,
+           "value": "6745"
+         }
+       ],
+       "voucher_number": "V-35791209"
+    }
+
 #### Validation
 
 The following JSON schema is used to validate requests:
@@ -875,3 +1048,7 @@ it has been closed or removed, or has run out of capacity.  For example:
       "error": "Availability was removed",
       "status": 400
     }
+
+## Planned: Validation
+
+Checks bookability and provides booking level pricing information.
