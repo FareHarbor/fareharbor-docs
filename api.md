@@ -790,6 +790,7 @@ Example:
 The following JSON schema is used to validate requests:
 
     {
+      "$schema": "http://json-schema.org/draft-04/schema#",
       "type": "object",
       "properties": {
         "contact": {
@@ -808,7 +809,8 @@ The following JSON schema is used to validate requests:
               "maxLength": 32
             }
           },
-          "required": ["email", "name", "phone"]
+          "required": ["email", "name", "phone"],
+          "additionalProperties": false
         },
         "customers": {
           "type": "array",
@@ -819,7 +821,8 @@ The following JSON schema is used to validate requests:
                 "type": "number"
               }
             },
-            "required": ["customer_type_rate"]
+            "required": ["customer_type_rate"],
+            "additionalProperties": false
           },
           "minItems": 1
         },
@@ -828,7 +831,8 @@ The following JSON schema is used to validate requests:
           "maxLength": 128
         }
       },
-      "required": ["contact", "customers", "voucher_number"]
+      "required": ["contact", "customers", "voucher_number"],
+      "additionalProperties": false
     }
 
 For more information regarding JSON schemas, see: http://json-schema.org/
