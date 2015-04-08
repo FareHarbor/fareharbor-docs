@@ -414,7 +414,7 @@ The customer type being priced.
 
   The price of a single customer of this type.
 
-* `capacity`: `number | null`
+* `capacity`: `number`
 
   The maximum number of customers of this type that can currently booking this availability;
   this number will change over time as other customers book. 
