@@ -549,6 +549,10 @@ Example:
   be the amount that the user of the API owes the vendor on this booking, if the vendor has opted
   to set up that information; otherwise it will be `null`.
 
+* `confirmation_url`: `string`
+
+  The booking's confirmation page URL.
+
 Example:
 
     {
