@@ -416,7 +416,7 @@ The customer type being priced.
 
 * `capacity`: `number`
 
-  The maximum number of customers of this type that can currently booking this availability;
+  The maximum number of customers of this type that can currently book this availability;
   this number will change over time as other customers book. 
 
 * `is_exclusive`: `bool`
