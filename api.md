@@ -268,10 +268,6 @@ Extended options are applicable to custom fields of type `extended-option`.
 
   The custom field associated with the custom field instance.
 
-* `customer_type`: `CustomerType | null`
-
-  The customer type associated with the custom field instance.
-
 ### Planned: Custom Field Value
 
 * `custom_field`: `CustomField.pk`
