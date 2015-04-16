@@ -420,6 +420,10 @@ The customer type being priced.
   Indicates that this customer type rate is "exclusive"; see below for how exclusivity
   affects bookability.
 
+* Planned: `custom_field_instances`: `[ CustomFieldInstance ]`
+
+  A list of custom field instances for the customer type rate.
+
 Example:
 
     {
