@@ -343,10 +343,6 @@ Items represent a particular kind of tour that the company offers.
 
   An array of `Image` objects associated with the item.
 
-* Planned: `custom_field_instances`: `[ CustomFieldInstance ]`
-
-  A list of custom field instances for the item.
-
 Example:
 
     {
@@ -465,6 +461,10 @@ Availability objects represent particular datetimes that an item goes out.
 * `customer_type_rates`: `[ CustomerTypeRate ]`
 
   Pricing information for available customer types.
+
+* Planned: `custom_field_instances`: `[ CustomFieldInstance ]`
+
+  A list of custom field instances for the availability.
 
 Example:
 
