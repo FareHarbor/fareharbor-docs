@@ -1,10 +1,25 @@
-FareHarbor External Integration API
------------------------------------
-# Examples
+# Getting Started
 
-## Companies endpoint
+To get started as a FareHarbor External API partner, first contact <support@fareharbor.com>
+and request access. Access is currently limited to select partners as we develop our initial
+API.
 
-### Retrieve a list of companies
+## Determining User Keys
+
+You'll want to request a user key from each affiliate you would like to make bookings on behalf of.
+You'll use this key for each request you make on behalf of the associated affiliate.
+Alternatively, contact <support@fareharbor.com> for help identifying the relevant user keys.
+
+## Structuring Requests and Responses
+
+All requests and responses are simple JSON objects; see `/external-api/format.md`.
+
+## Interacting with the API
+
+### Retrieve a list of available companies
+
+The first thing you might want to do is retrieve the list of companies that a given affiliate has access
+to in FareHarbor:
 
 Request:
     
@@ -21,9 +36,12 @@ Response:
       ]
     }
 
-## Items endpoint
+This indicates that the affiliate in question (given by `USER-KEY`) can access "XYZ Scuba".
 
-### Retrieve a list of items for a company
+### Retrieve a list of bookable items
+
+Next you can identify all of the items on a particular provider that a given affiliate can book.  Continuing the
+above example, we can determine which items on "XYZ Scuba" the user identified by `USER-KEY` can book:
 
 Request:
 
@@ -47,9 +65,9 @@ Response:
       ]
     }
 
-## Availabilities endpoint
-
-### Retrieve a list of availabilities for an item 
+### Retrieve a list of availabilities for an item
+ 
+Having found an item to book, you can access its availability on a per-day basis:
 
 Request:
 
@@ -84,6 +102,8 @@ Response:
         }
       ]
     }
+
+You can also access availability for a given range:
 
 Request:
 
@@ -142,9 +162,10 @@ Response:
       ]
     }
 
-## Bookings endpoint
-
 ### Create a booking for an availability
+
+Once you've found a bookable availability you can book it by simply `POST`ing to the availability's
+booking collection:
 
 Request:
 
@@ -220,7 +241,12 @@ Response:
       }
     }
 
+You'll want to hold onto the booking's `uuid` (if not the rest of the booking) so that you can access
+it later.
+
 ### Retrieve a booking
+
+Given a booking by `uuid` it's straightforward to access: 
 
 Request:
 

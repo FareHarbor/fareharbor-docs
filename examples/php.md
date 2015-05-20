@@ -1,11 +1,11 @@
 FareHarbor External Integration API
 -----------------------------------
-# Set up
+
+# Setup
 
 ## Dependencies
 
-Httpful PHP library. Installation instructions: 
-http://phphttpclient.com/
+Httpful PHP library. See the [installation instructions](http://phphttpclient.com/) for more information. 
 
     include("./httpful.phar");
 
