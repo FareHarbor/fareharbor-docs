@@ -255,6 +255,7 @@ Example response:
 When creating bookings use the customer type rate and custom field instance information
 contained in the availability to construct a request of the following form:
 
+* `note`: `string`
 * `voucher_number`: `string`
 * `contact`: `object`
     * `name`: `string`
