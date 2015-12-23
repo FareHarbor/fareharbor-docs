@@ -184,6 +184,7 @@ Request:
            "customer_type_rate": 8964453
          }
        ],
+       "note": "Optional booking note.",
        "voucher_number": "V-35791209"
     }' \
     https://fareharbor.com/api/external/v1/companies/xyz/availabilities/10780/bookings/

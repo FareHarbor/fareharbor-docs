@@ -117,6 +117,7 @@ Httpful PHP library. See the [installation instructions](http://phphttpclient.co
     $data = array(
         "contact" => $contact,
         "customers" => $customers,
+        "note" => "Optional booking note.",
         "voucher_number" => "V-35791209"
     );
 

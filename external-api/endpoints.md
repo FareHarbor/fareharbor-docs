@@ -176,6 +176,7 @@ Example request:
            "customer_type_rate": 65675
          }
        ],
+       "note": "Optional booking note.",
        "voucher_number": "V-35791209"
     }' \
     https://fareharbor.com/api/external/v1/companies/hawaiianadventures/availabilities/4786/bookings/
@@ -265,6 +266,7 @@ contained in the availability to construct a request of the following form:
 Example:
 
     {
+      "note": "Optional booking note.",
       "voucher_number": "VLT-1123",
       "contact": {
         "name": "John Doe",

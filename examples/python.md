@@ -109,6 +109,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
                 'customer_type_rate': customer_type_rate['pk']
             }
         ],
+        "note": "Optional booking note.",
         "voucher_number": "V-35791209"
     }
     request_data = json.dumps(request_data)
