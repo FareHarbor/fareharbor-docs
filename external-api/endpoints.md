@@ -62,6 +62,12 @@ Example response:
               "gallery": "carousel",
               "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
             }
+          ],
+          "customer_prototypes": [
+            {
+              "pk": 2522,
+              "display_name": "Adult"
+            }
           ]
         },
         { 
@@ -117,7 +123,11 @@ Example response:
                 "pk": 978,
                 "singular": "Adult",
                 "plural"; "Adults",
-                "note": "At least 18 years old.""
+                "note": "At least 18 years old."
+              },
+              "customer_prototype": {
+                "pk": 2522,
+                "display_name": "Adult"
               }
             }
           ]
@@ -141,7 +151,11 @@ Example response:
                 "pk": 978,
                 "singular": "Adult",
                 "plural"; "Adults",
-                "note": "At least 18 years old.""
+                "note": "At least 18 years old."
+              },
+              "customer_prototype": {
+                "pk": 2522,
+                "display_name": "Adult"
               }
             }
           ]
@@ -206,7 +220,11 @@ Example response:
                 "pk": 978,
                 "singular": "Adult",
                 "plural"; "Adults",
-                "note": "At least 18 years old.""
+                "note": "At least 18 years old."
+              },
+              "customer_prototype": {
+                "pk": 2522,
+                "display_name": "Adult"
               }
             }
           ]
@@ -228,6 +246,10 @@ Example response:
                 "singular": "Adult",
                 "plural"; "Adults",
                 "note": "At least 18 years old.""
+              },
+              "customer_prototype": {
+                "pk": 2522,
+                "display_name": "Adult"
               }
             }
           },
@@ -242,6 +264,10 @@ Example response:
                 "singular": "Adult",
                 "plural"; "Adults",
                 "note": "At least 18 years old.""
+              },
+              "customer_prototype": {
+                "pk": 2522,
+                "display_name": "Adult"
               }
             }
           }
