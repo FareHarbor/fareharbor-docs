@@ -245,7 +245,7 @@ Example response:
                 "pk": 978,
                 "singular": "Adult",
                 "plural"; "Adults",
-                "note": "At least 18 years old.""
+                "note": "At least 18 years old."
               },
               "customer_prototype": {
                 "pk": 2522,
@@ -263,7 +263,7 @@ Example response:
                 "pk": 978,
                 "singular": "Adult",
                 "plural"; "Adults",
-                "note": "At least 18 years old.""
+                "note": "At least 18 years old."
               },
               "customer_prototype": {
                 "pk": 2522,
