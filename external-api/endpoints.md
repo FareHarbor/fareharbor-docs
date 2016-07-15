@@ -457,6 +457,31 @@ it has been closed or removed, or has run out of capacity.  For example:
 
 Checks bookability and provides booking level pricing information.
 
+Example request:
+
+    $ curl -X POST \
+    -H "X-FareHarbor-API-App: APP-KEY" \
+    -H "X-FareHarbor-API-User: USER-KEY" \
+    -d \
+    '{
+       "contact": {
+         "name": "John Doe",
+         "phone": "415-789-4563",
+         "email": "johndoe@example.com"
+       },
+       "customers": [
+         {
+           "customer_type_rate": 65675
+         },
+         {
+           "customer_type_rate": 65675
+         }
+       ],
+       "note": "Optional booking note.",
+       "voucher_number": "V-35791209"
+    }' \
+    https://fareharbor.com/api/external/v1/companies/hawaiianadventures/availabilities/4786/bookings/validate/
+
 The response provides an `is_bookable` field indicating whether the booking can be created.
 
     {
