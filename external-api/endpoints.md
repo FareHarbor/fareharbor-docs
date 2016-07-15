@@ -453,6 +453,23 @@ it has been closed or removed, or has run out of capacity.  For example:
       "status": 400
     }
 
-## Planned: Validation
+### Validation
+
+* `POST /companies/<shortname>/availabilities/<Availability.pk>/bookings/validate/`
 
 Checks bookability and provides booking level pricing information.
+
+The response provides an `is_bookable` field indicating whether the booking can be created.
+
+    {
+      "is_bookable": true,
+      ...
+    }
+
+When the booking can't be created, additional information regarding the error is provided:
+
+    {
+      "is_bookable":false,
+      "code":"bookability-error",
+      "error":"Unable to create booking: error details."
+    }
