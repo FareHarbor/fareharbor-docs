@@ -313,7 +313,7 @@ Example:
       ]
     }
 
-#### Planned: Custom Field Values 
+#### Custom Field Values
 
 Booking custom fields:
 

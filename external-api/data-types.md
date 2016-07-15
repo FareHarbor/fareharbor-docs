@@ -400,9 +400,7 @@ Both capacities, if specified, cannot be exceeded, despite the fact that the sum
 capacities of the customer type rates may not match the available capacity of the availability
 itself. 
 
-## Upcoming Schemas
-
-### Planned: Extended Option
+### Extended Option
 
 Extended options are applicable to custom fields of type `extended-option`.
 
@@ -452,7 +450,7 @@ Extended options are applicable to custom fields of type `extended-option`.
 
   Whether the cost of this option should affect the taxable total of a booking.
 
-### Planned: Custom Field
+### Custom Field
 
 * `pk`: `number`
 
@@ -488,7 +486,7 @@ Extended options are applicable to custom fields of type `extended-option`.
   A list the custom field's extended options. This will only be provided
   for custom fields that have type `extended-option`.
 
-### Planned: Custom Field Instance
+### Custom Field Instance
 
 * `pk`: `number`
 
@@ -498,7 +496,7 @@ Extended options are applicable to custom fields of type `extended-option`.
 
   The custom field associated with the custom field instance.
 
-### Planned: Custom Field Value
+### Custom Field Value
 
 * `custom_field`: `CustomField.pk`
 
