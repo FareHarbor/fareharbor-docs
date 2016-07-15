@@ -165,10 +165,19 @@ Example response:
 
 ## Bookings
 
+Create a booking:
+
 * `POST /companies/<shortname>/availabilities/<Availability.pk>/bookings/`
+
+Retrieve a booking:
+
 * `GET /companies/<shortname>/bookings/<Booking.uuid>/`
 
-The result of both creating and retrieving a booking is a `Booking` object.
+Cancel a booking:
+
+* `DELETE /companies/<shortname>/bookings/<Booking.uuid>/`
+
+The result of both creating, retrieving, and cancelling a booking is a `Booking` object.
 
 Example request:
 
