@@ -308,11 +308,11 @@ Example:
     
       The customer type rate to which this customer corresponds.
 
-    * Planned: `custom_field_values`: `[ CustomFieldValue ]`
+    * `custom_field_values`: `[ CustomFieldValue ]`
 
       A list of custom field values for the customer.
 
-* Planned: `custom_field_values`: `[ CustomFieldValue ]`
+* `custom_field_values`: `[ CustomFieldValue ]`
 
   A list of custom field values for the booking.
 
