@@ -201,6 +201,7 @@ Example response:
       "booking": {
         "pk": 6876876,
         "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
+        "status": "booked",
         "availability": {
           "pk": 4786,
           "start_at": "2015-01-22T11:30:00-1000",
