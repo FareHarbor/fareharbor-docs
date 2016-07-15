@@ -13,7 +13,7 @@ Returns an array of `Company` objects.
 
 Example request:
 
-    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/
 
 Example response:
 
@@ -40,7 +40,7 @@ Returns an array of `Item` objects.
 
 Example request:
 
-    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/
 
 Example response:
 
@@ -98,7 +98,7 @@ Returns an array of `Availability` objects.
 
 Example request:
 
-    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/1867/availabilities/date/2015-01-022/
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/1867/availabilities/date/2015-01-022/
 
 Example response:
 
@@ -182,8 +182,8 @@ The result of both creating, retrieving, and cancelling a booking is a `Booking`
 Example request:
 
     $ curl -X POST \
-    -H "X-FareHarbor-API-App: APP-KEY" \
-    -H "X-FareHarbor-API-User: USER-KEY" \
+    -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
+    -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
     -d \
     '{
        "contact": {
@@ -470,8 +470,8 @@ Checks bookability and provides booking level pricing information.
 Example request:
 
     $ curl -X POST \
-    -H "X-FareHarbor-API-App: APP-KEY" \
-    -H "X-FareHarbor-API-User: USER-KEY" \
+    -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
+    -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
     -d \
     '{
        "contact": {
@@ -521,7 +521,7 @@ Requirements:
 
 Example request:
 
-    $ curl -X DELETE -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/bookings/d75102be-9732-4523-90a8-c698eff2b983/
+    $ curl -X DELETE -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/bookings/d75102be-9732-4523-90a8-c698eff2b983/
 
 Example response:
 
