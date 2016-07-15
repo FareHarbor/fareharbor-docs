@@ -313,57 +313,6 @@ Example:
       ]
     }
 
-#### Custom Field Values
-
-Booking custom fields:
-
-  Values for booking custom fields are specified by including a
-  `custom_field_values` property at the root level with the following form:
-
-  * `custom_field_values`: `array`
-    * `custom_field`: `CustomField.pk`
-    * `value`: `string`
-
-Customer custom fields:
-
-  Values for customer custom fields are specified by including a 
-  `custom_field_values` property at the customer level with the following form:
-
-  * `customers`: `array`
-    * `custom_field_values`: `array`
-      * `custom_field`: `CustomField.pk`
-       * `value`: `string`
-
-Example:
-
-    {
-       "contact": {
-         "name": "John Doe",
-         "phone": "415-789-4563",
-         "email": "johndoe@example.com"
-       },
-       "customers": [
-         {
-           "customer_type_rate": 8964453,
-           "custom_field_values": [
-             {
-               "custom_field": 123,
-               "value": "true"
-             }
-           ]
-         }
-       ],
-       "custom_field_values": [
-         {
-           "custom_field": 456,
-           "value": "6745"
-         }
-       ],
-       "voucher_number": "V-35791209"
-    }
-
-#### Validation
-
 The following JSON schema is used to validate requests:
 
     {
@@ -413,6 +362,55 @@ The following JSON schema is used to validate requests:
     }
 
 For more information regarding JSON schemas, see: http://json-schema.org/
+
+#### Custom Field Values
+
+Booking custom fields:
+
+  Values for booking custom fields are specified by including a
+  `custom_field_values` property at the root level with the following form:
+
+  * `custom_field_values`: `array`
+    * `custom_field`: `CustomField.pk`
+    * `value`: `string`
+
+Customer custom fields:
+
+  Values for customer custom fields are specified by including a 
+  `custom_field_values` property at the customer level with the following form:
+
+  * `customers`: `array`
+    * `custom_field_values`: `array`
+      * `custom_field`: `CustomField.pk`
+       * `value`: `string`
+
+Example:
+
+    {
+       "contact": {
+         "name": "John Doe",
+         "phone": "415-789-4563",
+         "email": "johndoe@example.com"
+       },
+       "customers": [
+         {
+           "customer_type_rate": 8964453,
+           "custom_field_values": [
+             {
+               "custom_field": 123,
+               "value": "true"
+             }
+           ]
+         }
+       ],
+       "custom_field_values": [
+         {
+           "custom_field": 456,
+           "value": "6745"
+         }
+       ],
+       "voucher_number": "V-35791209"
+    }
 
 ### Bookability
 
