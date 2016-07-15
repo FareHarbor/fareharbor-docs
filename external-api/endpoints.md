@@ -506,3 +506,35 @@ When the booking can't be created, additional information regarding the error is
       "code":"bookability-error",
       "error":"Unable to create booking: error details."
     }
+
+### Cancellation
+
+* `DELETE /companies/<shortname>/bookings/<Booking.uuid>/`
+
+Cancels the specified booking.
+
+Requirements:
+
+* The booking must be cancelled at least 48 hours prior to start time (availability `start_at` property).
+* Any affiliate collected payments for the booking must be fully refunded.
+* The requesting user must have permission to cancel bookings (granted on a per-company basis).
+
+Example request:
+
+    $ curl -X DELETE -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/bookings/d75102be-9732-4523-90a8-c698eff2b983/
+
+Example response:
+
+    {
+      "booking": {
+        "pk": 6876876,
+        "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
+        "status": "cancelled",
+        ...
+    }
+
+The ellipses in the above example represent properties that have been left out for the sake of brevity.
+
+#### Cancellation Policies
+
+Initially all companies will use a "48 hours prior, 100% refund" policy; however, we expect to expand support for various kinds of cancellation policies in the future.
