@@ -53,6 +53,43 @@ Example:
       "name": "Hawaiian Adventures"
     }
 
+### Planned: Lodging
+
+* `pk`: `number`
+
+  The lodging's unique ID.
+
+* `name`: `string`
+
+  The Lodging's name.
+
+* `phone`: `string`
+
+  The lodging's phone number.
+
+* `fax`: `string`
+
+  The lodging's fax number.
+
+* `address`: `string`
+
+  The lodging's address.
+
+* `url`: `string`
+
+  The lodging's URL.
+
+Example:
+
+    {
+      "pk": 231,
+      "name": "Wyndham Royal Garden",
+      "phone": "(808) 943-0202",
+      "fax": "",
+      "address": "440 Olohana St Honolulu, HI 96815",
+      "url": "https:\/\/www.extraholidays.com\/honolulu-hawaii\/royal-garden-at-waikiki.aspx"
+    }
+
 ### Image
 
 * `pk`: `number`

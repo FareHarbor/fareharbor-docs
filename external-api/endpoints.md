@@ -29,6 +29,31 @@ Example response:
       ]
     }
 
+## Planned: Lodgings
+
+`GET /companies/<shortname>/lodgings/`
+
+Returns an array of `Lodging` objects.
+
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/lodgings/
+
+Example response:
+
+    {
+      "lodgings": [
+        {
+          "pk": 231,
+          "name": "Wyndham Royal Garden",
+          "phone": "(808) 943-0202",
+          "fax": "",
+          "address": "440 Olohana St Honolulu, HI 96815",
+          "url": "https:\/\/www.extraholidays.com\/honolulu-hawaii\/royal-garden-at-waikiki.aspx"
+        }
+      ]
+    }
+
 ## Items
 
 `GET /companies/<shortname>/items/`
