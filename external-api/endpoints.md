@@ -563,3 +563,61 @@ The ellipses in the above example represent properties that have been left out f
 #### Cancellation Policies
 
 Initially all companies will use a "48 hours prior, 100% refund" policy; however, we expect to expand support for various kinds of cancellation policies in the future.
+
+#### Planned: Rebooking
+
+If it is necessary to change a booking to another date/time or change customer types/count, the booking must be cancelled and a new booking must be created.  Rebooking is a shortcut for that process.
+
+To rebook an existing booking, specify the existing booking's UUID value for the `rebooking` property when creating a booking.
+
+Example request:
+
+    $ curl -X POST \
+    -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
+    -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
+    -d \
+    '{
+       "rebooking": "d75102be-9732-4523-90a8-c698eff2b983",
+       "contact": {
+         "name": "John Doe",
+         "phone": "415-789-4563",
+         "email": "johndoe@example.com"
+       },
+       "customers": [
+         {
+           "customer_type_rate": 65675
+         },
+         {
+           "customer_type_rate": 65675
+         }
+       ],
+       "note": "Optional booking note.",
+       "voucher_number": "V-35791209"
+    }' \
+    https://fareharbor.com/api/external/v1/companies/hawaiianadventures/availabilities/5796/bookings/
+
+Example response:
+
+    {
+      "booking": {
+        "pk": 7974877,
+        "uuid": "10414711-3d20-4f4d-8ab3-eeaea26c2be3",
+        "rebooked_from": "d75102be-9732-4523-90a8-c698eff2b983",
+        "status": "booked",
+        ...
+    }
+
+The response includes a `rebooked_from` property that provides the source booking's UUID.
+
+Bookings that have been rebooked have a "rebooked" status. The `rebooked_to` property provides the UUID of the new booking.
+
+Example rebooked booking:
+
+    {
+      "booking": {
+        "pk": 6876876,
+        "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
+        "rebooked_to": "10414711-3d20-4f4d-8ab3-eeaea26c2be3"
+        "status": "rebooked",
+        ...
+    }
