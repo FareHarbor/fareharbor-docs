@@ -625,3 +625,104 @@ Example rebooked booking:
         "status": "rebooked",
         ...
     }
+
+#### Planned: Transportation
+
+Note: this functionality is not available yet.
+
+To request transportation for a booking, specify a `Lodging` pk for the `lodging` property when creating the booking as shown in the example below.
+
+Example booking request body with a lodging specified:
+
+    {
+      "contact": {
+         "name": "John Doe",
+         "phone": "1234567890",
+         "email": "example@example.com"
+       },
+       "customers": [
+         {
+           "customer_type_rate": 933643
+         }
+       ],
+       "voucher_number": "1233456-1",
+       "lodging": 789
+    }
+
+##### Planned: Pickup Information
+
+When a lodging is specified during booking creation and transportation is available, the booking response will include a `pickup` property as shown in the example below.
+
+Example booking response with `pickup` property:
+
+    {
+        "booking": {
+            "pk": 123,
+            "pickup": {
+                "time": "2016-08-01T10:30:00-1000",
+                "name": "Wyndham Royal Garden",
+                "description": "Please meet us at the front entrance of your hotel and allow a 15 minute window for your driver to arrive.",
+                "map_url": "https://goo.gl/maps/6QiYT",
+                "display_text": "We'll pick you up at 10:30 AM from Wyndham Royal Garden"
+            },
+            ...
+        }
+    }
+
+The `pickup` object provides the following properties:
+
+* `time`: `datetime`
+
+  The pickup time; the customer must arrive at the pickup location by this time.
+
+* `name`: `string`
+
+  The name of the pickup location.
+
+* `description`: `markdown`
+
+  Pickup instructions from the activity company; may not be provided.
+
+* `map_url`: `string`
+
+  A URL to a map showing the pickup location; may not be provided.
+
+* `display_text`: `string`
+
+  A formatted string that can be shown to customers.
+
+##### Planned: Arrival Information
+
+When a lodging is NOT provided during booking creation and arrival information is available, the booking response will include an `arrival` property as shown in the example below.
+
+Example booking response with `arrival` property:
+
+    {
+        "booking": {
+            "pk": 456,
+            "arrival": {
+                "time": "2016-08-01T13:15:00-1000",
+                "notes": "Check-in Time is at 12:15 for your 12:45 Zipline adventure time. Our check-in locations is at our KapohoKine Adventures Store: 224 Kamehameha Ave Suite 106 Hilo, HI 96720",
+                "display_text": "Please arrive by 12:15 PM"
+            },
+            ...
+        }
+    }
+
+The `arrival` object provides the following properties:
+
+* `time`: `datetime`
+
+  The arrival time; the customer must provide their own transporation and arrive at the activity location by this time.
+
+* `notes`: `markdown`
+
+  Notes from the activity company regarding arrival (e.g. check-in location details, driving directions); may not be provided.
+
+* `map_url`: `string`
+
+  A URL to a map showing the arrival location; may not be provided.
+
+* `display_text`: `string`
+
+  A formatted string that can be shown to customers.
