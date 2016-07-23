@@ -663,7 +663,7 @@ Example booking response with `pickup` property:
                 "name": "Wyndham Royal Garden",
                 "description": "Please meet us at the front entrance of your hotel and allow a 15 minute window for your driver to arrive.",
                 "map_url": "https://goo.gl/maps/6QiYT",
-                "display_text": "We'll pick you up at 10:30 AM from Wyndham Royal Garden"
+                "display_text": "We'll pick you up at 10:30am from Wyndham Royal Garden"
             },
             ...
         }
@@ -703,7 +703,7 @@ Example booking response with `arrival` property:
             "arrival": {
                 "time": "2016-08-01T13:15:00-1000",
                 "notes": "Check-in Time is at 12:15 for your 12:45 Zipline adventure time. Our check-in locations is at our KapohoKine Adventures Store: 224 Kamehameha Ave Suite 106 Hilo, HI 96720",
-                "display_text": "Please arrive by 12:15 PM"
+                "display_text": "Please arrive by 12:15pm"
             },
             ...
         }
