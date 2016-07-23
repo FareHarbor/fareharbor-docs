@@ -719,10 +719,6 @@ The `arrival` object provides the following properties:
 
   Notes from the activity company regarding arrival (e.g. check-in location details, driving directions); may not be provided.
 
-* `map_url`: `string`
-
-  A URL to a map showing the arrival location; may not be provided.
-
 * `display_text`: `string`
 
   A formatted string that can be shown to customers.
