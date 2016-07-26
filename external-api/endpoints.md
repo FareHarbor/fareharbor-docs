@@ -49,9 +49,9 @@ Example response:
           "pk": 231,
           "name": "Wyndham Royal Garden",
           "phone": "(808) 943-0202",
-          "fax": "",
           "address": "440 Olohana St Honolulu, HI 96815",
-          "url": "https:\/\/www.extraholidays.com\/honolulu-hawaii\/royal-garden-at-waikiki.aspx"
+          "url": "https:\/\/www.extraholidays.com\/honolulu-hawaii\/royal-garden-at-waikiki.aspx",
+          "is_self_lodging": false
         }
       ]
     }
