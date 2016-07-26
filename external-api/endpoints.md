@@ -651,7 +651,7 @@ Example booking request body with a lodging specified:
 
 ##### Planned: Pickup Information
 
-When a lodging is specified during booking creation and transportation is available, the booking response will include a `pickup` property as shown in the example below.
+When a lodging is specified during booking creation and transportation is available for the lodging, the booking response will include a `pickup` property as shown in the example below.
 
 Example booking response with `pickup` property:
 
@@ -693,7 +693,7 @@ The `pickup` object provides the following properties:
 
 ##### Planned: Arrival Information
 
-When a lodging is NOT provided during booking creation and arrival information is available, the booking response will include an `arrival` property as shown in the example below.
+When a lodging is NOT provided during booking creation or transportation is not available for the specified lodging, arrivial information may be provided. When arrival information is available, the booking response will include an `arrival` property as shown in the example below.
 
 Example booking response with `arrival` property:
 
