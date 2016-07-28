@@ -53,7 +53,7 @@ Example:
       "name": "Hawaiian Adventures"
     }
 
-### Planned: Lodging
+### Lodging
 
 * `pk`: `number`
 
@@ -67,10 +67,6 @@ Example:
 
   The lodging's phone number.
 
-* `fax`: `string`
-
-  The lodging's fax number.
-
 * `address`: `string`
 
   The lodging's address.
@@ -79,15 +75,19 @@ Example:
 
   The lodging's URL.
 
+* `is_self_lodging`: `bool`
+
+  Whether the lodging is a customer provided, non-hotel lodging (e.g. private residence).
+
 Example:
 
     {
       "pk": 231,
       "name": "Wyndham Royal Garden",
       "phone": "(808) 943-0202",
-      "fax": "",
       "address": "440 Olohana St Honolulu, HI 96815",
-      "url": "https:\/\/www.extraholidays.com\/honolulu-hawaii\/royal-garden-at-waikiki.aspx"
+      "url": "https:\/\/www.extraholidays.com\/honolulu-hawaii\/royal-garden-at-waikiki.aspx",
+      "is_self_lodging": false
     }
 
 ### Image
