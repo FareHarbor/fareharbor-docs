@@ -647,7 +647,7 @@ Example booking request body with a lodging specified:
 
 ##### Pickup Information
 
-When a lodging is specified during booking creation and transportation is available for the lodging, the booking response will include a `pickup` property as shown in the example below.
+When a lodging is specified during booking creation and transportation is available for the lodging, the booking response will include a `pickup` property that provides pickup information as shown in the example below.
 
 Example booking response with `pickup` property:
 
@@ -687,9 +687,11 @@ The `pickup` object provides the following properties:
 
   A formatted string that can be shown to customers.
 
+Note: if a lodging is specified and transportation is not available for the specified lodging (or any lodging), the `pickup` property will have a `null` value.
+
 ##### Arrival Information
 
-Arrival information is intended for customers who are providing their own transportation. When a lodging is not provided during booking creation or transportation is not available for the specified lodging, arrivial information may be provided. When arrival information is available, the booking response will include an `arrival` property as shown in the example below.
+Arrival information is intended for customers who are providing their own transportation. When a lodging is not provided during booking creation or transportation is not available for the specified lodging (or any lodging), arrivial information may be provided. When arrival information is available, the booking response will include an `arrival` property that provides arrival information as shown in the example below.
 
 Example booking response with `arrival` property:
 
@@ -718,3 +720,5 @@ The `arrival` object provides the following properties:
 * `display_text`: `string`
 
   A formatted string that can be shown to customers.
+
+Note: the `arrival` property will have a `null` value if pickup information is available.
