@@ -54,6 +54,30 @@ Example response:
       ]
     }
 
+## Availability Lodgings
+
+`GET /companies/<shortname>/availabilities/<availability.pk>/lodgings/`
+
+Returns an array of `Lodging` objects that include availability specific data.
+
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/availabilities/4786/lodgings/
+
+Example response:
+
+    {
+      "lodgings": [
+        {
+          "pk": 231,
+          "name": "Wyndham Royal Garden",
+          "is_pickup_available": true
+        }
+      ]
+    }
+
+The `is_pickup_available` property indicates whether a pickup is offered for the lodging (for the availability specified in the request URL). This value reflects the current state of the system and can change when updates are made.
+
 ## Items
 
 `GET /companies/<shortname>/items/`
