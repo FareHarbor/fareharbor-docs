@@ -141,6 +141,10 @@ Items represent a particular kind of tour that the company offers.
   The location of the item; generally where the activity takes place
   or where the tour leaves from, but can be anything. Unstructured.
 
+* `is_pickup_ever_available`: `bool`
+
+  Indicates whether the item is configured to provide pickups.
+
 * `image_cdn_url`: `string`
 
   A URL to the item's primary image.
@@ -160,6 +164,7 @@ Example:
       "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
       "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
       "location": "Honolulu, HI",
+      "is_pickup_ever_available": true,
       "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/",
       "images": [
         {
