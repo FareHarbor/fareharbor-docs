@@ -104,6 +104,7 @@ Example response:
           "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
           "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
           "location": "Honolulu, HI",
+          "is_pickup_ever_available": true,
           "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/",
           "images": [
             {
@@ -128,6 +129,7 @@ Example response:
           "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
           "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
           "location": "Honolulu, HI",
+          "is_pickup_ever_available": true,
           "image_cdn_url": "",
           "images": []
         }
