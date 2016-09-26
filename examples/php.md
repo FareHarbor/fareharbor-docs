@@ -34,7 +34,7 @@ Httpful PHP library. See the [installation instructions](http://phphttpclient.co
     echo "<ul>";
     foreach ($companies as $company) {
         echo "<li>";
-        echo "$company->shortname";
+        echo $company->shortname;
         echo "</li>";
     }
     echo "</ul>";
@@ -112,7 +112,9 @@ Httpful PHP library. See the [installation instructions](http://phphttpclient.co
         "email" => "johndoe@gmail.com"
     );
 
-    $customers = array(array("customer_type_rate" => "$customer_type_rate->pk"));
+    $customers = array(
+        array("customer_type_rate" => $customer_type_rate->pk)
+    );
 
     $data = array(
         "contact" => $contact,
@@ -177,7 +179,7 @@ Httpful PHP library. See the [installation instructions](http://phphttpclient.co
     echo "<ul>";
     foreach ($companies as $company) {
         echo "<li>";
-        echo "$company->shortname";
+        echo $company->shortname;
         echo "</li>";
     }
     echo "</ul>";
@@ -255,7 +257,9 @@ Httpful PHP library. See the [installation instructions](http://phphttpclient.co
         "email" => "johndoe@gmail.com"
     );
 
-    $customers = array(array("customer_type_rate" => "$customer_type_rate->pk"));
+    $customers = array(
+        array("customer_type_rate" => $customer_type_rate->pk)
+    );
 
     $data = array(
         "contact" => $contact,
