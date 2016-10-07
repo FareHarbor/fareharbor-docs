@@ -590,9 +590,7 @@ The ellipses in the above example represent properties that have been left out f
 
 Initially all companies will use a "48 hours prior, 100% refund" policy; however, we expect to expand support for various kinds of cancellation policies in the future.
 
-#### Planned: Rebooking
-
-Note: this functionality is not available yet.
+#### Rebooking
 
 If it is necessary to change a booking to another date/time or change customer types/count, the booking must be cancelled and a new booking must be created.  Rebooking is a shortcut for that process.
 
