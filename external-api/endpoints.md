@@ -594,7 +594,7 @@ Initially all companies will use a "48 hours prior, 100% refund" policy; however
 
 If it is necessary to change a booking to another date/time or change customer types/count, the booking must be cancelled and a new booking must be created.  Rebooking is a shortcut for that process.
 
-To rebook an existing booking, specify the existing booking's UUID value for the `rebooking` property when creating a booking.
+To rebook an existing booking, specify the existing booking's UUID value for the `rebooking` property when creating a booking. Note: valid values for all properties required by the create booking request must be provided.
 
 Example request:
 
