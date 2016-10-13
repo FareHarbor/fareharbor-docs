@@ -590,6 +590,82 @@ The ellipses in the above example represent properties that have been left out f
 
 Initially all companies will use a "48 hours prior, 100% refund" policy; however, we expect to expand support for various kinds of cancellation policies in the future.
 
+##### Effective Cancellation Policies
+
+The functionality detailed in this section is not yet available.
+
+###### [Planned] Items Endpoint
+
+A new `effective_cancellation_policy` property will be provided for each item that specifies data regarding the effective cancellation policy as shown in the example below:
+
+    {
+        "items": [
+            {
+                "pk": 123,
+                "name": "Surf Lesson",
+                "effective_cancellation_policy": {
+                    "type": "hours-before-start",
+                    "cutoff_hours_before": 48
+                },
+                ...
+            },
+            ...
+        ]
+    }
+
+The `type` property will specify the effective cancellation policy type. The following types will be supported:
+
+* "hours-before-start" - bookings are eligible for cancellation some number of hours before availability start time.
+* "hours-before-midnight" - bookings are eligible for cancellation some number of hours before midnight on availability start date.
+* "always" - bookings are eligible for cancellation up until a cutoff that is determined by the availability (usually the availability start time).
+* "never" - bookings are never eligible for cancellation (e.g. no effective cancellation policy, insufficient privileges, cancellation disallowed by policy).
+
+The `cutoff_hours_before` property will specify the number of hours for the "hours-before-start" and "hours-before-midnight" types. Note: this value can be negative indicating that bookings can be cancelled some number of hours after availability start time (when type is "hours-before-start") or some number of hours after midnight on availability start date (when type is "hours-before-midnight"). The `cutoff_hours_before` property will provide `null` when no cutoff is applicable (when bookings are never elgible for cancellation).
+
+###### [Planned] Availability Endpoints
+
+A new `effective_cancellation_policy` property will be provided for each availability that specifies data regarding the effective cancellation policy as shown in the example below:
+
+    {
+        "availabilities": [
+            {
+                "pk": 8901,
+                "effective_cancellation_policy": {
+                    "type": "hours-before-start",
+                    "cutoff": "2017-01-22T13:30:00-1000"
+                },
+                ...
+            },
+            ...
+        ]
+    }
+
+The `type` property will specify the effective cancellation policy type (see the items endpoint section for more details).
+
+The `cutoff` property will specify the last possible time (ISO8601 timestamp) bookings are eligible for cancellation. The `cutoff` property will provide `null` when no cutoff is applicable (when bookings are never elgible for cancellation).
+
+###### [Planned] Retrieve Booking Endpoint
+
+A new `is_eligible_for_cancellation` and `effective_cancellation_policy` property will be provided as shown in the example below:
+
+    {
+        "booking": {
+            "pk": 578997533,
+            "is_eligible_for_cancellation": true,
+            "effective_cancellation_policy": {
+                "type": "hours-before-start",
+                "cutoff": "2017-01-22T13:30:00-1000"
+            },
+            ...
+        }
+    }
+
+The `is_eligible_for_cancellation` property provides a boolean value indicating whether the booking is currently eligible for cancellation.
+
+The `type` property will specify the effective cancellation policy type (see the items endpoint section for more details).
+
+The `cutoff` property will specify the last possible time (ISO8601 timestamp) the booking is eligible for cancellation. The `cutoff` property will provide `null` when no cutoff is applicable (when the booking is never elgible for cancellation).
+
 #### Rebooking
 
 If it is necessary to change a booking to another date/time or change customer types/count, the booking must be cancelled and a new booking must be created.  Rebooking is a shortcut for that process.
