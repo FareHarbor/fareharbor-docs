@@ -596,7 +596,7 @@ The functionality detailed in this section is not yet available.
 
 ###### [Planned] Items Endpoint
 
-A new `effective_cancellation_policy` property will be provided for each item that specifies data regarding the effective cancellation policy as shown in the example below:
+When `detailed=yes` is specified as the query string for the items endpoint, a new `effective_cancellation_policy` property will be provided for each item that specifies data regarding the effective cancellation policy as shown in the example below:
 
     {
         "items": [
@@ -624,7 +624,7 @@ The `cutoff_hours_before` property will specify the number of hours for the "hou
 
 ###### [Planned] Availability Endpoints
 
-A new `effective_cancellation_policy` property will be provided for each availability that specifies data regarding the effective cancellation policy as shown in the example below:
+When `detailed=yes` is specified as the query string for the availabilities endpoints, a new `effective_cancellation_policy` property will be provided for each availability that specifies data regarding the effective cancellation policy as shown in the example below:
 
     {
         "availabilities": [
