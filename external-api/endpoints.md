@@ -591,10 +591,7 @@ The ellipses in the above example represent properties that have been left out f
 Initially all companies will use a "48 hours prior, 100% refund" policy; however, we expect to expand support for various kinds of cancellation policies in the future.
 
 ##### Effective Cancellation Policies
-
-The functionality detailed in this section is not yet available.
-
-###### [Planned] Items Endpoint
+###### Items Endpoint
 
 When `detailed=yes` is specified as the query string for the items endpoint, a new `effective_cancellation_policy` property will be provided for each item that specifies data regarding the effective cancellation policy as shown in the example below:
 
@@ -622,7 +619,7 @@ The `type` property will specify the effective cancellation policy type. The fol
 
 The `cutoff_hours_before` property will specify the number of hours for the "hours-before-start" and "hours-before-midnight" types. Note: this value can be negative indicating that bookings can be cancelled some number of hours after availability start time (when type is "hours-before-start") or some number of hours after midnight on availability start date (when type is "hours-before-midnight"). The `cutoff_hours_before` property will provide `null` when no cutoff is applicable (when bookings are never elgible for cancellation).
 
-###### [Planned] Availability Endpoints
+###### Availability Endpoints
 
 When `detailed=yes` is specified as the query string for the availabilities endpoints, a new `effective_cancellation_policy` property will be provided for each availability that specifies data regarding the effective cancellation policy as shown in the example below:
 
@@ -644,7 +641,7 @@ The `type` property will specify the effective cancellation policy type (see the
 
 The `cutoff` property will specify the last possible time (ISO8601 timestamp) bookings are eligible for cancellation. The `cutoff` property will provide `null` when no cutoff is applicable (when bookings are never elgible for cancellation).
 
-###### [Planned] Retrieve Booking Endpoint
+###### Retrieve Booking Endpoint
 
 A new `is_eligible_for_cancellation` and `effective_cancellation_policy` property will be provided as shown in the example below:
 
