@@ -424,7 +424,7 @@ The following JSON schema is used to validate requests:
 
 For more information regarding JSON schemas, see: http://json-schema.org/
 
-#### Custom Field Values
+### Custom Field Values
 
 Booking custom fields:
 
@@ -663,7 +663,7 @@ The `type` property will specify the effective cancellation policy type (see the
 
 The `cutoff` property will specify the last possible time (ISO8601 timestamp) the booking is eligible for cancellation. The `cutoff` property will provide `null` when no cutoff is applicable (when the booking is never elgible for cancellation).
 
-#### Rebooking
+### Rebooking
 
 If it is necessary to change a booking to another date/time or change customer types/count, the booking must be cancelled and a new booking must be created.  Rebooking is a shortcut for that process.
 
@@ -721,7 +721,7 @@ Example rebooked booking:
         ...
     }
 
-#### Transportation
+### Transportation
 
 To request transportation for a booking, specify a `Lodging` pk for the `lodging` property when creating the booking as shown in the example below.
 
@@ -742,7 +742,7 @@ Example booking request body with a lodging specified:
        "lodging": 789
     }
 
-##### Pickup Information
+#### Pickup Information
 
 When a lodging is specified during booking creation and transportation is available for the lodging, the booking response will include a `pickup` property that provides pickup information as shown in the example below.
 
@@ -786,7 +786,7 @@ The `pickup` object provides the following properties:
 
 Note: if a lodging is specified and transportation is not available for the specified lodging (or any lodging), the `pickup` property will have a `null` value.
 
-##### Arrival Information
+#### Arrival Information
 
 Arrival information is intended for customers who are providing their own transportation. When a lodging is not provided during booking creation or transportation is not available for the specified lodging (or any lodging), arrivial information may be provided. When arrival information is available, the booking response will include an `arrival` property that provides arrival information as shown in the example below.
 
