@@ -501,6 +501,70 @@ or the booking will not be created.
 
   Each customer type rate being booked must actually belong to the availability being booked.
 
+### Party Size Restrictions
+
+Note: this section describes planned enhancements to the FareHarbor External API; party size restriction data is not currently available.
+
+#### [Planned] Availability Restrictions
+
+FareHarbor supports optional party size booking restrictions at the availability level. The following properties will be included for each availability provided by the availability endpoints to indicate applicable restrictions:
+
+* `minimum_party_size`: minimum number of customers currently allowed on a booking.
+* `maximum_party_size`: maximum number of customers currently allowed on a booking.
+
+For example:
+
+    {
+      "availabilities": [
+        {
+          "pk": 47836,
+          "minimum_party_size": 4,
+          "maximum_party_size": 12,
+          ...
+        },
+        ...
+      ]
+    }
+
+Note: a number value will be provided for enabled restrictions; a `null` value will be provided for restrictions that are not enabled.
+
+#### [Planned] Customer Type Rate Restrictions
+
+FareHarbor also supports optional party size booking restrictions at the customer type rate level. The following properties will be included for each customer type rate provided by availability endpoints to indicate applicable restrictions:
+
+* `minimum_party_size`: minimum number of the associated customer type allowed in a party.
+* `maximum_party_size`: maximum number of the associated customer type allowed in a party.
+
+Note: the `minimum_party_size` restriction only applies when at least one customer of the associated customer type is in the party.
+
+For example:
+
+    {
+      "availabilities": [
+        {
+          "pk": 47836,
+          "customer_type_rates": [
+            {
+              "pk": 659086,
+              "minimum_party_size": 2,
+              "maximum_party_size": 6,
+              "customer_type": {
+                "pk": 9178,
+                "singular": "Adult",
+                "plural": "Adults",
+                ...
+              },
+              ...
+            },
+            ...
+          ]
+        },
+        ...
+      ]
+    }
+
+Note: a number value will be provided for enabled restrictions; a `null` value will be provided for restrictions that are not enabled.
+
 ### Errors
 
 Assuming you've properly constructed your request, the most likely error you will encounter when
