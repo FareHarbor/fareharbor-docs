@@ -502,10 +502,7 @@ or the booking will not be created.
   Each customer type rate being booked must actually belong to the availability being booked.
 
 ### Party Size Restrictions
-
-Note: this section describes planned enhancements to the FareHarbor External API; party size restriction data is not currently available.
-
-#### [Planned] Availability Restrictions
+#### Availability Restrictions
 
 FareHarbor supports optional party size booking restrictions at the availability level. The following properties will be included for each availability provided by the availability endpoints to indicate applicable restrictions:
 
@@ -528,7 +525,7 @@ For example:
 
 Note: a number value will be provided for enabled restrictions; a `null` value will be provided for restrictions that are not enabled.
 
-#### [Planned] Customer Type Rate Restrictions
+#### Customer Type Rate Restrictions
 
 FareHarbor also supports optional party size booking restrictions at the customer type rate level. The following properties will be included for each customer type rate provided by availability endpoints to indicate applicable restrictions:
 
