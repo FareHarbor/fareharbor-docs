@@ -724,6 +724,23 @@ The `type` property will specify the effective cancellation policy type (see the
 
 The `cutoff` property will specify the last possible time (ISO8601 timestamp) the booking is eligible for cancellation. The `cutoff` property will provide `null` when no cutoff is applicable (when the booking is never elgible for cancellation).
 
+### Note
+
+The booking note can be changed by issuing a `PUT` request to the note endpoint with the new note; to clear the booking note, pass `""`.
+
+Example request:
+
+    $ curl -X POST \
+    -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
+    -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
+    -d \
+    '{
+       "note": "This is a *note*."
+     }' \
+    https://fareharbor.com/api/external/v1/companies/hawaiianadventures/bookings/d75102be-9732-4523-90a8-c698eff2b983/
+
+The response is the `Booking` object, with the `note` field updated.
+
 ### Rebooking
 
 If it is necessary to change a booking to another date/time or change customer types/count, the booking must be cancelled and a new booking must be created.  Rebooking is a shortcut for that process.
