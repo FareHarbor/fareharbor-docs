@@ -228,6 +228,10 @@ Cancel a booking:
 
 * `DELETE /companies/<shortname>/bookings/<Booking.uuid>/`
 
+Update the booking note:
+
+* `PUT /companies/<shortname>/bookings/<Booking.uuid>/note/`
+
 The result of both creating, retrieving, and cancelling a booking is a `Booking` object.
 
 Example request:
@@ -726,18 +730,18 @@ The `cutoff` property will specify the last possible time (ISO8601 timestamp) th
 
 ### Note
 
-The booking note can be changed by issuing a `PUT` request to the note endpoint with the new note; to clear the booking note, pass `""`.
+The booking note can be changed by issuing a `PUT` request to the note endpoint (`/companies/<shortname>/bookings/<Booking.uuid>/note`) with the new note; to clear the booking note, pass `""`.
 
 Example request:
 
-    $ curl -X POST \
+    $ curl -X PUT \
     -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
     -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
     -d \
     '{
        "note": "This is a *note*."
      }' \
-    https://fareharbor.com/api/external/v1/companies/hawaiianadventures/bookings/d75102be-9732-4523-90a8-c698eff2b983/
+    https://fareharbor.com/api/external/v1/companies/hawaiianadventures/bookings/d75102be-9732-4523-90a8-c698eff2b983/note/
 
 The response is the `Booking` object, with the `note` field updated.
 
