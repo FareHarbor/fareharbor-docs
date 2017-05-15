@@ -845,6 +845,30 @@ Example rebooked booking:
         ...
     }
 
+### Agents and desks
+
+To specify the booking agent (resp. desk), pass an `Agent` pk for the `agent` property (resp. `Desk` pk for the `desk` property), when creating the booking as shown in the example below.
+
+Example booking request body with both agent and desk specified:
+
+    {
+      "contact": {
+         "name": "John Doe",
+         "phone": "1234567890",
+         "email": "example@example.com"
+       },
+       "customers": [
+         {
+           "customer_type_rate": 933643
+         }
+       ],
+       "voucher_number": "1233456-1",
+       "agent": 123,
+       "desk": 456
+    }
+
+Specification of both agent and desk when booking is **optional**; you can specify neither, either, or both.  Do not specify `null`.
+
 ### Transportation
 
 To request transportation for a booking, specify a `Lodging` pk for the `lodging` property when creating the booking as shown in the example below.
