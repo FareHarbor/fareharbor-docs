@@ -53,6 +53,42 @@ Example:
       "name": "Hawaiian Adventures"
     }
 
+### Agent
+
+* `pk`: `number`
+
+  The agent's unique ID.
+
+* `name`: `string`
+
+  The agent's name.
+
+
+Example:
+
+    {
+      "pk": 231,
+      "name": "Eddie"
+    }
+
+### Desk
+
+* `pk`: `number`
+
+  The desk's unique ID.
+
+* `name`: `string`
+
+  The desk's name.
+
+
+Example:
+
+    {
+      "pk": 231,
+      "name": "Windward Side"
+    }
+
 ### Lodging
 
 * `pk`: `number`
