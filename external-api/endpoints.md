@@ -29,6 +29,48 @@ Example response:
       ]
     }
 
+## Agents
+
+`GET /companies/<shortname>/agents/`
+
+Returns an array of `Agent` objects.
+
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/agents/
+
+Example response:
+
+    {
+      "agents": [
+        {
+          "pk": 123,
+          "name": "Eddie"
+        }
+      ]
+    }
+
+## Desks
+
+`GET /companies/<shortname>/desks/`
+
+Returns an array of `Desk` objects.
+
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/desks/
+
+Example response:
+
+    {
+      "desks": [
+        {
+          "pk": 123,
+          "name": "Windward Side"
+        }
+      ]
+    }
+
 ## Lodgings
 
 `GET /companies/<shortname>/lodgings/`
