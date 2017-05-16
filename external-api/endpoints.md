@@ -31,7 +31,7 @@ Example response:
 
 ## Agents
 
-`GET /companies/<shortname>/agents/`
+`GET /companies/<affiliate-shortname>/agents/`
 
 Returns an array of `Agent` objects.
 
@@ -50,9 +50,11 @@ Example response:
       ]
     }
 
+Note that `affiliate-shortname` is the shortname of the affiliate company with which your user key is associated; agents are per-affiliate, not per company.
+
 ## Desks
 
-`GET /companies/<shortname>/desks/`
+`GET /companies/<affiliate-shortname>/desks/`
 
 Returns an array of `Desk` objects.
 
@@ -70,6 +72,8 @@ Example response:
         }
       ]
     }
+
+Note that `affiliate-shortname` is the shortname of the affiliate company with which your user key is associated; desks are per-affiliate, not per company.
 
 ## Lodgings
 
