@@ -289,14 +289,12 @@ Example:
 ### Availability
 
 Availability objects represent particular datetimes that an item goes out.
- 
+
+#### Minimal Representation
+
 * `pk`: `number`
 
   The availabilities's unique ID.
-
-* `item`: `Item`
-
-  The availability's item (minimal version).
 
 * `start_at`: `datetime`
 * `end_at`: `datetime`
@@ -311,11 +309,7 @@ Availability objects represent particular datetimes that an item goes out.
 
 * `customer_type_rates`: `[ CustomerTypeRate ]`
 
-  Pricing information for available customer types.
-
-* Planned: `custom_field_instances`: `[ CustomFieldInstance ]`
-
-  A list of custom field instances for the availability.
+  Pricing information for available customer types (minimal version).
 
 Example:
 
@@ -343,6 +337,20 @@ Example:
         }
       ]
     }
+
+#### Extended Representation
+
+* `item`: `Item`
+
+  The availability's item (minimal version).
+
+* `customer_type_rates`: `[ CustomerTypeRate ]`
+
+  Pricing information for available customer types (extended version).
+
+* `custom_field_instances`: `[ CustomFieldInstance ]`
+
+  A list of custom field instances for the availability.
 
 ### Booking
 
