@@ -184,18 +184,17 @@ Example response:
 
 ## Availabilities
 
-* `GET /companies/<shortname>/items/<item.pk>/availabilities/date/<date>/`
-* `GET /companies/<shortname>/items/<item.pk>/availabilities/date-range/<start-date>/<end-date>/`
+* `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date/<date>/`
+* `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/`
 
 Returns possibly-bookable availabilities for `date`, or for the range `start-date` through `end-date`.
-Note that possibly-bookable availabilies include those for which customers are requested to "call to book".
-Note that `date`, `start-date`, and `end-date` should be in the format YYYY-MM-DD.
+Note that possibly-bookable availabilies include those for which customers are requested to "call to book". Note that `date`, `start-date`, and `end-date` should be in the format YYYY-MM-DD.
 
-Returns an array of `Availability` objects.
+Returns an array of `Availability` objects (minimal representation).
 
 Example request:
 
-    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/1867/availabilities/date/2015-01-22/
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/1867/minimal/availabilities/date/2015-01-22/
 
 Example response:
 
@@ -213,9 +212,7 @@ Example response:
           "customer_type_rates": [
             {
               "pk": 65675,
-              "total": 20000,
               "capacity": 10,
-              "is_exclusive": false,
               "customer_type": {
                 "pk": 978,
                 "singular": "Adult",
@@ -226,37 +223,11 @@ Example response:
                 "pk": 2522,
                 "display_name": "Adult"
               }
-            }
+            },
+            ...
           ]
         },
-        {
-          "pk": 4787,
-          "start_at": "2015-01-22T13:30:00-1000",
-          "end_at": "2015-01-22T15:30:00-1000",
-          "capacity": 10,
-          "item": {
-            "pk": 1867,
-            "name": "Jet Ski Tour"
-          },
-          "customer_type_rates": [
-            {
-              "pk": 65675,
-              "total": 20000,
-              "capacity": 10,
-              "is_exclusive": false,
-              "customer_type": {
-                "pk": 978,
-                "singular": "Adult",
-                "plural"; "Adults",
-                "note": "At least 18 years old."
-              },
-              "customer_prototype": {
-                "pk": 2522,
-                "display_name": "Adult"
-              }
-            }
-          ]
-        }
+        ...
       ]
     }
 
