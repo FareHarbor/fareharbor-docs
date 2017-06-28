@@ -245,6 +245,8 @@ Example:
 Customer type rates set capacity and pricing information for customer types on
 a particular availability. 
 
+#### Minimal Representation
+
 * `pk`: `number`
 
   The customer type rate's unique ID.
@@ -252,10 +254,6 @@ a particular availability.
 * `customer_type`: `CustomerType`
 
 The customer type being priced.
-
-* `total`: `amount`
-
-  The price of a single customer of this type.
 
 * `capacity`: `number`
 
@@ -266,6 +264,32 @@ The customer type being priced.
 
   Indicates that this customer type rate is "exclusive"; see below for how exclusivity
   affects bookability.
+
+Example:
+
+    {
+      "pk": 978,
+      "capacity": 10,
+      "is_exclusive": false,
+      "customer_type": {
+        "pk": 589,
+        "singular": "Adult",
+        "plural"; "Adults",
+        "note": "At least 18 years old.",
+        "customer_prototype": {
+          "pk": 2522,
+          "display_name": "Adult"
+        }
+      }
+    }
+
+#### Extended Representation
+
+The extended representation provides additional information about the customer type rate (see below).
+
+* `total`: `amount`
+
+  The price of a single customer of this type.
 
 * `custom_field_instances`: `[ CustomFieldInstance ]`
 
@@ -282,8 +306,22 @@ Example:
         "pk": 589,
         "singular": "Adult",
         "plural"; "Adults",
-        "note": "At least 18 years old."
-      }
+        "note": "At least 18 years old.",
+        "customer_prototype": {
+          "pk": 2522,
+          "display_name": "Adult"
+        }
+      },
+      "custom_field_instances": [
+        {
+          "pk": 8629,
+          "custom_field": {
+            "pk": 43879,
+            "type": "yes-no",
+            ...
+          }
+        }
+      ]
     }
 
 ### Availability
