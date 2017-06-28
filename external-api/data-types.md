@@ -352,6 +352,56 @@ The extended representation provides additional information about the availabili
 
   A list of custom field instances for the availability.
 
+Example:
+
+    {
+      "pk": 4786,
+      "start_at": "2015-01-22T11:30:00-1000",
+      "end_at": "2015-01-22T13:30:00-1000",
+      "capacity": 10,
+      "item": {
+        "pk": 1867,
+        "name": "Jet Ski Tour"
+      },
+      "customer_type_rates": [
+        {
+          "pk": 65675,
+          "total": 20000,
+          "capacity": 10,
+          "customer_type": {
+            "pk": 978,
+            "singular": "Adult",
+            "plural"; "Adults",
+            "note": "At least 18 years old.",
+            "customer_prototype": {
+              "pk": 2522,
+              "display_name": "Adult"
+            },
+            "custom_field_instances": [
+              {
+                "pk": 8629,
+                "custom_field": {
+                  "pk": 43879,
+                  "type": "yes-no",
+                  ...
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "custom_field_instances": [
+        {
+          "pk": 47974,
+          "custom_field": {
+            "pk": 3387,
+            "type": "yes-no",
+            ...
+          }
+        }
+      ]
+    }
+
 ### Booking
 
 * `pk`: `number`
