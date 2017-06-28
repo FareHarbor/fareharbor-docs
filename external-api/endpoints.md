@@ -205,10 +205,6 @@ Example response:
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
           "capacity": 10,
-          "item": {
-            "pk": 1867,
-            "name": "Jet Ski Tour"
-          },
           "customer_type_rates": [
             {
               "pk": 65675,
