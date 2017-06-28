@@ -340,6 +340,8 @@ Example:
 
 #### Extended Representation
 
+The extended representation provides additional information about the availability (see below).
+
 * `item`: `Item`
 
   The availability's item (minimal version).
