@@ -60,6 +60,8 @@ Example:
 
 ### Company
 
+#### Minimal Representation
+
 A `Company` object represent an affiliate or provider.
 
 * `shortname`: `string`
@@ -75,6 +77,70 @@ Example:
     {
       "shortname": "hawaiianadventures",
       "name": "Hawaiian Adventures"
+
+#### Extended Representation
+
+The extended representation provides additional information about the company (see below).
+
+* `about`: `markdown`
+
+  About page content for the company.
+
+* `booking_notes`: `markdown`
+
+  General notes for booking customers.
+
+* `faq`: `markdown`
+
+  FAQ page content for the company.
+
+* `intro`: `markdown`
+
+  Homepage content for the company.
+
+* `summary`: `string`
+
+  A short tagline or summary for the company.
+
+* `address`: `Address`
+
+  The company's physical address.
+
+* `billing_address`: `Address`
+
+  The comapny's billing address.
+
+Example:
+
+    {
+      "company": {
+        "shortname": "hawaiianadventures",
+        "name": "Hawaiian Adventures",
+        "currency": "usd",
+        "about": "Hawaiian Adventures offers several water activities that you are sure to enjoy.",
+        "about_safe_html": "<p>Hawaiian Adventures offers several water activities that you are sure to enjoy.</p>",
+        "booking_notes": "Weather conditions will be evaluated at the time of check-in.\n\n-If using a voucher, please bring the voucher with you.",
+        "booking_notes_safe_html": "<p>Weather conditions will be evaluated at the time of check-in.\n\n-If using a voucher, please bring the voucher with you.</p>",
+        "faq": "# What should I bring?\n\nWe suggest that you bring a swimming suit, a towel, and sunscreen.",
+        "faq_safe_html": "<h1>What should I bring?</h1>\n<p>We suggest that you bring a swimming suit, sunscreen, and a towel.</p>",
+        "intro": "We offer the best water activities on Oahu",
+        "intro_safe_html": "<p>We offer the best water activities on Oahu</p>",
+        "summary": "Water activities 365 days a year",
+        "address": {
+          "city": "Honolulu",
+          "country": "US",
+          "postal_code": "96821",
+          "province": "HI",
+          "street": "123 Wailupe Cir"
+        },
+        "billing_address": {
+          "city": "Honolulu",
+          "country": "US",
+          "postal_code": "96821",
+          "province": "HI",
+          "street": "123 Wailupe Cir"
+        }
+      }
     }
 
 ### Agent
