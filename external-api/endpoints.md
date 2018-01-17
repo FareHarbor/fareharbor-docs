@@ -29,6 +29,49 @@ Example response:
       ]
     }
 
+## Company
+
+`GET /companies/<company-shortname>/`
+
+Returns a `Company` object (extended representation).
+
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/
+
+Example response:
+
+    {
+      "company": {
+        "shortname": "hawaiianadventures",
+        "name": "Hawaiian Adventures",
+        "currency": "usd",
+        "about": "Hawaiian Adventures offers several water activities that you are sure to enjoy.",
+        "about_safe_html": "<p>Hawaiian Adventures offers several water activities that you are sure to enjoy.</p>",
+        "booking_notes": "Weather conditions will be evaluated at the time of check-in.\n\nIf using a voucher, please bring the voucher with you.",
+        "booking_notes_safe_html": "<p>Weather conditions will be evaluated at the time of check-in.\n\nIf using a voucher, please bring the voucher with you.</p>",
+        "faq": "# What should I bring?\n\nWe suggest that you bring a swimming suit, sunscreen, and a towel.",
+        "faq_safe_html": "<h1>What should I bring?</h1>\n<p>We suggest that you bring a swimming suit, a towel, and sunscreen.</p>",
+        "intro": "We offer the best water activities on Oahu",
+        "intro_safe_html": "<p>We offer the best water activities on Oahu</p>",
+        "summary": "Water activities 365 days a year",
+        "address": {
+          "city": "Honolulu",
+          "country": "US",
+          "postal_code": "96821",
+          "province": "HI",
+          "street": "123 Wailupe Cir"
+        },
+        "billing_address": {
+          "city": "Honolulu",
+          "country": "US",
+          "postal_code": "96821",
+          "province": "HI",
+          "street": "123 Wailupe Cir"
+        }
+      }
+    }
+
 ## Agents
 
 `GET /companies/<affiliate-shortname>/agents/`
