@@ -72,11 +72,17 @@ A `Company` object represent an affiliate or provider.
 
   The company's name.
 
+* `currency`: `string`
+
+  The company's currency.
+
 Example:
 
     {
       "shortname": "hawaiianadventures",
-      "name": "Hawaiian Adventures"
+      "name": "Hawaiian Adventures",
+      "currency": "usd"
+    }
 
 #### Extended Representation
 
