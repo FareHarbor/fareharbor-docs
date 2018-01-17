@@ -34,6 +34,30 @@ All datetimes are returned in ISO8601 format; for example `2013-02-04T06:21:36+0
 
 ## Schemas
 
+### Address
+
+Structured address data.
+
+* `city`: `string`
+
+* `country`: `string`
+
+* `postal_code`: `string`
+
+* `province`: `string`
+
+* `street`: `string`
+
+Example:
+
+    {
+      "city": "Honolulu",
+      "country: "US",
+      "postal_code": "96821",
+      "province": "HI",
+      "street": "123 Wailupe Cir"
+    }
+
 ### Company
 
 A `Company` object represent an affiliate or provider.
