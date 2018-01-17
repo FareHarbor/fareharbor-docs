@@ -114,7 +114,7 @@ The extended representation provides additional information about the company (s
 
 * `billing_address`: `Address`
 
-  The comapny's billing address.
+  The company's billing address.
 
 Example:
 
