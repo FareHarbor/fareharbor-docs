@@ -2,7 +2,9 @@
 
 FareHarbor can notify you of updates via a simple webhook. At this time you can
 provide two URLs, one for production notifications and one for test notifications, by contacting
-<support@fareharbor.com>.
+<support@fareharbor.com>. In production, SSL certificates will be verified.
+
+Note: companies in demo mode will not trigger webhook requests.
 
 ## Booking notifications
 
