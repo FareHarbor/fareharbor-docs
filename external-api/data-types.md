@@ -285,6 +285,10 @@ Items represent a particular kind of tour that the company offers.
 
   An array of `Image` objects associated with the item.
 
+* `customer_prototypes`: `[ CustomerPrototype ]`
+
+  An array of `CustomerPrototype` objects associated with the item.
+
 Example:
 
     {
@@ -303,6 +307,13 @@ Example:
           "pk": 687,
           "gallery": "carousel",
           "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
+        }
+      ],
+      "customer_prototypes": [
+        {
+          "pk": 2522,
+          "display_name": "Adult",
+          "total": 20000
         }
       ]
     }
@@ -334,6 +345,28 @@ Example:
       "singular": "Adult",
       "plural"; "Adults",
       "note": "At least 18 years old."
+    }
+
+### Customer Prototype
+
+* `pk`: `number`
+
+  The customer prototype's unique ID.
+
+* `display_name`: `string`
+
+  The customer prototype's display name.
+
+* `total`: `amount`
+
+  The price of a single customer of this type.
+
+Example:
+
+    {
+      "pk": 2522,
+      "display_name": "Adult",
+      "total": 20000
     }
 
 ### Customer Type Rate
@@ -374,7 +407,8 @@ Example:
         "note": "At least 18 years old.",
         "customer_prototype": {
           "pk": 2522,
-          "display_name": "Adult"
+          "display_name": "Adult",
+          "total": 20000
         }
       }
     }
@@ -405,7 +439,8 @@ Example:
         "note": "At least 18 years old.",
         "customer_prototype": {
           "pk": 2522,
-          "display_name": "Adult"
+          "display_name": "Adult",
+          "total": 20000
         }
       },
       "custom_field_instances": [
@@ -463,7 +498,8 @@ Example:
             "note": "At least 18 years old.",
             "customer_prototype": {
               "pk": 2522,
-              "display_name": "Adult"
+              "display_name": "Adult",
+              "total": 20000
             }
           }
         }
@@ -509,7 +545,8 @@ Example:
             "note": "At least 18 years old.",
             "customer_prototype": {
               "pk": 2522,
-              "display_name": "Adult"
+              "display_name": "Adult",
+              "total": 20000
             },
             "custom_field_instances": [
               {

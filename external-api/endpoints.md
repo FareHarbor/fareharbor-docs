@@ -205,7 +205,8 @@ Example response:
           "customer_prototypes": [
             {
               "pk": 2522,
-              "display_name": "Adult"
+              "display_name": "Adult",
+              "total": 20000
             }
           ]
         },
@@ -305,7 +306,8 @@ Example response:
             },
             "customer_prototype": {
               "pk": 2522,
-              "display_name": "Adult"
+              "display_name": "Adult",
+              "total": 20000
             },
             "custom_field_instances": [
               {
@@ -410,7 +412,8 @@ Example response:
               },
               "customer_prototype": {
                 "pk": 2522,
-                "display_name": "Adult"
+                "display_name": "Adult",
+                "total": 20000
               }
             }
           ]
@@ -435,7 +438,8 @@ Example response:
               },
               "customer_prototype": {
                 "pk": 2522,
-                "display_name": "Adult"
+                "display_name": "Adult",
+                "total": 20000
               }
             }
           },
@@ -453,7 +457,8 @@ Example response:
               },
               "customer_prototype": {
                 "pk": 2522,
-                "display_name": "Adult"
+                "display_name": "Adult",
+                "total": 20000
               }
             }
           }
