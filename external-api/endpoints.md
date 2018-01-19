@@ -355,7 +355,7 @@ Update the booking note:
 
 * `PUT /companies/<shortname>/bookings/<Booking.uuid>/note/`
 
-The result of both creating, retrieving, and cancelling a booking is a `Booking` object.
+The result of creating, retrieving, or cancelling a booking is a `Booking` object.
 
 Example request:
 
@@ -462,9 +462,10 @@ Example response:
               }
             }
           }
-        ]
-      },
-      "invoice_price": null
+        ],
+        "invoice_price": null,
+        "order": null
+      }
     }
 
 ### Request Schema
@@ -1074,7 +1075,7 @@ Example of the `order` property for a booking that *does* belong to an order:
         "booking": {
             "pk": 456,
             "order": {
-              "display_id": "ABTT"
+                "display_id": "ABTT"
             },
             ...
         }
@@ -1086,4 +1087,4 @@ When `order` is not `null`, `order` is an object that provides the following pro
 
   A unique identifier for the order.
 
-Note that this API does not currently provide a way to create orders.
+Note that there is not currently a way to create orders via the API.
