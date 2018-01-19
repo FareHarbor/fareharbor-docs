@@ -1054,7 +1054,7 @@ Note: the `arrival` property will have a `null` value if pickup information is a
 
 ### Orders
 
-Orders are a way of grouping collections of bookings, so that they can be created or cancelled as a block.
+Orders are a way of grouping collections of bookings so that they can be created or cancelled as a block.
 
 A booking can belong to an order, but it doesn't have to. An order can include any number of bookings.
 
