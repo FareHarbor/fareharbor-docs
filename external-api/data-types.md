@@ -235,7 +235,7 @@ Example:
 * `image_cdn_url`: `string`
 
   The image's URL.
-  
+
 Example:
 
     {
@@ -253,7 +253,7 @@ Items represent a particular kind of tour that the company offers.
   The item's unique ID.
 
 * `name`: `string`
-    
+
   The name of the item.
 
 * `headline`: `string`
@@ -372,7 +372,7 @@ Example:
 ### Customer Type Rate
 
 Customer type rates set capacity and pricing information for customer types on
-a particular availability. 
+a particular availability.
 
 #### Minimal Representation
 
@@ -387,7 +387,7 @@ The customer type being priced.
 * `capacity`: `number`
 
   The maximum number of customers of this type that can currently book this availability;
-  this number will change over time as other customers book. 
+  this number will change over time as other customers book.
 
 * `is_exclusive`: `bool`
 
@@ -474,7 +474,7 @@ Availability objects represent particular datetimes that an item goes out.
 * `capacity`: `number`
 
   The overall maximum number of customers that can currently book this availability;
-  this number will change over time as other customers book. 
+  this number will change over time as other customers book.
 
 * `customer_type_rates`: `[ CustomerTypeRate ]`
 
@@ -573,6 +573,18 @@ Example:
       ]
     }
 
+### Order
+
+Orders are a way of grouping collections of bookings, so that they can be created or cancelled as a block.
+
+A booking can belong to an order, but it doesn't have to. An order can include any number of bookings.
+
+#### Representation
+
+* `display_id`: `string`
+
+  A unique identifier for the order.
+
 ### Booking
 
 * `pk`: `number`
@@ -590,29 +602,29 @@ Example:
 * `availability`: `Availability`
 
   The availability to which this booking corresponds.
- 
+
 * `contact`: `Contact`
 
   Contact information for this booking.  A contact consists of:
-    
+
     * `name`: `string`
-    
+
         The name of the head of the party.
-        
+
     * `phone`: `string`
-    
+
         The contact phone number for the party.
-        
+
     * `email`: `string`
-    
+
         The contact email for the party.
 
 * `customers`: `[ Customer ]`
 
   A list of customers on this booking.  Customers consist of:
-  
+
     * `customer_type_rate`: `CustomerTypeRate`
-    
+
       The customer type rate to which this customer corresponds.
 
     * `custom_field_values`: `[ CustomFieldValue ]`
@@ -632,6 +644,10 @@ Example:
 * `confirmation_url`: `string`
 
   The booking's confirmation page URL.
+
+* `order`: `Order | null`
+
+  When there is no order associated with the booking, `order` will be `null`.
 
 Example:
 
@@ -697,7 +713,8 @@ Example:
           }
         }
       ],
-      "invoice_price": null
+      "invoice_price": null,
+      "order": null
     }
 
 ### Capacities
@@ -705,7 +722,7 @@ Example:
 Note that availabilities have both an overall capacity, and customer type rates have an (optional) capacity.
 Both capacities, if specified, cannot be exceeded, despite the fact that the sum of available
 capacities of the customer type rates may not match the available capacity of the availability
-itself. 
+itself.
 
 ### Extended Option
 
@@ -782,7 +799,7 @@ Extended options are applicable to custom fields of type `extended-option`.
 
 * `booking_notes`: `markdown`
 
-  Notes for the customer specific to the custom field. 
+  Notes for the customer specific to the custom field.
 
 * `offset`: `amount`
 
@@ -811,6 +828,6 @@ Extended options are applicable to custom fields of type `extended-option`.
 
 * `value`: `string`
 
-  A string up to 2048 characters. If the custom field is of type `yes-no`, 
-  "true" or "false" must be specified. If the custom field is of type 
+  A string up to 2048 characters. If the custom field is of type `yes-no`,
+  "true" or "false" must be specified. If the custom field is of type
   `extended-option`, an extended option pk must be specified.
