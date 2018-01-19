@@ -579,8 +579,6 @@ Orders are a way of grouping collections of bookings so that they can be created
 
 A booking can belong to an order, but it doesn't have to. An order can include any number of bookings.
 
-#### Representation
-
 * `display_id`: `string`
 
   A unique identifier for the order.
