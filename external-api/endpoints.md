@@ -210,7 +210,7 @@ Example response:
             }
           ]
         },
-        { 
+        {
           "pk": 1963,
           "name": "Surfing 101",
           "headline": "Learn to surf!",
@@ -355,7 +355,7 @@ Update the booking note:
 
 * `PUT /companies/<shortname>/bookings/<Booking.uuid>/note/`
 
-The result of both creating, retrieving, and cancelling a booking is a `Booking` object.
+The result of creating, retrieving, or cancelling a booking is a `Booking` object.
 
 Example request:
 
@@ -365,10 +365,10 @@ Example request:
     -d \
     '{
        "contact": {
-         "name": "John Doe", 
-         "phone": "415-789-4563", 
+         "name": "John Doe",
+         "phone": "415-789-4563",
          "email": "johndoe@example.com"
-       }, 
+       },
        "customers": [
          {
            "customer_type_rate": 65675
@@ -462,9 +462,10 @@ Example response:
               }
             }
           }
-        ]
-      },
-      "invoice_price": null
+        ],
+        "invoice_price": null,
+        "order": null
+      }
     }
 
 ### Request Schema
@@ -567,7 +568,7 @@ Booking custom fields:
 
 Customer custom fields:
 
-  Values for customer custom fields are specified by including a 
+  Values for customer custom fields are specified by including a
   `custom_field_values` property at the customer level with the following form:
 
   * `customers`: `array`
@@ -1051,3 +1052,39 @@ The `arrival` object provides the following properties:
   A formatted string that can be shown to customers.
 
 Note: the `arrival` property will have a `null` value if pickup information is available.
+
+### Orders
+
+Orders are a way of grouping collections of bookings so that they can be created or cancelled as a block.
+
+A booking can belong to an order, but it doesn't have to. An order can include any number of bookings.
+
+Example of the `order` property for a booking that does not belong to an order:
+
+    {
+        "booking": {
+            "pk": 456,
+            "order": null,
+            ...
+        }
+    }
+
+Example of the `order` property for a booking that *does* belong to an order:
+
+    {
+        "booking": {
+            "pk": 456,
+            "order": {
+                "display_id": "ABTT"
+            },
+            ...
+        }
+    }
+
+When `order` is not `null`, `order` is an object that provides the following property:
+
+* `display_id`: `string`
+
+  A unique identifier for the order.
+
+Note that there is not currently a way to create orders via the API.
