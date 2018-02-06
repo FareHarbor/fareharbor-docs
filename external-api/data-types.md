@@ -621,6 +621,10 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
   A list of customers on this booking.  Customers consist of:
 
+    * `checkin_url`: `string`
+
+      A short URL that can be rendered as a QR code for check-in purposes (the QR code should be "type 4" with "error correction H").
+
     * `customer_type_rate`: `CustomerTypeRate`
 
       The customer type rate to which this customer corresponds.
@@ -683,6 +687,7 @@ Example:
       },
       "customers": [
         {
+          "checkin_url": "https://fhchk.co/abc",
           "customer_type_rate": {
             "pk": 65675,
             "total": 20000,
@@ -697,6 +702,7 @@ Example:
           }
         },
         {
+          "checkin_url": "https://fhchk.co/def",
           "customer_type_rate": {
             "pk": 65675,
             "total": 20000,
