@@ -425,6 +425,7 @@ Example response:
         },
         "customers": [
           {
+            "checkin_url": "https://fhchk.co/abc",
             "customer_type_rate": {
               "pk": 65675,
               "total": 20000,
@@ -444,6 +445,7 @@ Example response:
             }
           },
           {
+            "checkin_url": "https://fhchk.co/def",
             "customer_type_rate": {
               "pk": 65675,
               "total": 20000,
