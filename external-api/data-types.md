@@ -305,6 +305,11 @@ Example:
       "headline": "Epic Jet Ski Tour",
       "description": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.",
       "description_safe_html": "\u003cp\u003eWe are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.\u003c\/p\u003e",
+      "description_text": "We are conveniently located just 5 minutes from Waikiki and will arrange for pickup\/dropoff at or near your hotel.",
+      "description_bullets": [
+        "Located just 5 minutes from Waikiki.",
+        "Transportation included."
+      ],
       "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
       "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
       "location": "Honolulu, HI",
