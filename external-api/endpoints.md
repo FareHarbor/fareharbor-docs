@@ -190,6 +190,11 @@ Example response:
           "headline": "Epic Jet Ski Tour",
           "description": "See Honolulu from a jet ski!",
           "description_safe_html": "\u003cp\u003eSee Honolulu from a jet ski!\u003c\/p\u003e",
+          "description_text": "See Honolulu from a jet ski!",
+          "description_bullets": [
+            "Located just 5 minutes from Waikiki.",
+            "Transportation included."
+          ],
           "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
           "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
           "location": "Honolulu, HI",
@@ -216,6 +221,11 @@ Example response:
           "headline": "Learn to surf!",
           "description": "This is an introductory lesson.",
           "description_safe_html": "\u003cp\u003eThis is an introductory lesson.\u003c\/p\u003e",
+          "description_text": "This is an introductory lesson.",
+          "description_bullets": [
+            "Located just 5 minutes from Waikiki.",
+            "Transportation included."
+          ],
           "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
           "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
           "location": "Honolulu, HI",
