@@ -264,6 +264,10 @@ Items represent a particular kind of tour that the company offers.
 
   The item's description.
 
+* `description_text`: `string`
+
+  The item's plain-text description.
+
 * `cancellation_policy`: `markdown`
 
   The item's cancellation policy.
