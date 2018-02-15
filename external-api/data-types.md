@@ -268,6 +268,10 @@ Items represent a particular kind of tour that the company offers.
 
   The item's plain-text description.
 
+* `description_bullets`: `[ string ]`
+
+  An array containing plain-text descriptive bullet points for the item.
+
 * `cancellation_policy`: `markdown`
 
   The item's cancellation policy.
