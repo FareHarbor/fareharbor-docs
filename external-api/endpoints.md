@@ -944,9 +944,13 @@ Example rebooked booking:
 
 ### Agents and desks
 
-To specify the booking agent (resp. desk), pass an `Agent` pk for the `agent` property (resp. `Desk` pk for the `desk` property), when creating the booking as shown in the example below.
+When creating a booking, you can specify the booking agent by pk, by name, or not at all. It is an error to specify both an agent pk and a name.
 
-Example booking request body with both agent and desk specified:
+Similarly, you can specify a desk pk, a desk name, or neither, but not both.
+
+To specify the booking agent by pk, pass an `Agent` pk for the `agent` property. To specify the agent by name, pass an `Agent` name for the `agent_name` property. (Resp. `Desk` pk for the `desk` property, `Desk` name for the `desk_name` property).
+
+Example booking request body with both agent and desk specified by pk:
 
     {
       "contact": {
@@ -964,7 +968,25 @@ Example booking request body with both agent and desk specified:
        "desk": 456
     }
 
-Specification of both agent and desk when booking is **optional**; you can specify neither, either, or both.  Do not specify `null`.
+Example booking request body with both agent and desk specified by name:
+
+    {
+      "contact": {
+         "name": "John Doe",
+         "phone": "1234567890",
+         "email": "example@example.com"
+       },
+       "customers": [
+         {
+           "customer_type_rate": 933643
+         }
+       ],
+       "voucher_number": "1233456-1",
+       "agent_name": "Eddie",
+       "desk_name": "Windward Side"
+    }
+
+Specification of agent and desk when booking is **optional**; you can specify neither, either, or both. If you do wish not to specify one or the other, do not pass a `null` value; instead, simply omit the property.
 
 ### Transportation
 
