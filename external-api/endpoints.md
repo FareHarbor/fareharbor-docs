@@ -986,7 +986,7 @@ Example booking request body with both agent and desk specified by name:
        "desk_name": "Windward Side"
     }
 
-Specification of agent and desk when booking is **optional**; you can specify neither, either, or both. If you do wish not to specify one or the other, do not pass a `null` value; instead, simply omit the property.
+Specification of agent and desk when booking is **optional**; you can specify neither, either, or both. If you do not wish to specify one or the other, do not pass a `null` value; instead, simply omit the property.
 
 ### Transportation
 
