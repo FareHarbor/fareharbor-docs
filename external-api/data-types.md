@@ -244,6 +244,16 @@ Example:
       "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
     }
 
+### Tag
+
+* `name`: `string`
+
+  The tag's display name.
+
+* `short_name`: `string`
+
+  The tag's short name. The short name is unique per company and is limited to lowercase letters (a-z), digits (0-9), and the dash character.
+
 ### Item
 
 Items represent a particular kind of tour that the company offers.
