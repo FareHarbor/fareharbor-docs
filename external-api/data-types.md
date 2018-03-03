@@ -244,6 +244,34 @@ Example:
       "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/rvybRyLWTgyV5w4xg42p\/"
     }
 
+### Cancellation Policy
+
+* `type`: `string`
+
+  The cancellation policy's type. Supported types:
+
+  * `hours-before-start`
+
+      Bookings are eligible for cancellation some number of hours before availability start time.
+
+  * `hours-before-midnight`
+
+      Bookings are eligible for cancellation some number of hours before midnight on availability start date.
+
+  * `always`
+
+      Bookings are eligible for cancellation up until a cutoff that is determined by the availability (usually the availability start time).
+
+  * `never`
+
+      Bookings are never eligible for cancellation (e.g. no effective cancellation policy, insufficient privileges, cancellation disallowed by policy).
+
+* `cutoff_hours_before`: `number`
+
+  The number of hours for the `hours-before-start` and `hours-before-midnight` types.
+
+  Note: this value can be negative indicating that bookings can be cancelled some number of hours after availability start time (when type is `hours-before-start`) or some number of hours after midnight on availability start date (when type is `hours-before-midnight`). The `cutoff_hours_before` property will provide `null` when no cutoff is applicable (when bookings are never elgible for cancellation).
+
 ### Tag
 
 * `name`: `string`
