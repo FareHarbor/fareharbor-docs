@@ -369,6 +369,44 @@ Example:
       ]
     }
 
+#### Item Details
+
+When `detailed=yes` is specified as the query string for the items endpoint, additional details are provided for each item.
+
+* `effective_cancellation_policy`: `CancellationPolicy`
+
+  Cancellation policy data for the item.
+
+* `tags`: `[ Tag ]`
+
+  An array of `Tag` objects associated with the item.
+
+Example:
+
+    {
+      "pk": 1867,
+      "effective_cancellation_policy": {
+        "type": "hours-before-start",
+        "cutoff_hours_before": 24
+      },
+      "tags": [
+        {
+          "name": "Jet ski tour",
+          "short_name": "jet-ski-tour"
+        },
+        {
+          "name": "Water activity",
+          "short_name": "water-activity"
+        },
+        {
+          "name": "Transportation included",
+          "short_name": "transportation"
+        },
+        ...
+      ],
+      ...
+    }
+
 ### Customer Type
 
 Customer types represent different kinds of customers that might do an activity, for
