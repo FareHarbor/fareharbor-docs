@@ -266,9 +266,9 @@ Example:
 
   The location's longitude.
 
-* `lattitude`: `number | null`
+* `latitude`: `number | null`
 
-  The location's lattitude.
+  The location's latitude.
 
 * `google_place_id`: `string`
 
