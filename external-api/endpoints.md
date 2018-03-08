@@ -229,6 +229,25 @@ Example response:
           "cancellation_policy": "A full refund will be issued if notice is given at least 24 hours before start time.",
           "cancellation_policy_safe_html": "\u003cp\u003eA full refund will be issued if notice is given at least 24 hours before start time.\u003c\/p\u003e",
           "location": "Honolulu, HI",
+          "locations": [
+            {
+              "pk": 234234,
+              "type": "primary",
+              "note": "Next to the blue fence.",
+              "note_safe_html": "<p>Next to the blue fence.</p>",
+              "address": {
+                "city": "Honolulu",
+                "country": "US",
+                "postal_code": "96821",
+                "province": "HI",
+                "street": "123 Wailupe Cir"
+              },
+              "longitude": 21.3069,
+              "latitude": -157.8583,
+              "google_place_id": "ChIJYZ4srGUSAHwRT1Da4amp3x",
+              "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d184886-Reviews-Epic_Jet_Ski_Tour-Honolulu_Oahu_Hawaii.html",
+            }
+          ],
           "is_pickup_ever_available": true,
           "image_cdn_url": "",
           "images": []
