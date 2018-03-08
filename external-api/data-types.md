@@ -395,7 +395,13 @@ Example:
           "type": "primary",
           "note": "Next to the blue fence.",
           "note_safe_html": "<p>Next to the blue fence.</p>",
-          "address": "TODO",
+          "address": {
+            "city": "Honolulu",
+            "country": "US",
+            "postal_code": "96821",
+            "province": "HI",
+            "street": "123 Wailupe Cir"
+          },
           "longitude": 21.3069,
           "latitude": -157.8583,
           "google_place_id": "ChIJYZ4srGUSAHwRT1Da4amp3x",
