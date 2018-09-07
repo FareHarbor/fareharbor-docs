@@ -455,6 +455,10 @@ Example response:
         "customers": [
           {
             "checkin_url": "https://fhchk.co/abc",
+            "checkin_status": {
+              "name": "checked in",
+              "type": "checked-in"
+            },
             "customer_type_rate": {
               "pk": 65675,
               "total": 20000,
@@ -475,6 +479,10 @@ Example response:
           },
           {
             "checkin_url": "https://fhchk.co/def",
+            "checkin_status": {
+              "name": "checked in",
+              "type": "checked-in"
+            },
             "customer_type_rate": {
               "pk": 65675,
               "total": 20000,

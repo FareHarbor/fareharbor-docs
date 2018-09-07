@@ -771,6 +771,18 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
       A short URL that can be rendered as a QR code for check-in purposes (the QR code should be "type 4" with "error correction H").
 
+    * `checkin_status`: `CheckinStatus | null`
+
+      The customer's checkin status.  When there is no checkin status associated with the customer, `checkin_status` will be `null`.  When a checkin status is available, it consists of:
+
+        * `name`: `string`
+
+          The checkin status' name.
+
+        * `type`: `string`
+
+          The checkin status' type. Supported types are: `checked-in` and `no-show`.
+
     * `customer_type_rate`: `CustomerTypeRate`
 
       The customer type rate to which this customer corresponds.
@@ -834,6 +846,10 @@ Example:
       "customers": [
         {
           "checkin_url": "https://fhchk.co/abc",
+          "checkin_status": {
+            "name": "checked in",
+            "type": "checked-in"
+          },
           "customer_type_rate": {
             "pk": 65675,
             "total": 20000,
@@ -849,6 +865,10 @@ Example:
         },
         {
           "checkin_url": "https://fhchk.co/def",
+          "checkin_status": {
+            "name": "checked in",
+            "type": "checked-in"
+          },
           "customer_type_rate": {
             "pk": 65675,
             "total": 20000,
