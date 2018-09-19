@@ -285,7 +285,7 @@ Example response:
               "customer_type": {
                 "pk": 978,
                 "singular": "Adult",
-                "plural"; "Adults",
+                "plural": "Adults",
                 "note": "At least 18 years old."
               },
               "customer_prototype": {
@@ -330,7 +330,7 @@ Example response:
             "customer_type": {
               "pk": 978,
               "singular": "Adult",
-              "plural"; "Adults",
+              "plural": "Adults",
               "note": "At least 18 years old."
             },
             "customer_prototype": {
@@ -436,7 +436,7 @@ Example response:
               "customer_type": {
                 "pk": 978,
                 "singular": "Adult",
-                "plural"; "Adults",
+                "plural": "Adults",
                 "note": "At least 18 years old."
               },
               "customer_prototype": {
@@ -467,7 +467,7 @@ Example response:
               "customer_type": {
                 "pk": 978,
                 "singular": "Adult",
-                "plural"; "Adults",
+                "plural": "Adults",
                 "note": "At least 18 years old."
               },
               "customer_prototype": {
@@ -491,7 +491,7 @@ Example response:
               "customer_type": {
                 "pk": 978,
                 "singular": "Adult",
-                "plural"; "Adults",
+                "plural": "Adults",
                 "note": "At least 18 years old."
               },
               "customer_prototype": {
