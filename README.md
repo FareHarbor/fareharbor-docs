@@ -1,4 +1,4 @@
-# Fareharbor External API
+# FareHarbor External API
 
 * Getting Started
   `/external-api/getting-started.md` for a quick-start guide.
