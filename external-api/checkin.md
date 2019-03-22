@@ -10,7 +10,7 @@ The body should be as follows:
 {
   "qr_code": string  // required
   "is_whole_booking": bool,  // defaults to false if not provided
-  "status": string|number|null  // defaults to "auto" if not provided; null clears checkin status.
+  "checkin_status": string|number|null  // defaults to "auto" if not provided; null clears checkin status.
 }
 ```
 
@@ -57,7 +57,7 @@ Examples:
 ```
 {
   "qr_code": "https://fhchk.co/abc",
-  "status": 386865
+  "checkin_status": 386865
 }
 ```
 
@@ -66,7 +66,7 @@ Examples:
 ```
 {
   "qr_code": "https://fhchk.co/abc",
-  "status": null
+  "checkin_status": null
 }
 ```
 
@@ -110,12 +110,12 @@ Body:
 
 ```
 {
-  "status": string|number|null  // defaults to "auto" if not provided
+  "checkin_status": string|number|null  // defaults to "auto" if not provided
   "customer": number|null  // defaults to null (whole booking) if not provided
 }
 ```
 
-`status` - `string|number|null`: as above.
+`checkin_status` - `string|number|null`: as above.
 
 `customer` - `number|null`: when a customer `pk` is specified, the associated customer
 will be checked in. When `null` is specified, all customers associated with the
@@ -131,7 +131,7 @@ No request body.
 
 ```
 {
-  "status": 68575,
+  "checkin_status": 68575,
 }
 ```
 
@@ -139,7 +139,7 @@ No request body.
 
 ```
 {
-  "status": 785897,
+  "checkin_status": 785897,
   "customer": 9868574
 }
 ```
@@ -148,7 +148,7 @@ No request body.
 
 ```
 {
-  "status": null,
+  "checkin_status": null,
 }
 ```
 
@@ -156,7 +156,7 @@ No request body.
 
 ```
 {
-  "status": null,
+  "checkin_status": null,
   "customer": 6857686
 }
 ```
