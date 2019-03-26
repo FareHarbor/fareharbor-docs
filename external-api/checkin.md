@@ -8,9 +8,9 @@ The body should be as follows:
 
 ```
 {
-  "qr_code": string  // required
+  "qr_code": string,  // required
   "is_whole_booking": bool,  // defaults to false if not provided
-  "checkin_status": string|number|null  // defaults to "auto" if not provided; null clears checkin status.
+  "checkin_status": string|number|null  // defaults to "auto" if not provided; null clears checkin status
 }
 ```
 
@@ -39,7 +39,7 @@ Examples:
 
 ```
 {
-  "qr_code": "https://fhchk.co/abc",
+  "qr_code": "https://fhchk.co/abc"
 }
 ```
 
@@ -82,14 +82,14 @@ Response:
 {
   "checkin_statuses": [
     {
-      'pk': 45786797,
-      'type': 'checked-in',
-      'name': 'Checked in'
+      "pk": 45786797,
+      "type": "checked-in",
+      'name': "Checked in"
     },
     {
-      'pk': 89766887,
-      'type': 'no-show',
-      'name': 'No show'
+      "pk": 89766887,
+      "type": "no-show",
+      "name": "No show"
     }
   ]
 }
@@ -110,7 +110,7 @@ Body:
 
 ```
 {
-  "checkin_status": string|number|null  // defaults to "auto" if not provided
+  "checkin_status": string|number|null,  // defaults to "auto" if not provided
   "customer": number|null  // defaults to null (whole booking) if not provided
 }
 ```
@@ -131,7 +131,7 @@ No request body.
 
 ```
 {
-  "checkin_status": 68575,
+  "checkin_status": 68575
 }
 ```
 
@@ -148,7 +148,7 @@ No request body.
 
 ```
 {
-  "checkin_status": null,
+  "checkin_status": null
 }
 ```
 
