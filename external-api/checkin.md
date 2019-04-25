@@ -23,8 +23,9 @@ code (customer checkin URL) will be updated. Defaults to `false` if the property
 is not provided.
 
 `checkin_status` - `string|number|null`: the string "auto" indicates that checkin status
-should be automatically determined (other string values may be supported in the
-future). When a checkin status `pk` is provided, the associated checkin status
+should be automatically determined. The string "unchanged" will leave the checkin
+status unchanged. Other string values may be supported in the
+future. When a checkin status `pk` is provided, the associated checkin status
 will be used. When `null` is provided, the checkin status will be reset. Defaults
 to `"auto"` if the property is not provided.
 
@@ -32,6 +33,7 @@ The result is the booking as described here: https://github.com/FareHarbor/fareh
 
 When "auto" check-in is used, an HTTP 400 will be returned if the customer
 (or, in the case of whole booking checkin, any customer) is already checked in.
+
 
 Examples:
 
