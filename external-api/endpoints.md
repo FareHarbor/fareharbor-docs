@@ -969,6 +969,10 @@ Example rebooked booking:
         ...
     }
 
+### Cancelling a Rebooked Booking
+
+If you create a booking, then rebook it, and then cancel *either the original or the rebooked booking*, you will get the same response: the `Booking` object for the rebooked booking (not the original). Assuming the cancellation succeeds, the `status` of the rebooked booking will become `cancelled`. (The status of the original booking remains `rebooked` even after you have cancelled the rebooked booking.)
+
 ### Agents and desks
 
 When creating a booking, you can specify the booking agent by pk, by name, or not at all. It is an error to specify both an agent pk and a name.
