@@ -108,6 +108,38 @@ The extended representation provides additional information about the company (s
 
   A short tagline or summary for the company.
 
+* `url`: `string`
+
+  The company's website address.
+
+* `facebook_url`: `string`
+
+  The company's Facebook address.
+
+* `instagram_url`: `string`
+
+  The company's Instagram address.
+
+* `tripadvisor_url`: `string`
+
+  The company's TripAdvisor address.
+
+* `twitter_url`: `string`
+
+  The company's Twitter address.
+
+* `yelp_url`: `string`
+
+  The company's Yelp address.
+
+* `youtube_url`: `string`
+
+  The company's Youtube address.
+
+* `pinterest_url`: `string`
+
+  The company's Pinterest address.
+
 * `address`: `Address`
 
   The company's physical address.
