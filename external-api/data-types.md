@@ -507,12 +507,17 @@ Example:
 
   The price of a single customer of this type.
 
+* `total_including_tax`: `amount`
+
+  The price of a single customer of this type plus applicable taxes.
+
 Example:
 
     {
       "pk": 2522,
       "display_name": "Adult",
-      "total": 20000
+      "total": 20000,
+      "total_including_tax": 21550
     }
 
 ### Customer Type Rate
@@ -554,7 +559,8 @@ Example:
         "customer_prototype": {
           "pk": 2522,
           "display_name": "Adult",
-          "total": 20000
+          "total": 20000,
+          "total_including_tax": 21550
         }
       }
     }
@@ -567,6 +573,10 @@ The extended representation provides additional information about the customer t
 
   The price of a single customer of this type.
 
+* `total_including_tax`: `amount`
+
+  The price of a single customer of this type plus applicable taxes.
+
 * `custom_field_instances`: `[ CustomFieldInstance ]`
 
   A list of custom field instances for the customer type rate.
@@ -576,6 +586,7 @@ Example:
     {
       "pk": 978,
       "total": 20000,
+      "total_including_tax": 21550,
       "capacity": 10,
       "is_exclusive": false,
       "customer_type": {
@@ -586,7 +597,8 @@ Example:
         "customer_prototype": {
           "pk": 2522,
           "display_name": "Adult",
-          "total": 20000
+          "total": 20000,
+          "total_including_tax": 21550
         }
       },
       "custom_field_instances": [
