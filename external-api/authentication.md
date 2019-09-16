@@ -1,6 +1,6 @@
 # Authentication
 
-An app key and a user key are required to authenicate requests all requests to
+An app key and a user key are required to authenicate all requests to
 the FareHarbor external API.  The app key identifies your application,
 and can be used for all of your affiliates. The user key identifies a specific
 user on a specific affiliate.

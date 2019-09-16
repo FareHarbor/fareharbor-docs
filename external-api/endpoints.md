@@ -261,7 +261,7 @@ Example response:
 * `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/`
 
 Returns possibly-bookable availabilities for `date`, or for the range `start-date` through `end-date`.
-Note that possibly-bookable availabilies include those for which customers are requested to "call to book". Note that `date`, `start-date`, and `end-date` should be in the format YYYY-MM-DD.
+Note that possibly-bookable availabilies do not include those for which customers are requested to "call to book". Note that `date`, `start-date`, and `end-date` should be in the format YYYY-MM-DD.
 
 Returns an array of `Availability` objects (minimal representation).
 
