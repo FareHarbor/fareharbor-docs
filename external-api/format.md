@@ -133,3 +133,5 @@ are the ones you are most likely to encounter.
 
 A `4xx` request is always indicative of an problem with the request being made,
 while a `5xx` error indicates a server-side error.
+
+A detailed list of error codes and messages are described in `error-codes.md`
