@@ -10,7 +10,7 @@ A custom field instance represents an available booking option. Details regardin
 
 ## Custom Field Types
 
-The API currently supports the following custom field types: `short`, `long`, `extended-option`, and `yes-no`.  Values for `short` and `long` custom fields can be any string under 2048 characters.  Values for `extended-option` custom fields must be an `extended_option` pk defined in the `extended_options` property for the custom field.  Values for `yes-no` custom fields must be boolean.
+The API currently supports the following custom field types: `short`, `long`, `extended-option`, `yes-no` and `count`.  Values for `short` and `long` custom fields can be any string under 2048 characters.  Values for `extended-option` custom fields must be an `extended_option` pk defined in the `extended_options` property for the custom field.  Values for `yes-no` custom fields must be boolean. Values for `count` custom fields must be an integer.
 
 ## Customer and Booking Level Custom Fields
 
