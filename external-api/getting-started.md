@@ -9,7 +9,7 @@ API.
 FareHarbor will provide approved API partners with keys that can be used to make requests and create bookings for suppliers.
 The supplier must confirm their approval of your API access before you are able to make bookings for them via API.
 If you are using the FareHarbor API to book for suppliers across multiple countries/currencies, you may be provided with one User Key per currency.
-You can find more information about the authentication process [here](authentication.md). Alternatively, you may contact <support@fareharbor.com> for assistance with User Keys.
+You can find more information about the authentication process in `authentication.md`. Alternatively, you may contact <support@fareharbor.com> for assistance with User Keys.
 
 ## Structuring Requests and Responses
 
