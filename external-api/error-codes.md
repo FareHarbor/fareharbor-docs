@@ -59,8 +59,8 @@ This document provides more information about the following types of error codes
 | Item is not available |Product is no longer offered for online or API booking |
 | Item is private |Product is no longer offered for online or API booking |
 | No bookings cutoff time reached |Availability is no longer bookable. |
-| Party size is too large |Your selected quantity does not meet the minimum party size set by the supplier |
-| Party size is too small |Your selected quantity exceeds the maximum party size set by the supplier |
+| Party size is too small |Your selected quantity does not meet the minimum party size set by the supplier |
+| Party size is too large |Your selected quantity exceeds the maximum party size set by the supplier |
 | Resources are not available |Please contact api-support@fareharbor.com |
 | Auto-open time not reached  |Please contact api-support@fareharbor.com | 
 
