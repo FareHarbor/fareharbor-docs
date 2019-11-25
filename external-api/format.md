@@ -11,7 +11,7 @@ The body should consist entirely of a JSON object.
 
 ## Authentication
 
-You'll need to authenticate every request you make the API; see `authentication.md`.
+You'll need to authenticate every request you make the API; see [`authentication.md`](authentication.md).
 
 # Responses
 
@@ -23,7 +23,7 @@ number, string, and so on).
 ### Success responses
 
 Successful responses contain the data requested.  The structure of these responses is described in detail
-in `data-types.md`; however in general they follow this structure:
+in [`data-types.md`](data-types.md); however in general they follow this structure:
 
 * `<singular type>`: `object`
 
@@ -98,7 +98,7 @@ are the ones you are most likely to encounter.
 
   You do not have permission to access this endpoint in this way.
   
-  Review `authentication.md` and verify that you are sending the
+  Review [`authentication.md`](authentication.md) and verify that you are sending the
   correct API keys, and that you do indeed have permission to access to
   endpoint you are attempting to access.
   
@@ -134,4 +134,4 @@ are the ones you are most likely to encounter.
 A `4xx` request is always indicative of an problem with the request being made,
 while a `5xx` error indicates a server-side error.
 
-A detailed list of error codes and messages are described in `error-codes.md`
+A detailed list of error codes and messages are described in [`error-codes.md`](error-codes.md)
