@@ -37,7 +37,7 @@ This document provides more information about the following types of error codes
 | 400  |bookability-error  | Unable to create booking: [bookability-error](#bookability-error) |
 | 400  |booking-creation-error | Unable to create booking: [booking-creation-error](#booking-creation-error) |
 | 400  |booking-cancellation-error | Unable to cancel booking: [booking-cancellation-error](#booking-cancellation-error) |
-| 429  |Too Many Requests | You have sent too many requests in too short a time interval: [rate-limits](getting-started.md#rate-limits) |
+| 429  |Too Many Requests | [You have sent too many requests in too short a time interval](getting-started.md#rate-limits) |
 
 
 
