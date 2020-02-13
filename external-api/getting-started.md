@@ -4,6 +4,18 @@ To get started as a FareHarbor External API partner, first contact <support@fare
 and request access. Access is currently limited to select partners as we develop our initial
 API.
 
+## Rate Limits
+
+Each partner is allowed approximately 1400 requests per minute to the
+FareHarbor External API. This is about 23 requests per second.
+
+FareHarbor may reject requests in excess of this limit. In this case,
+the API will return an HTTP status of 429, "Too Many Requests".
+
+If you are currently running a lot of daily requests all at once,
+please consider spreading them out more evenly over the course of the
+day.
+
 ## Determining User Keys
 
 FareHarbor will provide approved API partners with User Keys that can be used to make requests and create bookings for suppliers.
@@ -23,8 +35,8 @@ The first thing you might want to do is retrieve the list of companies that a gi
 to in FareHarbor:
 
 Request:
-    
-    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/ 
+
+    $ curl -H "X-FareHarbor-API-App: APP-KEY" -H "X-FareHarbor-API-User: USER-KEY" https://fareharbor.com/api/external/v1/companies/
 
 Response:
 
@@ -67,7 +79,7 @@ Response:
     }
 
 ### Retrieve a list of availabilities for an item
- 
+
 Having found an item to book, you can access its availability on a per-day basis:
 
 Request:
@@ -176,10 +188,10 @@ Request:
     -d \
     '{
        "contact": {
-         "name": "John Doe", 
-         "phone": "415-789-4563", 
+         "name": "John Doe",
+         "phone": "415-789-4563",
          "email": "johndoe@example.com"
-       }, 
+       },
        "customers": [
          {
            "customer_type_rate": 8964453
@@ -189,7 +201,7 @@ Request:
        "voucher_number": "V-35791209"
     }' \
     https://fareharbor.com/api/external/v1/companies/xyz/availabilities/10780/bookings/
-    
+
 Response:
 
     {
@@ -248,7 +260,7 @@ it later.
 
 ### Retrieve a booking
 
-Given a booking by `uuid` it's straightforward to access: 
+Given a booking by `uuid` it's straightforward to access:
 
 Request:
 

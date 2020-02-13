@@ -37,14 +37,15 @@ This document provides more information about the following types of error codes
 | 400  |bookability-error  | Unable to create booking: [bookability-error](#bookability-error) |
 | 400  |booking-creation-error | Unable to create booking: [booking-creation-error](#booking-creation-error) |
 | 400  |booking-cancellation-error | Unable to cancel booking: [booking-cancellation-error](#booking-cancellation-error) |
-  
-   
-   
-  
+| 429  |Too Many Requests | [You have sent too many requests in too short a time interval](getting-started.md#rate-limits) |
+
+
+
+
 ### Bookability error
 | Message | Description |
 | ------- | ------      |
-| Sorry, this date and time is not available. Please call us or choose a different date or time. Error: a-already-has-exclusive. |Please contact the supplier, or select a different availability. | 
+| Sorry, this date and time is not available. Please call us or choose a different date or time. Error: a-already-has-exclusive. |Please contact the supplier, or select a different availability. |
 | Sorry, this date and time is not available. Please call us or choose a different date or time. Error: a-already-has-non-exclusive. |Please contact the supplier, or select a different availability. |
 | Call to book |Availability is not available for online or API booking |
 | Closed | Availability is closed |
@@ -62,33 +63,32 @@ This document provides more information about the following types of error codes
 | Party size is too small |Your selected quantity does not meet the minimum party size set by the supplier |
 | Party size is too large |Your selected quantity exceeds the maximum party size set by the supplier |
 | Resources are not available |Please contact api-support@fareharbor.com |
-| Auto-open time not reached  |Please contact api-support@fareharbor.com | 
+| Auto-open time not reached  |Please contact api-support@fareharbor.com |
 
-### Booking creation error 
+### Booking creation error
 | Message | Description |
 | ------- | ------      |
-| Invalid order. |Please contact api-support@fareharbor.com | 
-| Sorry, you are not an affiliate for this company. |Insufficient permission, please contact api-support@fareharbor.com | 
-| New bookings cannot be created for availabilities on archived items. |Product is no longer offered  | 
+| Invalid order. |Please contact api-support@fareharbor.com |
+| Sorry, you are not an affiliate for this company. |Insufficient permission, please contact api-support@fareharbor.com |
+| New bookings cannot be created for availabilities on archived items. |Product is no longer offered  |
 | This booking has already been rebooked. |Cannot rebook a cancelled booking |
 | Test bookings cannot be rebooked when demo mode is not enabled.|Please contact api-support@fareharbor.com |
 | Non-test bookings cannot be rebooked because demo mode is enabled. |Please contact api-support@fareharbor.com |
 | New bookings cannot be created for this contact until demo mode is disabled. |Please contact api-support@fareharbor.com |
 | New bookings cannot be created for this contact until demo mode is enabled. |Please contact api-support@fareharbor.com |
 | Sorry, you cannot add bookings to this contact for this company.|Please contact api-support@fareharbor.com |
-| Sorry, you cannot rebook while adding a booking to a customer. |Please contact api-support@fareharbor.com | 
-| Affiliates cannot be changed while rebooking without first refunding all affiliate payments. |Please contact api-support@fareharbor.com | 
-| Sorry, you cannot rebook this booking to this company. |Insufficient permission, please contact api-support@fareharbor.com | 
-| Please specify at least one customer. |Cannot create a booking for zero customers | 
-| Availability is not bookable. |This time cannot be booked. Please try another availability. | 
-| Please specify a voucher number. |Voucher field is required. | 
-| Unable to satisfy resources. |Insufficient inventory for supplier to operate the product for your selections | 
-| Unable to add to order. |Please contact api-support@fareharbor.com | 
+| Sorry, you cannot rebook while adding a booking to a customer. |Please contact api-support@fareharbor.com |
+| Affiliates cannot be changed while rebooking without first refunding all affiliate payments. |Please contact api-support@fareharbor.com |
+| Sorry, you cannot rebook this booking to this company. |Insufficient permission, please contact api-support@fareharbor.com |
+| Please specify at least one customer. |Cannot create a booking for zero customers |
+| Availability is not bookable. |This time cannot be booked. Please try another availability. |
+| Please specify a voucher number. |Voucher field is required. |
+| Unable to satisfy resources. |Insufficient inventory for supplier to operate the product for your selections |
+| Unable to add to order. |Please contact api-support@fareharbor.com |
 
 
-### Booking cancellation error 
+### Booking cancellation error
 | Message | Description |
 | ------- | ------      |
-| This booking has already been cancelled. | Cannot cancel a cancelled booking | 
-| You don't have permission to cancel this booking. | Insufficient permission, please contact api-support@fareharbor.com| 
-
+| This booking has already been cancelled. | Cannot cancel a cancelled booking |
+| You don't have permission to cancel this booking. | Insufficient permission, please contact api-support@fareharbor.com|

@@ -27,7 +27,7 @@ in [`data-types.md`](data-types.md); however in general they follow this structu
 
 * `<singular type>`: `object`
 
-or 
+or
 
 * `<plural type>`: `array`
 
@@ -42,7 +42,7 @@ Examples:
     }
 ```
 
-``` 
+```
     {
       "companies": [
         {
@@ -54,7 +54,7 @@ Examples:
 ```
 
 ### Error responses
- 
+
 * `error`: `string`
 
 A message describing the error.
@@ -97,11 +97,11 @@ are the ones you are most likely to encounter.
 * 403: Forbidden
 
   You do not have permission to access this endpoint in this way.
-  
+
   Review [`authentication.md`](authentication.md) and verify that you are sending the
   correct API keys, and that you do indeed have permission to access to
   endpoint you are attempting to access.
-  
+
 * 404: Not Found
 
   The company, item, or availability does not exist; it may have been
@@ -122,6 +122,9 @@ are the ones you are most likely to encounter.
 
   Returned when a request has been rate-limited due to excessive requests.
   It is *very* unlikely that you will encounter this in normal usage.
+
+  For the actual numeric rate limits and more discussion of this, see
+  [here](getting-started.md#rate-limts).
 
 * 500: Internal Server Error
 
