@@ -15,6 +15,8 @@ This document provides more information about the following types of error codes
 | 400  |booking-note-error | Unable to update booking note: `booking_note` |
 | 400  |contact-error | Unable to create contact: `message`|
 | 400  |content-type-invalid-error  | Invalid content-type|
+| 400  |customer-custom-field-value-creation-error | Unable to create customer custom field value for customer custom_field pk %s: ensure a valid value is specified|
+| 400  |customer-custom-field-values-invalid  |<p>Duplicate values provided for the following customer custom_field pks <br>The following customer custom_field pk values are invalid for pk <br>The following customer custom_field pk values are required for pk <br> The value is not valid for customer custom_field pk </p>|
 | 400  |customer-type-rates-invalid | The following 'customer_type_rate' pk values are invalid for availability pk <availability_pk>: <customer_type_rate_pk> |
 | 400  |invalid-checkin-already-checked-in | already checked in |
 | 400  |invalid-checkin-customer | invalid customer|
