@@ -124,7 +124,7 @@ are the ones you are most likely to encounter.
   It is *very* unlikely that you will encounter this in normal usage.
 
   For the actual numeric rate limits and more discussion of this, see
-  [here](getting-started.md#rate-limts).
+  [here](getting-started.md#rate-limits).
 
 * 500: Internal Server Error
 
