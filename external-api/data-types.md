@@ -775,6 +775,10 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
         The contact email for the party.
 
+    * `is_subcribed`: `string`
+
+        The contact subscription to the company mail list
+
 * `customers`: `[ Customer ]`
 
   A list of customers on this booking.  Customers consist of:
