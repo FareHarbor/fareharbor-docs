@@ -777,7 +777,7 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
     * `is_subscribed_for_email_updates`: `bool`
 
-        The contact subscription to the company mail list
+        Whether or not the contact would like email updates.
 
 * `customers`: `[ Customer ]`
 
