@@ -23,8 +23,7 @@ Any time there is a booking-related event, FareHarbor sends a `POST`
 request to the webhook URL you have provided.
 
 The body of this request contains an up-to-date JSON representation of
-the booking, as described here `/external-api/endpoints.md` and here
-`/external-api/data-types.md#booking`.
+the booking, as described [here](/external-api/endpoints.md) and [here](/external-api/data-types.md#booking).
 
 Your server should respond to the webhook with an HTTP success
 response code. (If FareHarbor receives an HTTP error response, or no
