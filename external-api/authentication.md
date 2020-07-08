@@ -24,7 +24,7 @@ The recommended approach to passing your keys is via the custom headers
 
 ## Keys sent as parameters
 
-You can - but *should not* -- send your keys as the query parameters, passing your app key via
+You can - but *we recommend you do not* -- send your keys as the query parameters, passing your app key via
 `api-app` and your user key via `api-user`:
 
 ```
