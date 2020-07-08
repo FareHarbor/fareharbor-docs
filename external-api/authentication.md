@@ -5,7 +5,8 @@ the FareHarbor external API.  The app key identifies your application,
 and can be used for all of your affiliates. The user key identifies a specific
 user on a specific affiliate.
 
-These keys are UUIDs. Note that these keys *must* be kept private.
+These keys are in UUID format. Note that these keys *must* be kept private. 
+If your key is disclosed publicly please contact support@fareharbor.com to have it rotated.
 
 ## Keys sent as headers (recommended)
 
@@ -23,7 +24,7 @@ The recommended approach to passing your keys is via the custom headers
 
 ## Keys sent as parameters
 
-You can also send your keys as the query parameters, passing your app key via
+You can - but *should not* -- send your keys as the query parameters, passing your app key via
 `api-app` and your user key via `api-user`:
 
 ```
@@ -33,7 +34,7 @@ You can also send your keys as the query parameters, passing your app key via
     $ curl https://fareharbor.com/api/external/v1/companies/?api-app=APP-KEY&api-user=USER-KEY
 ```
 
-This should only be used in server to server scenarios.
+This is a permitted usage pattern but not a recommended one - in particular you must not use this as part of a browser based interaction, since keys can end up persisting in browser histories, logs, and other less secure locations. 
 
 ## Requesting Keys
 
