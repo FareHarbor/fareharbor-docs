@@ -25,8 +25,6 @@ All currency amounts are returned as an integer number of the smallest
 negotiable unit of money in the company's currency. In the case of
 USD, this means USD cents. So, for instance, `1425` means $14.25 USD.
 
-* `field`: `number`
-
 Some amount fields may have corresponding fields whose names are
 suffixed with `_display`. These fields will contain strings
 representing the same amount of money, but using the customary
@@ -35,6 +33,7 @@ US/USD, this will be the string `14.25`. Note that some countries may
 use a comma rather than a period as the decimal point.
 
 * `field`: `number`
+* `field_display`: `string`
 
 ### Datetime fields
 
