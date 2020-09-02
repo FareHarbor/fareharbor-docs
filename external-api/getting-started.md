@@ -17,6 +17,10 @@ If you are currently running a lot of daily requests all at once,
 please consider spreading them out more evenly over the course of the
 day.
 
+## TLS Version
+
+As of 2020-09-01 we require clients that connect to our API to make use of TLS1.2 in order to ensure a speedy and secure connection. You can test this by running a curl command against our API and if you see something like `SSL_ERROR_SYSCALL in connection to fareharbor.com:443` or `Unknown SSL protocol error in connection` you are trying to use a TLS version we do not support. If that is the case it is likely that you will need to upgrade your local openssl version, which is outside the scope of this document.
+
 ## Determining User Keys
 
 FareHarbor will provide approved API partners with User Keys that can be used to make requests and create bookings for suppliers.
