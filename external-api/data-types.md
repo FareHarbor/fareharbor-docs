@@ -834,6 +834,13 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
   When there is no order associated with the booking, `order` will be `null`.
 
+* `dashboard_url`: `string`
+  The booking's dashboard URL.
+
+* `customer_count`: `number`
+  The number of customers on this booking
+
+
 Example:
 
     {
@@ -909,7 +916,9 @@ Example:
         }
       ],
       "invoice_price": null,
-      "order": null
+      "order": null,
+      "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
+      "customer_count": 1
     }
 
 ### Capacities
