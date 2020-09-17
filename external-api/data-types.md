@@ -838,7 +838,7 @@ A booking can belong to an order, but it doesn't have to. An order can include a
   The booking's dashboard URL.
 
 * `customer_count`: `number`
-  The number of customers on this booking
+  The number of customers on this booking.
 
 
 Example:
