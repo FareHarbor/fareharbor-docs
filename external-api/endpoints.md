@@ -395,7 +395,7 @@ Example request:
     '{
        "contact": {
          "name": "John Doe",
-         "phone": "415-789-4563",
+         "phone": "+1-415-789-4563",
          "email": "johndoe@example.com"
        },
        "customers": [
@@ -449,7 +449,9 @@ Example response:
         },
         "contact": {
           "name": "John Doe",
-          "phone": "415-789-4563",
+          "phone": "+1-415-789-4563",
+          "phone_country": "US",
+          "normalized_phone": "+14157894563",
           "email": "johndoe@example.com"
         },
         "customers": [
@@ -512,6 +514,8 @@ Example response:
 When creating bookings use the customer type rate and custom field instance information
 contained in the availability to construct a request of the following form:
 
+For best results in the contact phone, include the plus sign and the international country code. I.e. check the E.164 international phone number formatting.
+
 * `note`: `string`
 * `voucher_number`: `string`
 * `contact`: `object`
@@ -528,7 +532,7 @@ Example:
       "voucher_number": "VLT-1123",
       "contact": {
         "name": "John Doe",
-        "phone": "443-222-1100",
+        "phone": "+14432221100",
         "email": "johndoe@example.com"
       },
       "customers": [
@@ -620,7 +624,7 @@ Example:
     {
        "contact": {
          "name": "John Doe",
-         "phone": "415-789-4563",
+         "phone": "+1-415-789-4563",
          "email": "johndoe@example.com"
        },
        "customers": [
@@ -758,7 +762,7 @@ Example request:
     '{
        "contact": {
          "name": "John Doe",
-         "phone": "415-789-4563",
+         "phone": "+1-415-789-4563",
          "email": "johndoe@example.com"
        },
        "customers": [
@@ -927,7 +931,7 @@ Example request:
        "rebooking": "d75102be-9732-4523-90a8-c698eff2b983",
        "contact": {
          "name": "John Doe",
-         "phone": "415-789-4563",
+         "phone": "+1-415-789-4563",
          "email": "johndoe@example.com"
        },
        "customers": [
@@ -986,7 +990,7 @@ Example booking request body with both agent and desk specified by pk:
     {
       "contact": {
          "name": "John Doe",
-         "phone": "1234567890",
+         "phone": "+11234567890",
          "email": "example@example.com"
        },
        "customers": [
@@ -1004,7 +1008,7 @@ Example booking request body with both agent and desk specified by name:
     {
       "contact": {
          "name": "John Doe",
-         "phone": "1234567890",
+         "phone": "+11234567890",
          "email": "example@example.com"
        },
        "customers": [
@@ -1028,7 +1032,7 @@ Example booking request body with a lodging specified:
     {
       "contact": {
          "name": "John Doe",
-         "phone": "1234567890",
+         "phone": "+11234567890",
          "email": "example@example.com"
        },
        "customers": [

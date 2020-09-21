@@ -99,7 +99,7 @@ The example data below shows how one specifies custom field values for customer 
         }
       ],
       "contact": {
-        "phone": "123-456-7890",
+        "phone": "+1123-456-7890",
         "name": "John Doe",
         "email": "johndoe@example.com"
       },
