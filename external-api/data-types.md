@@ -782,11 +782,11 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
     * `normalized_phone`: `string`
 
-        The contact phone number for the party. This will have a plus sign, the country code and no extra characters like commas.
+        The party's contact phone number. This will have a plus sign, the country code, and no extra characters such as commas or dashes.
 
     * `country_phone`: `string`
 
-        The contact's phone country code.
+        The contact phones' country code.
 
     * `email`: `string`
 
