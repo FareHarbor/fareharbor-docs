@@ -117,6 +117,38 @@ The extended representation provides additional information about the company (s
 
   A short tagline or summary for the company.
 
+* `url`: `string`
+
+  The company's website address.
+
+* `facebook_url`: `string`
+
+  The company's Facebook address.
+
+* `instagram_url`: `string`
+
+  The company's Instagram address.
+
+* `tripadvisor_url`: `string`
+
+  The company's TripAdvisor address.
+
+* `twitter_url`: `string`
+
+  The company's Twitter address.
+
+* `yelp_url`: `string`
+
+  The company's Yelp address.
+
+* `youtube_url`: `string`
+
+  The company's Youtube address.
+
+* `pinterest_url`: `string`
+
+  The company's Pinterest address.
+
 * `address`: `Address`
 
   The company's physical address.
@@ -141,6 +173,14 @@ Example:
         "intro": "We offer the best water activities on Oahu",
         "intro_safe_html": "<p>We offer the best water activities on Oahu</p>",
         "summary": "Water activities 365 days a year",
+        "url": "https://company-url.com",
+        "facebook_url": "https://facebook.com/url",
+        "instagram_url": "https://instagram.com/url",
+        "tripadvisor_url": "https://tripadvisor.com/url",
+        "twitter_url": "https://twitter.com/url",
+        "yelp_url": "https://yelp.com/url",
+        "youtube_url": "https://youtube.com/url",
+        "pinterest_url": "https://pintrest.com/url",
         "address": {
           "city": "Honolulu",
           "country": "US",
