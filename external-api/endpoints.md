@@ -511,10 +511,8 @@ Example response:
 
 ### Request Schema
 
-When creating bookings use the customer type rate and custom field instance information
+When creating bookings, use the customer type rate and custom field instance information
 contained in the availability to construct a request of the following form:
-
-For best results in the contact phone, include the plus sign and the international country code. I.e. check the E.164 international phone number formatting.
 
 * `note`: `string`
 * `voucher_number`: `string`
@@ -524,6 +522,10 @@ For best results in the contact phone, include the plus sign and the internation
     * `email`: `string`
 * `customers`: `array`
     * `customer_type_rate`: `CustomerTypeRate.pk`
+
+For best results, include the plus sign and international country code
+in the contact `phone` field (E.164 format). If the country code is
+not present, it may lead to unexpected behavior in some cases.
 
 Example:
 
