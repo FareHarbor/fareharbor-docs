@@ -503,7 +503,9 @@ Example response:
           }
         ],
         "invoice_price": null,
-        "order": null
+        "order": null,
+        "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
+        "customer_count": 1
       }
     }
 
