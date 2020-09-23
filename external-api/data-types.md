@@ -786,7 +786,7 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
     * `country_phone`: `string`
 
-        The contact phones' country code.
+        The contact phone's country code.
 
     * `email`: `string`
 
