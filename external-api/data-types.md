@@ -820,6 +820,14 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
         The contact phone number for the party.
 
+    * `normalized_phone`: `string`
+
+        The party's contact phone number. This will have a plus sign, the country code, and no extra characters such as commas or dashes.
+
+    * `country_phone`: `string`
+
+        The contact phone's country code.
+
     * `email`: `string`
 
         The contact email for the party.
@@ -912,7 +920,9 @@ Example:
       },
       "contact": {
         "name": "Surfer Dude",
-        "phone": "443-222-1100",
+        "phone": "+1-443-222-1100",
+        "phone_country": "US",
+        "normalized_phone": "+14432221100",
         "email": "surfer@dude.com"
       },
       "customers": [

@@ -14,7 +14,7 @@ The API currently supports the following custom field types: `short`, `long`, `e
 
 ## Customer and Booking Level Custom Fields
 
-`custom_field_instances` under a `customer_type_rate` specify customer level custom fields (i.e. custom fields that are applicable to the `customer_type` specified by the `customer_type_rate`). `custom_field_instances` under an availability specify booking level custom fields (i.e. custom fields that are applicable to the entire booking).  
+`custom_field_instances` under a `customer_type_rate` specify customer level custom fields (i.e. custom fields that are applicable to the `customer_type` specified by the `customer_type_rate`). `custom_field_instances` under an availability specify booking level custom fields (i.e. custom fields that are applicable to the entire booking).
 
 ## Example
 
@@ -99,7 +99,7 @@ The example data below shows how one specifies custom field values for customer 
         }
       ],
       "contact": {
-        "phone": "123-456-7890",
+        "phone": "+1-123-456-7890",
         "name": "John Doe",
         "email": "johndoe@example.com"
       },

@@ -194,7 +194,7 @@ Request:
     '{
        "contact": {
          "name": "John Doe",
-         "phone": "415-789-4563",
+         "phone": "+1-415-789-4563",
          "email": "johndoe@example.com"
        },
        "customers": [
@@ -235,7 +235,9 @@ Response:
           "start_at": "2015-02-01T07:00:00-1000"
         }
         "contact": {
-          "phone": "415-789-4563",
+          "phone": "+1-415-789-4563",
+          "phone_country": "US",
+          "normalized_phone": "+14157894563",
           "name": "John Doe",
           "email": "johndoe@example.com"
         },
@@ -301,7 +303,9 @@ Response:
           "start_at": "2015-02-01T07:00:00-1000"
         }
         "contact": {
-          "phone": "415-789-4563",
+          "phone": "+1-415-789-4563",
+          "phone_country": "US",
+          "normalized_phone": "+14157894563",
           "name": "John Doe",
           "email": "johndoe@example.com"
         },
