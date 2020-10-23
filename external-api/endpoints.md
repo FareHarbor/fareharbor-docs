@@ -224,8 +224,8 @@ Example response:
               "total": 20000
             }
           ],
-          "health_and_safety_policy": "Our policies are:\n\n* Bring your own equipment\n* Use facemask when we met",
-          "health_and_safety_policy_safe_html": "<p>Our policies are:</p>\n<ul>\n<li>Bring your own equipment</li>\n<li>Use facemask when we met</li>\n</ul>"
+          "health_and_safety_policy": "Our policies are:\n\n* Bring your own equipment\n* Please wear a facemask",
+          "health_and_safety_policy_safe_html": "<p>Our policies are:</p>\n<ul>\n<li>Bring your own equipment</li>\n<li>Please wear a facemask</li>\n</ul>"
         },
         {
           "pk": 1963,

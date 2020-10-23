@@ -483,8 +483,8 @@ Example:
           "total": 20000
         }
       ],
-      "health_and_safety_policy": "Our policies are:\n\n* Bring your own googles\n* Use facemask when we met",
-      "health_and_safety_policy_safe_html": "<p>Our policies are:</p>\n<ul>\n<li>Bring your own googles</li>\n<li>Use facemask when we met</li>\n</ul>"
+      "health_and_safety_policy": "Our policies are:\n\n* Bring your own googles\n* Please wear a facemask",
+      "health_and_safety_policy_safe_html": "<p>Our policies are:</p>\n<ul>\n<li>Bring your own googles</li>\n<li>Please wear a facemask</li>\n</ul>"
     }
 
 #### Item Details
