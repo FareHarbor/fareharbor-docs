@@ -159,7 +159,7 @@ The extended representation provides additional information about the company (s
 
 * `health_and_safety_policy`: `markdown`
 
-  The company's health and safety policy.
+  The company's health and safety policy. This is supplemental to the item level `health_and_safety_policy` field, and is only displayed if the specific item does not have a value for `health_and_safety_policy` set.
 
 Example:
 
@@ -430,7 +430,7 @@ Items represent a particular kind of tour that the company offers.
 
 * `health_and_safety_policy`: `markdown`
 
-  The item's health and safety policy.
+  The item's health and safety policy. It includes details and procedures related to specific activities for the item like the precautions being taken, equipment to bring, and any additional special rules.
 
 Example:
 
