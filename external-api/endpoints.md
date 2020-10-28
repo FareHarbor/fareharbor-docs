@@ -76,7 +76,9 @@ Example response:
           "postal_code": "96821",
           "province": "HI",
           "street": "123 Wailupe Cir"
-        }
+        },
+        "health_and_safety_policy": "# Company Health & Safety Policy Statement\nThe safety and health of our employees is this company’s most important business consideration.\n\nThe company pledges to do the following:\n\n*  Strive to achieve the goal of zero accidents and injuries.\n* Train all employees in safe work practices and procedures.",
+        "health_and_safety_policy_safe_html": "<h1>Company Health &amp; Safety Policy Statement</h1>\n<p>The safety and health of our employees is this company’s most important business consideration.</p>\n<p>The company pledges to do the following:</p>\n<ul>\n<li>Strive to achieve the goal of zero accidents and injuries.</li>\n<li>Train all employees in safe work practices and procedures.</li>\n</ul>"
       }
     }
 
@@ -221,7 +223,9 @@ Example response:
               "display_name": "Adult",
               "total": 20000
             }
-          ]
+          ],
+          "health_and_safety_policy": "Our policies are:\n\n* Bring your own equipment\n* Please wear a facemask",
+          "health_and_safety_policy_safe_html": "<p>Our policies are:</p>\n<ul>\n<li>Bring your own equipment</li>\n<li>Please wear a facemask</li>\n</ul>"
         },
         {
           "pk": 1963,
@@ -259,7 +263,9 @@ Example response:
           "is_pickup_ever_available": true,
           "image_cdn_url": "",
           "images": []
-        }
+        },
+        "health_and_safety_policy": "",
+        "health_and_safety_policy_safe_html": ""
       ]
     }
 

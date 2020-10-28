@@ -78,7 +78,9 @@ Response:
           "image_cdn_url": "https:\/\/d1a2dkr8rai8e2.cloudfront.net\/api\/file\/lYsz2SeTaS8s5oRMxO6b",
           "location": "",
           "name": "Wreck & Reef Dive",
-          "pk": 28
+          "pk": 28,
+          "health_and_safety_policy": "",
+          "health_and_safety_policy_safe_html": ""
         }
       ]
     }
