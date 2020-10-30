@@ -83,6 +83,7 @@ Example response:
     }
 
 ## Checkin QR Code
+
 `PUT /companies/<company-shortname>/checkin/`
 
 Checkin a booking based on QR code.
@@ -198,6 +199,33 @@ Example response:
         "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
         "customer_count": 1
       }
+    }
+
+## Checkin Statuses
+
+`GET /companies/<company-shortname>/checkin-statuses/`
+
+List all the checkin statuses for the `Company`.
+
+Example request:
+
+    $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/checkin-statuses/
+
+Example response:
+
+    {
+        "checkin_statuses": [
+            {
+                "pk": 3,
+                "type": "checked-in",
+                "name": "checked in"
+            },
+            {
+                "pk": 4,
+                "type": "no-show",
+                "name": "no-show"
+            }
+        ]
     }
 
 ## Agents
