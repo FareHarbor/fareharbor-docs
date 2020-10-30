@@ -673,7 +673,7 @@ Checkin a booking based on UUID:
 
 * `PUT /companies/<shortname>/bookings/<Booking.uuid>/checkin/`
 
-Returns the `Booking` object.
+Returns a `Booking` object.
 
 
 Example request:
