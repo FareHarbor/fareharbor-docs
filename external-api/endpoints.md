@@ -86,9 +86,7 @@ Example response:
 
 `PUT /companies/<company-shortname>/checkin/`
 
-Checkin a booking based on QR code.
-
-Returns a `Booking` object.
+Checkin a booking based on QR code. Returns a `Booking` object.
 
 Example request:
 
@@ -205,7 +203,7 @@ Example response:
 
 `GET /companies/<company-shortname>/checkin-statuses/`
 
-List all the checkin statuses for the `Company`.
+Returns an array of `CheckinStatus` objects for the `Company`.
 
 Example request:
 
