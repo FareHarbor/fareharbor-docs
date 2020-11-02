@@ -82,11 +82,11 @@ Example response:
       }
     }
 
-## Checkin QR Code
+## Check in with QR Code
 
 `PUT /companies/<company-shortname>/checkin/`
 
-Checkin a booking based on QR code. Returns a `Booking` object.
+Check in a booking based on QR code. Returns a `Booking` object.
 
 Example request:
 
@@ -199,7 +199,7 @@ Example response:
       }
     }
 
-## Checkin Statuses
+## Check in Statuses
 
 `GET /companies/<company-shortname>/checkin-statuses/`
 
@@ -669,7 +669,7 @@ Example response:
       }
     }
 
-Checkin a booking based on UUID:
+Check in a booking based on UUID:
 
 * `PUT /companies/<shortname>/bookings/<Booking.uuid>/checkin/`
 
