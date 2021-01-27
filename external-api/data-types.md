@@ -900,6 +900,8 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 * `customer_count`: `number`
   The number of customers on this booking.
 
+* `is_subscribed_for_sms_updates`: `boolean`
+    Whether or not the contact would like SMS updates
 
 Example:
 

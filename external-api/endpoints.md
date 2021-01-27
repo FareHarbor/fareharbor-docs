@@ -195,7 +195,8 @@ Example response:
         "invoice_price": null,
         "order": null,
         "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
-        "customer_count": 1
+        "customer_count": 1,
+        "is_subscribed_for_sms_updates": false
       }
     }
 
@@ -665,7 +666,8 @@ Example response:
         "invoice_price": null,
         "order": null,
         "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
-        "customer_count": 1
+        "customer_count": 1,
+        "is_subscribed_for_sms_updates": false
       }
     }
 
@@ -783,7 +785,8 @@ Example response:
         "invoice_price": null,
         "order": null,
         "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
-        "customer_count": 1
+        "customer_count": 1,
+        "is_subscribed_for_sms_updates": false
       }
     }
 
