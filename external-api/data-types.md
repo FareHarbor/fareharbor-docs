@@ -904,7 +904,7 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
 * `is_subscribed_for_sms_updates`: `boolean`
 
-  Whether or not the contact would like the booking company to send them SMS updates about this booking. Note that the value of this field does not reflect whether or not the user has sent a STOP request.
+  Whether or not the contact would like the booking company to send them SMS updates about this booking. Note that the value of this field does not reflect whether or not the user has sent a STOP request to FareHarbor. If the user sends a STOP request to an External API client, that API client should respect that request.
 
 Example:
 
