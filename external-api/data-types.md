@@ -895,11 +895,16 @@ A booking can belong to an order, but it doesn't have to. An order can include a
   When there is no order associated with the booking, `order` will be `null`.
 
 * `dashboard_url`: `string`
+
   The booking's dashboard URL.
 
 * `customer_count`: `number`
+
   The number of customers on this booking.
 
+* `is_subscribed_for_sms_updates`: `boolean`
+
+  Whether or not the contact would like the booking company to send them SMS updates about this booking. Note that the value of this field does not reflect whether or not the user has sent a STOP request to FareHarbor. If the user sends a STOP request to an External API client, that API client should respect that request.
 
 Example:
 
@@ -980,7 +985,8 @@ Example:
       "invoice_price": null,
       "order": null,
       "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
-      "customer_count": 1
+      "customer_count": 1,
+      "is_subscribed_for_sms_udpates": false
     }
 
 ### Capacities

@@ -262,7 +262,8 @@ Response:
         "pk": 566107,
         "uuid": "9e61f8f3-a43f-4cb5-994e-71816301c2db",
         "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/9e61f8f3-a43f-4cb5-994e-71816301c2db/",
-        "customer_count": 1
+        "customer_count": 1,
+        "is_subscribed_for_sms_updates": false
       }
     }
 
@@ -330,6 +331,7 @@ Response:
         "pk": 566107,
         "uuid": "9e61f8f3-a43f-4cb5-994e-71816301c2db",
         "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/9e61f8f3-a43f-4cb5-994e-71816301c2db/",
-        "customer_count": 1
+        "customer_count": 1,
+        "is_subscribed_for_sms_updates": false
       }
     }
