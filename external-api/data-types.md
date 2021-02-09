@@ -163,9 +163,11 @@ The extended representation provides additional information about the company (s
 
 * `open_hours`: `object | null`
 
-  If `open_hours` is "null", then open hours have not been set for this company.
+  Represents the company's general opening and closing times. Used for general company information or for context for all-day availabilities, but should not be used in place of specific availability start and end times.
 
-  Otherwise, `open_hours` is an object whose keys are names of days of the week. The value for each day is either "none", if the company is closed that day; or an object whose keys are "open_time" and "close_time", which specify the open time and close time that day, in 24-hour HH:MM format.
+  If open hours have been set for this company, then `open_hours` is an object whose keys are names of days of the week. The value for each day is either `null`, if the company is closed that day; or an object whose keys are `open_time` and `close_time`, which specify the open time and close time that day in 24-hour HH:MM format.
+
+  Otherwise, `open_hours` will be `null`.
 
 Example:
 
