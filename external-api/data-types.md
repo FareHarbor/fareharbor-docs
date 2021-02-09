@@ -206,7 +206,7 @@ Example:
           "street": "123 Wailupe Cir"
         },
         "health_and_safety_policy": "Your health is our top priority, and we have put special measures in place to keep all guests safe both during and after your activity.\n\n* Stringent Cleaning – We've increased the frequency of disinfecting surfaces and high touch areas.\n* Social Distancing – Guests are required to stay 6 feet apart.\n* Wellness Checks – Employees receive daily wellness checks to ensure they are healthy and symptom-free.",
-        "health_and_safety_policy_safe_html": "<p>Your health is our top priority, and we have put special measures in place to keep all guests safe both during and after your activity.</p>\n<ul>\n<li>Stringent Cleaning – We've increased the frequency of disinfecting surfaces and high touch areas.</li>\n<li>Social Distancing – Guests are required to stay 6 feet apart.</li>\n<li>Wellness Checks – Employees receive daily wellness checks to ensure they are healthy and symptom-free.</li>\n</ul>"
+        "health_and_safety_policy_safe_html": "<p>Your health is our top priority, and we have put special measures in place to keep all guests safe both during and after your activity.</p>\n<ul>\n<li>Stringent Cleaning – We've increased the frequency of disinfecting surfaces and high touch areas.</li>\n<li>Social Distancing – Guests are required to stay 6 feet apart.</li>\n<li>Wellness Checks – Employees receive daily wellness checks to ensure they are healthy and symptom-free.</li>\n</ul>",
         "open_hours": {
           "monday": {
             "open_time": "10:00",
