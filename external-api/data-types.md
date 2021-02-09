@@ -161,6 +161,14 @@ The extended representation provides additional information about the company (s
 
   The company's health and safety policy. This is supplemental to the item level `health_and_safety_policy` field, and is only displayed on the FareHarbor dashboard if the specific item does not have a value for `health_and_safety_policy` set.
 
+* `open_hours`: `object | null`
+
+  Represents the company's general opening and closing times. Used for general company information or for context for all-day availabilities, but should not be used in place of specific availability start and end times.
+
+  If open hours have been set for this company, then `open_hours` is an object whose keys are names of days of the week. The value for each day is either `null`, if the company is closed that day; or an object whose keys are `open_time` and `close_time`, which specify the open time and close time that day in 24-hour HH:MM format.
+
+  Otherwise, `open_hours` will be `null`.
+
 Example:
 
     {
@@ -200,7 +208,31 @@ Example:
           "street": "123 Wailupe Cir"
         },
         "health_and_safety_policy": "Your health is our top priority, and we have put special measures in place to keep all guests safe both during and after your activity.\n\n* Stringent Cleaning – We've increased the frequency of disinfecting surfaces and high touch areas.\n* Social Distancing – Guests are required to stay 6 feet apart.\n* Wellness Checks – Employees receive daily wellness checks to ensure they are healthy and symptom-free.",
-        "health_and_safety_policy_safe_html": "<p>Your health is our top priority, and we have put special measures in place to keep all guests safe both during and after your activity.</p>\n<ul>\n<li>Stringent Cleaning – We've increased the frequency of disinfecting surfaces and high touch areas.</li>\n<li>Social Distancing – Guests are required to stay 6 feet apart.</li>\n<li>Wellness Checks – Employees receive daily wellness checks to ensure they are healthy and symptom-free.</li>\n</ul>"
+        "health_and_safety_policy_safe_html": "<p>Your health is our top priority, and we have put special measures in place to keep all guests safe both during and after your activity.</p>\n<ul>\n<li>Stringent Cleaning – We've increased the frequency of disinfecting surfaces and high touch areas.</li>\n<li>Social Distancing – Guests are required to stay 6 feet apart.</li>\n<li>Wellness Checks – Employees receive daily wellness checks to ensure they are healthy and symptom-free.</li>\n</ul>",
+        "open_hours": {
+          "monday": {
+            "open_time": "10:00",
+            "close_time": "17:00"
+          },
+          "tuesday": {
+            "open_time": "10:00",
+            "close_time": "17:00"
+          },
+          "wednesday": {
+            "open_time": "10:00",
+            "close_time": "17:00"
+          },
+          "thursday": {
+            "open_time": "10:00",
+            "close_time": "17:00"
+          },
+          "friday": {
+            "open_time": "10:00",
+            "close_time": "17:00"
+          },
+          "saturday": null,
+          "sunday": null
+        }
       }
     }
 
