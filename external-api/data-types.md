@@ -161,11 +161,11 @@ The extended representation provides additional information about the company (s
 
   The company's health and safety policy. This is supplemental to the item level `health_and_safety_policy` field, and is only displayed on the FareHarbor dashboard if the specific item does not have a value for `health_and_safety_policy` set.
 
-* `open_hours`:
+* `open_hours`: `object | null`
 
-  If `open_hours` is not present, or if it is "null", then open hours have not been set for this company.
+  If `open_hours` is "null", then open hours have not been set for this company.
 
-  Otherwise, `open_hours` is a dictionary whose keys are names of days of the week. The value for each day is either "none", if the company is closed that day; or a dictionary whose keys are "open_time" and "close_time", which specify the open time and close time that day, in 24-hour HH:MM format.
+  Otherwise, `open_hours` is an object whose keys are names of days of the week. The value for each day is either "none", if the company is closed that day; or an object whose keys are "open_time" and "close_time", which specify the open time and close time that day, in 24-hour HH:MM format.
 
 Example:
 
@@ -228,8 +228,8 @@ Example:
             "open_time": "10:00",
             "close_time": "17:00"
           },
-          "saturday": None,
-          "sunday": None
+          "saturday": null,
+          "sunday": null
         }
       }
     }

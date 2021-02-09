@@ -100,8 +100,8 @@ Example response:
             "open_time": "10:00",
             "close_time": "17:00"
           },
-          "saturday": None,
-          "sunday": None
+          "saturday": null,
+          "sunday": null
         }
       }
     }
