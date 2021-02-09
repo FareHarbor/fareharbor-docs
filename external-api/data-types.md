@@ -159,7 +159,7 @@ The extended representation provides additional information about the company (s
 
 * `health_and_safety_policy`: `markdown`
 
-  The company's health and safety policy. This is supplemental to the item level `health_and_safety_policy` field, and is only displayed on the FareHarbor dashboard if the specific item does not have a value for `health_and_safety_policy` set.
+  The company's health and safety policy. This is supplemental to the item level `health_and_safety_policy` field, and is only displayed on the FareHarbor Dashboard if the specific item does not have a value for `health_and_safety_policy` set.
 
 * `open_hours`: `object | null`
 
