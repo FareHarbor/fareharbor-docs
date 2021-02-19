@@ -67,6 +67,8 @@ allowed to view, there may also be a `payments` property:
       }
     }
 
+The `sub_type` in the response is the name of the in-store payment type, when the type is `in-store`
+
 Your server should respond to the webhook with an HTTP success
 response code. (If FareHarbor receives an HTTP error response or no
 response at all, then the webhook will be retried up to 3 more times
