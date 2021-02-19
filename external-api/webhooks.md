@@ -59,7 +59,8 @@ allowed to view, there may also be a `payments` property:
               }
             ],
             "status": "succeeded",
-            "type": "affiliate"
+            "type": "affiliate",
+            "sub_type": null
           }
         ],
         ...
