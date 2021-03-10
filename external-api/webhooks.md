@@ -59,7 +59,7 @@ allowed to view, there may also be a `payments` property:
               }
             ],
             "status": "succeeded",
-            "type": "in-store",
+            "type": "affiliate",
             "in_store_payment_type": {
                  "pk": 137,
                  "name": "Cash"
