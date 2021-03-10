@@ -71,7 +71,8 @@ allowed to view, there may also be a `payments` property:
     }
 
 When `type: "in-store"`, the `in_store_payment_type` in the response has the pk and name of the in-store payment type
-When `type: is not in-store`, the `in_store_payment_type` in the response is `null`
+When `type: "affiliate"`, and the payment is an affiliate in-store payment, the `in_store_payment_type` in the response has the pk and name of the in-store payment type (If the user has necessary permissions)
+When the payment is not an in-store payment, the `in_store_payment_type` in the response is `null`
 
 
 Your server should respond to the webhook with an HTTP success
