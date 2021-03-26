@@ -59,12 +59,27 @@ allowed to view, there may also be a `payments` property:
               }
             ],
             "status": "succeeded",
-            "type": "affiliate"
+            "type": "affiliate",
+            "in_store_payment_type": {
+               "pk": 137,
+               "name": "Cash"
+            }
           }
         ],
         ...
       }
     }
+
+When the payment is `type: "in-store"`, the `in_store_payment_type` in
+the response has the pk and name of the in-store payment type.
+
+When the payment is `type: "affiliate"` and the payment is an
+affiliate in-store payment, the `in_store_payment_type` in the
+response has the pk of the in-store payment type and may have the name
+as well.
+
+When the payment is not an in-store payment, the
+`in_store_payment_type` in the response is `null`.
 
 Your server should respond to the webhook with an HTTP success
 response code. (If FareHarbor receives an HTTP error response or no
