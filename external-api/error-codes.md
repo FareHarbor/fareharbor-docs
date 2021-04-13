@@ -34,11 +34,11 @@ This document provides more information about the following types of error codes
 | 403  |app-key-invalid  | API app key is invalid |
 | 403  |invalid-checkin-permissions-error  | you do not have permissions to update checkin status|
 | 403  |user-key-invalid  | API user key is invalid |
-| 403  |Too Many Requests | [You have sent too many requests in too short a time interval](getting-started.md#rate-limits) |
 | 404  |availability-pk-invalid  | `pk` is not a valid availability pk for company shortname `shortname` |
 | 404  |booking-uuid-invalid  | `UUID` is not a valid booking uuid for company shortname `shortname` |
 | 404  |company-shortname-invalid  | `shortname` is not a valid company shortname |
 | 404  |item-pk-invalid | <pk> is not a valid item pk for company shortname `shortname` |
+| 429  |Too Many Requests | [You have sent too many requests in too short a time interval](getting-started.md#rate-limits) |
 
 
 ### Bookability error
