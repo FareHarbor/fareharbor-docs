@@ -6,12 +6,12 @@ API.
 
 ## Rate Limits
 
-Each partner is allowed approximately 600 requests per minute to the
-FareHarbor External API. This is about 10 requests per second.
+Each partner is allowed 30 requests per second to the
+FareHarbor External API.
 
-This is evaluated over a 5 minute period. Going over this limit will
-result in an HTTP response with 403 status ("Forbidden") for the
-duration of the following five minute window.
+This is evaluated every second. Going over this limit will
+result in an HTTP response with 429 status ("Too Many Requests") for the
+remainder of the second.
 
 If you are currently running a lot of daily requests all at once,
 please consider spreading them out more evenly over the course of the
