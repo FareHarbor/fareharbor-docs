@@ -99,6 +99,7 @@ Response:
       "availabilities": [
         {
           "capacity": 20,
+          "headline": "Epic Wreck & Reef Dive",
           "customer_type_rates": [
             {
               "capacity": null,
@@ -153,6 +154,7 @@ Response:
             "name": "Wreck & Reef Dive",
             "pk": 28
           },
+          "headline": "Epic Wreck & Reef Dive",
           "pk": 3267113,
           "start_at": "2015-02-01T07:00:00-1000"
         },
@@ -176,6 +178,7 @@ Response:
             "name": "Wreck & Reef Dive",
             "pk": 28
           },
+          "headline": "Epic Wreck & Reef Dive",
           "pk": 3267913,
           "start_at": "2015-02-13T07:00:00-1000"
         }

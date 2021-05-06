@@ -765,6 +765,10 @@ The extended representation provides additional information about the availabili
 
   The availability's item (minimal version).
 
+* `headline`: `string`
+
+  The availability's headline.
+
 * `customer_type_rates`: `[ CustomerTypeRate ]`
 
   Pricing information for available customer types (extended version).
@@ -784,6 +788,7 @@ Example:
         "pk": 1867,
         "name": "Jet Ski Tour"
       },
+      "headline": "Epic Jet Ski Tour",
       "customer_type_rates": [
         {
           "pk": 65675,
