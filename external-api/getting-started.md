@@ -6,12 +6,11 @@ API.
 
 ## Rate Limits
 
-Each partner is allowed 30 requests per second to the
-FareHarbor External API.
+We enforce two different rate limits. Requests to the FareHarbor External API must comply with both limits.
 
-This is evaluated every second. Going over this limit will
-result in an HTTP response with 429 status ("Too Many Requests") for the
-remainder of the second.
+We allow at most 30 request per second. Going over this limit will result in an HTTP response with 429 status ("Too Many Requests") for the remainder of the second.
+
+In addition, we allow at most 3000 requests per 5-minute period. Going over this limit will result in an HTTP response with 403 status ("Forbidden") for the remainder of the 5-minute period.
 
 If you are currently running a lot of daily requests all at once,
 please consider spreading them out more evenly over the course of the
