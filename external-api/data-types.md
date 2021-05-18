@@ -877,6 +877,10 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
         The contact phone's country code.
 
+    * `language`: `string`
+
+        The contact language.
+
     * `email`: `string`
 
         The contact email for the party.
