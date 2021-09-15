@@ -1110,7 +1110,7 @@ Requirements:
 
 * The booking must be cancelled at least 48 hours prior to start time (availability `start_at` property) to receive 100% refund.
 * Any affiliate-collected payments for the booking must be fully refunded.
-* Cancellations are allowed till the start time. However, if less than 48 hours, there is no refund.
+* Cancellations are allowed up until the start time. However, if the booking is cancelled less than 48 hours prior to start time, there is no refund.
 * The requesting user must have permission to cancel bookings (granted on a per-company basis).
 
 Example request:
