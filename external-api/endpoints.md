@@ -1108,8 +1108,9 @@ Cancels the specified booking.
 
 Requirements:
 
-* The booking must be cancelled at least 48 hours prior to start time (availability `start_at` property).
-* Any affiliate collected payments for the booking must be fully refunded.
+* The booking must be cancelled at least 48 hours prior to start time (availability `start_at` property) to receive 100% refund.
+* Any affiliate-collected payments for the booking must be fully refunded.
+* Cancellations are allowed till the start time. However, if less than 48 hours, there is no refund.
 * The requesting user must have permission to cancel bookings (granted on a per-company basis).
 
 Example request:
@@ -1130,7 +1131,7 @@ The ellipses in the above example represent properties that have been left out f
 
 #### Cancellation Policies
 
-Initially all companies will use a "48 hours prior, 100% refund" policy; however, we expect to expand support for various kinds of cancellation policies in the future.
+Initially all companies will use a "48 hours prior, 100% refund" and "if less than 48 hours prior, 0% refund" policy; however, we expect to expand support for various kinds of cancellation policies in the future.
 
 ##### Effective Cancellation Policies
 ###### Items Endpoint
