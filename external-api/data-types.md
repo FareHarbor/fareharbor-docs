@@ -365,6 +365,27 @@ Example:
 
   The location's TripAdvisor URL.
 
+Example:
+
+    {
+      "pk": 234234,
+      "type": "primary",
+      "note": "Next to the blue fence.",
+      "note_safe_html": "<p>Next to the blue fence.</p>",
+      "address": {
+        "city": "Honolulu",
+        "country": "US",
+        "postal_code": "96821",
+        "province": "HI",
+        "street": "123 Wailupe Cir"
+      },
+      "longitude": 21.3069,
+      "latitude": -157.8583,
+      "google_place_id": "ChIJYZ4srGUSAHwRT1Da4amp3x",
+      "tripadvisor_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d184886-Reviews-Epic_Jet_Ski_Tour-Honolulu_Oahu_Hawaii.html",
+    }
+
+
 ### Cancellation Policy
 
 * `type`: `string`
@@ -393,6 +414,13 @@ Example:
 
   Note: this value can be negative indicating that bookings can be cancelled some number of hours after availability start time (when type is `hours-before-start`) or some number of hours after midnight on availability start date (when type is `hours-before-midnight`). The `cutoff_hours_before` property will provide `null` when no cutoff is applicable (when bookings are never elgible for cancellation).
 
+Example:
+
+    {
+      "type": "hours-before-start",
+      "cutoff_hours_before": "24"
+    }
+
 ### Tag
 
 * `name`: `string`
@@ -402,6 +430,13 @@ Example:
 * `short_name`: `string`
 
   The tag's short name. The short name is unique per company and is limited to lowercase letters (a-z), digits (0-9), and the dash character.
+
+Example:
+
+    {
+      "name": "Jet ski tour",
+      "short_name": "jet-ski-tour"
+    }
 
 ### Item
 
@@ -839,6 +874,12 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
   A unique identifier for the order.
 
+Example:
+
+    {
+      "display_id": "ABTT"
+    }
+
 ### Booking
 
 * `pk`: `number`
@@ -1087,6 +1128,20 @@ Extended options are applicable to custom fields of type `extended-option`.
 
   Whether the cost of this option should affect the taxable total of a booking.
 
+Example:
+
+    {
+      "pk": 105,
+      "name": "Helmet",
+      "description": "Need a helmet?",
+      "modifier_kind": "percentage",
+      "modifier_type": "adjust",
+      "offset": null,
+      "percentage": 35,
+      "is_always_per_customer": true,
+      "is_taxable": false
+    }
+
 ### Custom Field
 
 * `pk`: `number`
@@ -1123,6 +1178,28 @@ Extended options are applicable to custom fields of type `extended-option`.
   A list the custom field's extended options. This will only be provided
   for custom fields that have type `extended-option`.
 
+Example:
+
+    {
+      "pk": 4502,
+      "type": "extended-option"
+      "is_required": false,
+      "description": "Do you need additional safety equipment?",
+      "name": "Safety Equipment",
+      "offset": 100,
+      "extended_options": {
+        "pk": 105,
+        "name": "Helmet",
+        "description": "Need a helmet?",
+        "modifier_kind": "percentage",
+        "modifier_type": "adjust",
+        "offset": null,
+        "percentage": 35,
+        "is_always_per_customer": true,
+        "is_taxable": false
+      }
+    }
+
 ### Custom Field Instance
 
 * `pk`: `number`
@@ -1132,6 +1209,31 @@ Extended options are applicable to custom fields of type `extended-option`.
 * `custom_field`: `CustomField`
 
   The custom field associated with the custom field instance.
+
+Example:
+
+    {
+      "pk": 2681,
+      "custom_field": {
+        "pk": 4502,
+        "type": "yes-no"
+        "is_required": false,
+        "description": "Do you need additional safety equipment?",
+        "name": "Safety Equipment",
+        "offset": 100,
+        "extended_options": {
+          "pk": 105,
+          "name": "Helmet",
+          "description": "Need a helmet?",
+          "modifier_kind": "percentage",
+          "modifier_type": "adjust",
+          "offset": null,
+          "percentage": 35,
+          "is_always_per_customer": true,
+          "is_taxable": false
+        }
+      }
+    }
 
 ### Custom Field Value
 
@@ -1144,3 +1246,11 @@ Extended options are applicable to custom fields of type `extended-option`.
   A string up to 2048 characters. If the custom field is of type `yes-no`,
   "true" or "false" must be specified. If the custom field is of type
   `extended-option`, an extended option pk must be specified.
+
+Example:
+
+    {
+      "custom_field": 4502,
+      "value": "false",
+      "extended-option": 105
+    }
