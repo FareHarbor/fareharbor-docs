@@ -949,7 +949,7 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
 Example:
 
-__NOTE:__ _The `payment` in this example is just available for the booking webhooks and __<ins>NOT</ins>__ for this External API. `payment` comes when the selected schema is Bookings + payments for the webhook._
+__NOTE:__ The `payment` in this example is just available for the booking webhooks and __<ins>NOT</ins>__ for this External API. `payment` comes when the selected schema is Bookings + payments for the webhook.
 
     {
       "pk": 6876876,
