@@ -31,7 +31,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
 
     companies_url = '%s/companies/' % ROOT_URL
     
-    print companies_url
+    print(companies_url)
 
     response = requests.get(companies_url, headers=HEADERS)
 
@@ -39,7 +39,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     companies = response_data['companies']
 
     for company in companies:
-        print company
+        print(company)
 
 # Listing items for a company
 
@@ -47,7 +47,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     
     items_url = '%s/companies/%s/items/' % (ROOT_URL, company['shortname'],)
     
-    print items_url
+    print(items_url)
 
     response = requests.get(items_url, headers=HEADERS)
 
@@ -55,7 +55,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     items = response_data['items']
 
     for item in items:
-        print item
+        print(item)
         
 # Listing availabilities for an item
 
@@ -67,7 +67,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
         item['pk'],
     )
     
-    print availabilities_url
+    print(availabilities_url)
     
     response = requests.get(availabilities_url, headers=HEADERS)
     
@@ -75,7 +75,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     availabilities = response_data['availabilities']
     
     for availability in availabilities:
-        print availability
+        print(availability)
         
 # Listing customer type rates for an availability
 
@@ -84,7 +84,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     customer_type_rates = availability['customer_type_rates']
     
     for customer_type_rate in customer_type_rates:
-        print customer_type_rate
+        print(customer_type_rate)
         
 # Creating a booking for an availability
 
@@ -96,7 +96,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
         availability['pk'],
     )
     
-    print book_url
+    print(book_url)
     
     request_data = {
         'contact': {
@@ -119,7 +119,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     response_data = json.loads(response.text)
     booking = response_data['booking']
     
-    print booking
+    print(booking)
     
 # Retrieving a booking
 
@@ -129,14 +129,14 @@ http://docs.python-requests.org/en/latest/user/install/#install
         booking['uuid'],
     )
 
-    print booking_url
+    print(booking_url)
 
     response = requests.get(booking_url, headers=HEADERS)
     
     response_data = json.loads(response.text)
     booking = response_data['booking']
         
-    print booking
+    print(booking)
     
 # Entire script
 
@@ -157,7 +157,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
 
     companies_url = '%s/companies/' % ROOT_URL
 
-    print companies_url
+    print(companies_url)
 
     response = requests.get(companies_url, headers=HEADERS)
 
@@ -165,7 +165,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     companies = response_data['companies']
 
     for company in companies:
-        print company
+        print(company)
 
     # ITEMS
 
@@ -173,7 +173,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
 
     items_url = '%s/companies/%s/items/' % (ROOT_URL, company['shortname'],)
 
-    print items_url
+    print(items_url)
 
     response = requests.get(items_url, headers=HEADERS)
 
@@ -181,7 +181,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     items = response_data['items']
 
     for item in items:
-        print item
+        print(item)
 
     # AVAILABILITIES
 
@@ -193,7 +193,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
         item['pk'],
     )
 
-    print availabilities_url
+    print(availabilities_url)
 
     response = requests.get(availabilities_url, headers=HEADERS)
 
@@ -201,7 +201,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     availabilities = response_data['availabilities']
 
     for availability in availabilities:
-        print availability
+        print(availability)
 
     # CUSTOMER TYPE RATES
 
@@ -210,7 +210,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     customer_type_rates = availability['customer_type_rates']
 
     for customer_type_rate in customer_type_rates:
-        print customer_type_rate
+        print(customer_type_rate)
 
     # CREATE BOOKING
 
@@ -222,7 +222,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
         availability['pk'],
     )
 
-    print book_url
+    print(book_url)
 
     request_data = {
         'contact': {
@@ -244,7 +244,7 @@ http://docs.python-requests.org/en/latest/user/install/#install
     response_data = json.loads(response.text)
     booking = response_data['booking']
 
-    print booking
+    print(booking)
 
     # RETRIEVE BOOKING
 
@@ -254,11 +254,11 @@ http://docs.python-requests.org/en/latest/user/install/#install
         booking['uuid'],
     )
 
-    print booking_url
+    print(booking_url)
 
     response = requests.get(booking_url, headers=HEADERS)
 
     response_data = json.loads(response.text)
     booking = response_data['booking']
 
-    print booking
+    print(booking)
