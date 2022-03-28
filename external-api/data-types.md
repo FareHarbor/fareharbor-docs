@@ -949,7 +949,7 @@ A booking can belong to an order, but it doesn't have to. An order can include a
 
 Example:
 
-__NOTE:__ The `payment` in this example is just available for the booking webhooks and __<ins>NOT</ins>__ for this External API. `payment` comes when the selected schema is Bookings + payments for the webhook.
+__NOTE:__ The `payment` in this example is just available for the booking webhooks and __<ins>NOT</ins>__ for this External API. The webhook documentation can be found [here](https://github.com/FareHarbor/fareharbor-docs/blob/master/external-api/webhooks.md) and the `payment` is also noted there that it may appear depending on what fields you are allowed to view.
 
     {
       "pk": 6876876,
