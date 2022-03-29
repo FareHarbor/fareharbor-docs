@@ -990,6 +990,8 @@ Example:
 
 Example:
 
+__NOTE:__ The `payment` in this example is just available for the booking webhooks and __<ins>NOT</ins>__ for this External API. The webhook documentation can be found [here](https://github.com/FareHarbor/fareharbor-docs/blob/master/external-api/webhooks.md) and the `payment` is also noted there that it may appear depending on what fields you are allowed to view.
+
     {
       "pk": 6876876,
       "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
@@ -1068,7 +1070,22 @@ Example:
       "order": null,
       "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
       "customer_count": 1,
-      "is_subscribed_for_sms_udpates": false
+      "is_subscribed_for_sms_udpates": false,
+      "payments": [
+        {
+          "pk": 236495,
+          "created_at": "2022-03-23T11:36:36-0700",
+          "type": "card",
+          "in_store_payment_type": null,
+          "status": "succeeded",
+          "currency": "usd",
+          "initial_amount_paid": 40000,
+          "initial_amount_paid_display": "400.00",
+          "amount_paid": 40000,
+          "amount_paid_display": "400.00",
+          "refunds": []
+        }
+      ]
     }
 
 ### Capacities
