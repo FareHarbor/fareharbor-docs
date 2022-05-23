@@ -590,6 +590,7 @@ Example request:
          }
        ],
        "note": "Optional booking note.",
+       "external_id": "DataTracker5678",
        "voucher_number": "V-35791209"
     }' \
     https://fareharbor.com/api/external/v1/companies/hawaiianadventures/availabilities/4786/bookings/
@@ -688,6 +689,7 @@ Example response:
           }
         ],
         "invoice_price": null,
+        "external_id": "DataTracker5678",
         "order": null,
         "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/",
         "customer_count": 1,

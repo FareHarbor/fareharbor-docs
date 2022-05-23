@@ -971,6 +971,10 @@ Example:
 * `confirmation_url`: `string`
 
   The booking's confirmation page URL.
+  
+* `external_id`: `string`
+
+  An additional identifier if necessary.  Max Length 128.
 
 * `order`: `Order | null`
 
