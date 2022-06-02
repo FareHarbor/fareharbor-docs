@@ -54,7 +54,7 @@ allowed to view, there may also be a `payments` property:
                 "amount_refunded": 215,
                 "amount_refunded_display": "2.15",
                 "created_at": "2020-07-23T14:43:41-1000",
-                "is_cancelled": False,
+                "is_cancelled": false,
                 "pk": 1123
               }
             ],
