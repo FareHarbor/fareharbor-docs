@@ -882,6 +882,8 @@ Example:
 
 ### Booking
 
+When `with_payments=yes` is specified as the query string for the bookings endpoint, the payment information is provided for the booking. The `payments` parameter will be the same as the `payments` in webhooks that can be found [here](https://github.com/FareHarbor/fareharbor-docs/blob/master/external-api/webhooks.md).
+
 * `pk`: `number`
 
   The booking's unique ID.
@@ -992,9 +994,39 @@ Example:
 
   Whether or not the contact would like the booking company to send them SMS updates about this booking. Note that the value of this field does not reflect whether or not the user has sent a STOP request to FareHarbor. If the user sends a STOP request to an External API client, that API client should respect that request.
 
-Example:
+* `payments`: `[ Payment ]` (optional through query string)
 
-__NOTE:__ The `payment` in this example is just available for the booking webhooks and __<ins>NOT</ins>__ for this External API. The webhook documentation can be found [here](https://github.com/FareHarbor/fareharbor-docs/blob/master/external-api/webhooks.md) and the `payment` is also noted there that it may appear depending on what fields you are allowed to view.
+  Payment information for the booking, only visible through [webhooks](https://github.com/FareHarbor/fareharbor-docs/blob/master/external-api/webhooks.md) or with the `with_payments=yes` query string. If there is no query string, then the `payments` won't show. Payments consist of:
+
+    * `amount_paid`: `amount | null`
+
+      The total amount that has been paid for the booking.
+
+    * `created_at`: `datetime`
+
+      When the payment has been paid for the booking.
+
+    * `currency`: `string`
+
+      The company's currency.
+
+    * `initial_amount_paid`: `amount | null`
+
+      The amount paid when the booking was first created.
+
+    * `refunds`: `Refund | null`
+
+      Refund detail of a booking (if there is a refund).
+
+    * `status`: `string`
+
+      Status of the payment for the booking. Supported types are `initialed`, `pending`, `succeeded` and `failed`.
+
+    * `type`: `string`
+
+      What was used to pay for the booking. Supported types are `affiliate`, `card`, and `cash`.
+
+Example:
 
     {
       "pk": 6876876,
