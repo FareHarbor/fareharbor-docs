@@ -882,7 +882,7 @@ Example:
 
 ### Booking
 
-When `with_payments=yes` is specified as the query string for the bookings endpoint, the payment information is provided for the booking. The `payments` parameter will be the same as the `payments` in webhooks that can be found [here](https://github.com/FareHarbor/fareharbor-docs/blob/master/external-api/webhooks.md).
+When `with_payments=yes` is specified as a query string to the bookings endpoint, the payment information is provided for the booking. The `payments` parameter will be the same as the `payments` in webhooks that can be found [here](https://github.com/FareHarbor/fareharbor-docs/blob/master/external-api/webhooks.md).
 
 * `pk`: `number`
 
@@ -1017,6 +1017,18 @@ When `with_payments=yes` is specified as the query string for the bookings endpo
     * `refunds`: `Refund | null`
 
       Refund detail of a booking (if there is a refund).
+
+        * `amount_refunded`: `amount`
+
+          Amount that is refunded.
+
+        * `created_at`: `datetime`
+
+          Datetime of when the refund occured.
+
+        * `is_cancelled`: `boolean`
+
+          Wheter or not the booking was cancelled.
 
     * `status`: `string`
 
