@@ -50,6 +50,8 @@ Example response:
         "about_safe_html": "<p>Hawaiian Adventures offers several water activities that you are sure to enjoy.</p>",
         "booking_notes": "Weather conditions will be evaluated at the time of check-in.\n\nIf using a voucher, please bring the voucher with you.",
         "booking_notes_safe_html": "<p>Weather conditions will be evaluated at the time of check-in.\n\nIf using a voucher, please bring the voucher with you.</p>",
+        "cancellation_notes": "Please contact us ASAP if you cant attend.  We are beginning to prep the food you'll be tasting sometimes up to 48 hours in advance.  *We can usually reschedule but need as much notice as possible.*",
+        "cancellation_notes_safe_html": "<p>Please contact us ASAP if you cant attend.  We are beginning to prep the food you&#39;ll be tasting sometimes up to 48 hours in advance.  <em>We can usually reschedule but need as much notice as possible.</em></p>",
         "faq": "# What should I bring?\n\nWe suggest that you bring a swimming suit, sunscreen, and a towel.",
         "faq_safe_html": "<h1>What should I bring?</h1>\n<p>We suggest that you bring a swimming suit, a towel, and sunscreen.</p>",
         "intro": "We offer the best water activities on Oahu",
