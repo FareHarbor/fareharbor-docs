@@ -153,9 +153,9 @@ The extended representation provides additional information about the company (s
 
   The company's physical address.
 
-* `affiliated_since`: `DATETIME` or `None`
+* `affiliated_since`: `string`
 
-  If the API user’s company is an affiliate, then we will see a datetime of when the relationship started.  If the user’s company is a charter company or has no partners, then it will show as None.
+  If the API user’s company is an affiliate, then we will see a timestamp of when the relationship started.
 
 * `billing_address`: `Address`
 

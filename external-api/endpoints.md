@@ -70,7 +70,7 @@ Example response:
           "province": "HI",
           "street": "123 Wailupe Cir"
         },
-        'affiliated_since': 'None',
+        'affiliated_since': '2020-06-17T15:44:03+0000',
         "billing_address": {
           "city": "Honolulu",
           "country": "US",
