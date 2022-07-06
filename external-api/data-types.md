@@ -149,7 +149,7 @@ The extended representation provides additional information about the company (s
 
   The company's Pinterest address.
 
-* `address`: `Address`
+* `address`: `address`
 
   The company's physical address.
 
@@ -157,7 +157,7 @@ The extended representation provides additional information about the company (s
 
   If the API user’s company is an affiliate, then we will see a timestamp of when the relationship started.
 
-* `billing_address`: `Address`
+* `billing_address`: `address`
 
   The company's billing address.
 
@@ -350,7 +350,7 @@ Example:
 
   A brief note about this location that can be displayed to end users.
 
-* `address`: `Address`
+* `address`: `address`
 
   The location's physical address.
 
