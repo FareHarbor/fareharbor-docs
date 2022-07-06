@@ -153,7 +153,7 @@ The extended representation provides additional information about the company (s
 
   The company's physical address.
 
-* `affiliated_since`: `Datetime`
+* `affiliated_since`: `datetime`
 
   If the API user’s company is an affiliate, then we will see a timestamp of when the relationship started.
 
@@ -756,8 +756,8 @@ Availability objects represent particular datetimes that an item goes out.
 
   The availabilities's unique ID.
 
-* `start_at`: `Datetime`
-* `end_at`: `Datetime`
+* `start_at`: `datetime`
+* `end_at`: `datetime`
 
   The availability's start and end time; note that this time can be arbitrarily long or short,
   and that `start_at` can equal `end_at` for "point" availabilities.
@@ -1007,7 +1007,7 @@ When `with_payments=yes` is specified as a query string to the bookings endpoint
 
       The total amount that has been paid for the booking.
 
-    * `created_at`: `Datetime`
+    * `created_at`: `datetime`
 
       When the payment has been paid for the booking.
 
@@ -1027,7 +1027,7 @@ When `with_payments=yes` is specified as a query string to the bookings endpoint
 
           Amount that is refunded.
 
-        * `created_at`: `Datetime`
+        * `created_at`: `datetime`
 
           Datetime of when the refund occured.
 
