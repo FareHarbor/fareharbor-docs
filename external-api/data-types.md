@@ -153,6 +153,10 @@ The extended representation provides additional information about the company (s
 
   The company's physical address.
 
+* `affiliated_since`: `datetime`
+
+  If the API user’s company is an affiliate, then we will see a timestamp of when the relationship started.
+
 * `billing_address`: `Address`
 
   The company's billing address.
@@ -200,6 +204,7 @@ Example:
           "province": "HI",
           "street": "123 Wailupe Cir"
         },
+        'affiliated_since': '2020-06-17T15:44:03+0000',
         "billing_address": {
           "city": "Honolulu",
           "country": "US",
