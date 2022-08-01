@@ -18,7 +18,7 @@ webhooks and one for test webhooks.
 Contact <support@fareharbor.com> to configure these.
 
 (Note: The server for the production webhook URL must have a valid SSL
-certificates. It doesn't have one, then the webhook will not be
+certificate. It doesn't have one, then the webhook will not be
 delivered. It is up to you to ensure that your SSL certificates get
 renewed as needed.)
 

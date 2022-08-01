@@ -26,10 +26,7 @@ a reconfiguration or modification of your server software.
 
 It is unlikely that the problem lies with FareHarbor. As a general
 policy, FareHarbor does not make changes to the API and webhooks that
-would break existing partner implementations. If FH ever did this, it
-would risk breaking potentially thousands of existing
-integrations. And if this ever does happen, FareHarbor will (hopefully)
-fix it very quickly!
+would break existing partner implementations. 
 
 ## Question: Missed bookings
 
@@ -112,7 +109,7 @@ globally-unique identifier for the customer.
 As long as the booking is not rebooked, the pk will not change, and
 can be used as an ID within your system, directly or indirectly. 
 
-If you receive a new webhooks for a booking that is already
+If you receive a new webhook for a booking that is already
 represented in your system, this new webhook may contain updated
 information. Using the PK, you can check each customer's data to see
 if any piece of that customer's data has changed--the contents of a
