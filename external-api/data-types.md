@@ -1036,7 +1036,7 @@ When `with_payments=yes` is specified as a query string to the bookings endpoint
 
     * `type`: `string`
 
-      What was used to pay for the booking. Supported types are `affiliate`, `card`, `cash`, and `in-store`.
+      What was used to pay for the booking. Supported types are `affiliate`, `card`, and `in-store`.
 
 Example:
 
