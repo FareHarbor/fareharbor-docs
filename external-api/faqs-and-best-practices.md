@@ -16,10 +16,10 @@ What should I do?
 
 This response indicates that FareHarbor sent a webhook to
 `https://my.webhook.url/`, but the server RECEIVING the webhook (i.e.,
-your server) experienced an error. To resolve this, contact whoever is
-responsible for your server, and ask them to look through the server
-logs around the time when that webhook was sent. This should reveal
-the problem.
+your server) experienced an error. To resolve this, contact the person
+who is responsible for your server, and ask them to look through the
+server logs around the time when that webhook was sent. This should
+reveal the problem.
 
 It is up to folks on your side to resolve the problem. It may involve
 a reconfiguration or modification of your server software.
@@ -54,11 +54,37 @@ takes too long to return, or times out. What should I do?
 
 ### Answer
 
-There are a few potential causes of this endpoint being slow. But the
-easiest solution to this problem is to DECREASE THE DATE RANGE for
-which you are requesting availability data. For instance, if
-start-date and end-date are 60 days or 30 days apart, try decreasing
-the interval to 15 days or even 10 days.
+There are a couple of things you can do:
+
+1. DECREASE THE DATE RANGE for which you are requesting availability
+   data. For instance, if start-date and end-date are 60 days or 30
+   days apart, try decreasing the interval to 15 days or even 10 days.
+
+2. If you are using the extended Availabilities schema, try switching
+   back to the (default) minimal schema.
+
+## Question: 403 from FareHarbor External API
+
+I am calling the FareHarbor External API. FareHarbor is responding
+with a "403 Forbidden". How can I fix this?
+
+### Answer
+
+Double-check that you are using the right keys in your API call.
+
+## Question: Cancelling rebooked bookings
+
+Say I create booking A, then I rebook it to booking B, then I want to
+cancel the booking. When cancelling via API, should I cancel booking A
+or booking B?
+
+### Answer
+
+Cancelling either one via API will cancel the booking. Regardless of
+which you cancel, booking A will wind up with `"status":"rebooked"`
+and booking B will wind up with `"status":"cancelled"`. So depending
+how your system is set up, the path of least confusion on your side
+may be to CANCEL THE MOST RECENT BOOKING.
 
 # FH Webhook/API Integration Best Practices
 
@@ -68,9 +94,9 @@ using webhooks and APIs.
 ## Consider using Zapier, or a similar service.
 
 Before writing software to integrate with FareHarbor webhooks, look
-into using Zapier, IFTTT, or something similar. In many cases, doing
-an integration this way will be quicker, easier, more reliable, and
-less expensive than doing it yourself with your own servers and custom
+into using Zapier or something similar. In many cases, doing an
+integration this way will be quicker, easier, more reliable, and less
+expensive than doing it yourself with your own servers and custom
 software.
 
 In order to integrate with FareHarbor webhooks and API directly, you
