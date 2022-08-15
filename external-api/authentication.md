@@ -37,5 +37,8 @@ You can - but *we recommend you do not* -- send your keys as the query parameter
 This is a permitted usage pattern but not a recommended one - in particular you must not use this as part of a browser based interaction, since keys can end up persisting in browser histories, logs, and other less secure locations. 
 
 ## Requesting Keys
+                                                                                                                                      If you would like to pursue an integration with the FareHarbor API,
+please contact <strategicpartnerships@fareharbor.com> so that we can
+review your request.
 
-Please contact <support@fareharbor.com> to request API keys.
+Note that we cannot grant access in all cases.
