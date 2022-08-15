@@ -4,7 +4,11 @@ A webhook is an HTTPS request sent from FareHarbor to a server of your
 choice as a result of an event.
 
 FareHarbor can send webhooks when bookings are created, updated,
-rebooked, or cancelled, or when a contact changes.
+rebooked, or cancelled, when a contact changes, when a checkin occurs,
+etc.
+
+For ideas about how to use webhooks in concert with the External API,
+see `/external-api/faqs-and-best-practices.md`g
 
 # Configuring webhooks
 
@@ -13,14 +17,17 @@ webhooks and one for test webhooks.
 
 Contact <support@fareharbor.com> to configure these.
 
-(Note: SSL certificates will be validated for the production URL.)
+(Note: The server for the production webhook URL must have a valid SSL
+certificate. It doesn't have one, then the webhook will not be
+delivered. It is up to you to ensure that your SSL certificates get
+renewed as needed.)
 
 (Note: Companies in demo mode do not trigger webhooks.)
 
 ## Booking notifications
 
 When a booking-related event occurs, FareHarbor sends a `POST` request to
-the webhook URL you have provided.
+the webhook URL that you have provided.
 
 Depending on how your webhooks are configured, these `POST` reqeusts will be sent for:
 
@@ -31,8 +38,8 @@ Depending on how your webhooks are configured, these `POST` reqeusts will be sen
 The body of this request contains an up-to-date JSON representation of
 the booking.
 
-Some of the fields are described here `/external-api/endpoints.md` and
-here `/external-api/data-types.md#booking`.
+Some of the fields are described here: `/external-api/endpoints.md` and
+here: `/external-api/data-types.md#booking`.
 
 Depending how your webhook is configured and what fields you are
 allowed to view, there may also be a `payments` property:
@@ -82,9 +89,9 @@ When the payment is not an in-store payment, the
 `in_store_payment_type` in the response is `null`.
 
 Your server should respond to the webhook with an HTTP success
-response code. (If FareHarbor receives an HTTP error response or no
-response at all, then the webhook will be retried up to 3 more times
-at 60 second intervals.)
+response code. If FareHarbor receives an HTTP error response or no
+response at all, then the webhook will be retried some number of
+times, with a significant pause between attempts. 
 
 ## Third-party servers
 

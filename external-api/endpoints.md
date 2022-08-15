@@ -549,7 +549,7 @@ Example response:
         ]
       }
     }
-
+    
 ## Bookings
 
 Create a booking:
@@ -1468,3 +1468,57 @@ When `order` is not `null`, `order` is an object that provides the following pro
   A unique identifier for the order.
 
 Note that there is not currently a way to create orders via the API.
+
+
+## Availability Bookings
+
+Fetch a list of all bookings (in simplified format) for an availability:
+
+* `GET /companies/<shortname>/availabilities/<Availability.pk>/bookings/`
+
+The result will be a list of simplified booking objects.
+
+Example request:
+
+    $ curl \
+    -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
+    -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
+    https://fareharbor.com/api/external/v1/companies/hawaiianadventures/availabilities/4786/bookings/
+
+Example response:
+
+    {
+      "bookings": [
+        {
+          "pk": 6876876,
+          "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
+          "company": {
+            "shortname": "hawaiianadventures",
+            "name": "Hawaiian Adventures",
+            "currency": "usd"
+          },
+          "affiliate_company": {
+            "shortname": "joes",
+            "name": "Joes",
+            "currency": "usd"
+          },
+          "contact": {
+            "name": "John Doe",
+            "phone": "+1-415-789-4563",
+            "phone_country": "US",
+            "language": "en-us",
+            "normalized_phone": "+14157894563",
+            "is_subscribed_for_email_updates": false,
+            "email": "johndoe@example.com",
+            "is_subscribed_for_sms_updates": false
+          },
+          "display_id": "#12",
+          "external_id": "DataTracker5678",
+          "order": null,
+          "status": "booked",
+          "rebooked_from": null,
+          "rebooked_to": null,
+          "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/?overlay=/contacts/7/bookings/d75102be-9732-4523-90a8-c698eff2b983/"
+        }
+      ]
+    }
