@@ -30,7 +30,8 @@ would break existing partner implementations.
 
 ## Question: Missed bookings
 
-FareHarbor failed to send me webhooks for some bookings. What should I do?
+FareHarbor failed to send me webhooks for some bookings. What should I
+do?
 
 ### Answer
 
@@ -43,25 +44,35 @@ the webhooks won't be delivered.
 
 In this case, the missing bookings can be retrieved using the
 Availability Bookings endpoint, to retieve a list of all bookings for
-each Availability. See `/external-api/endpoints.md`. If you need more
-details than are provided by this endpoint, then you can call the Retrieve
-Booking Endpoint to retrieve the full details for each one.
+each Availability. See
+(/external-api/endpoints.md#availability-bookings). If you need more
+details than are provided by this endpoint, then you can call the
+Retrieve Booking Endpoint to retrieve the full details for each
+booking.
 
-## Question: Slow /availabilities/ endpoint
+## Question: Slow /availabilities/date-range/ endpoint
 
-The `/availabilities/date-range/<start-date>/<end-date>/` endpoint
-takes too long to return, or times out. What should I do?
+The Availabilities Date Range endpoint takes too long to return, or
+times out. What should I do?
 
 ### Answer
 
 There are a couple of things you can do:
 
-1. DECREASE THE DATE RANGE for which you are requesting availability
+1. BE SURE YOU ARE USING THE MINIMAL AVAILABILITIES ENDPOINT. This is
+   the one described in the documentation:
+   
+   (/external-api/endpoints.md#availabilities)
+   
+    GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/
+    
+   Other versions of this endpoint are much slower, and are not
+   recommended.
+
+2. DECREASE THE DATE RANGE for which you are requesting availability
    data. For instance, if start-date and end-date are 60 days or 30
    days apart, try decreasing the interval to 15 days or even 10 days.
 
-2. If you are using the extended Availabilities schema, try switching
-   back to the (default) minimal schema.
 
 ## Question: 403 from FareHarbor External API
 
@@ -146,6 +157,10 @@ practical purposes, you can treat a rebooking event the same as a
 cancellation and a new booking. Data associated with the old booking
 are no longer relevant.
 
+### Retrieving Bookings for an Availability
 
-
-
+We recently added an endpoint that allows you to retrieve all bookings
+on a particular availability. This can be useful if you think you may
+not have successfully processed one or more webhooks (or if you are
+not using webhooks at all). See the Availability Bookings endpoint in
+(/external-api/endpoints.md#availability-bookings).
