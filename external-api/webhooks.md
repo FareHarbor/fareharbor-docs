@@ -8,7 +8,7 @@ rebooked, or cancelled, when a contact changes, when a checkin occurs,
 etc.
 
 For ideas about how to use webhooks in concert with the External API,
-see `/external-api/faqs-and-best-practices.md`g
+see [/external-api/faqs-and-best-practices.md](/external-api/faqs-and-best-practices.md).
 
 # Configuring webhooks
 
@@ -38,8 +38,8 @@ Depending on how your webhooks are configured, these `POST` reqeusts will be sen
 The body of this request contains an up-to-date JSON representation of
 the booking.
 
-Some of the fields are described here: `/external-api/endpoints.md` and
-here: `/external-api/data-types.md#booking`.
+Some of the fields are described here: [/external-api/endpoints.md](/external-api/endpoints.md) and
+here: [/external-api/data-types.md#booking](/external-api/data-types.md#booking).
 
 Depending how your webhook is configured and what fields you are
 allowed to view, there may also be a `payments` property:

@@ -22,7 +22,9 @@ server logs around the time when that webhook was sent. This should
 reveal the problem.
 
 It is up to folks on your side to resolve the problem. It may involve
-a reconfiguration or modification of your server software.
+a reconfiguration or modification of your server software. Also,
+ensure that your server's SSL certificate is valid and has not
+expired.
 
 It is unlikely that the problem lies with FareHarbor. As a general
 policy, FareHarbor does not make changes to the API and webhooks that
@@ -30,38 +32,57 @@ would break existing partner implementations.
 
 ## Question: Missed bookings
 
-FareHarbor failed to send me webhooks for some bookings. What should I do?
+FareHarbor failed to send me webhooks for some bookings. What should I
+do?
 
 ### Answer
 
 FareHarbor tries very hard to send webhooks for new or changed
 bookings. If FareHarbor fails on the first attempt, it will retry
 repeatedly over some window of time.  If the server RECEIVING the
-webhooks (your server) is down for a long time for some reason, due to
-a time-consuming update or a bug or whatever, there is a chance that
-the webhooks won't be delivered.
+webhooks (your server) is down for a long time for some reason, there
+is a chance that the webhooks won't be delivered.
 
 In this case, the missing bookings can be retrieved using the
-Availability Bookings endpoint, to retieve a list of all bookings for
-each Availability. See `/external-api/endpoints.md`. If you need more
-details than are provided by this endpoint, then you can call the Retrieve
-Booking Endpoint to retrieve the full details for each one.
+Availability Bookings endpoint, which allows you to retieve a list of
+all Bookings for a particular Availability. See
+[/external-api/endpoints.md#availability-bookings](/external-api/endpoints.md#availability-bookings). If
+you need more details than are provided by this endpoint, then you can
+call the Retrieve Booking Endpoint to retrieve the full details for
+each booking.
 
-## Question: Slow /availabilities/ endpoint
+## Question: Duplicate webhooks
 
-The `/availabilities/date-range/<start-date>/<end-date>/` endpoint
-takes too long to return, or times out. What should I do?
+I receive each webhook TWICE.
+
+### Answer
+
+Do you have TWO api keys configured to send webhooks? 
+
+## Question: Slow /availabilities/date-range/ endpoint
+
+The Availabilities Date Range endpoint takes too long to return, or
+times out and never returns. What should I do?
 
 ### Answer
 
 There are a couple of things you can do:
 
-1. DECREASE THE DATE RANGE for which you are requesting availability
+1. BE SURE YOU ARE USING THE MINIMAL AVAILABILITIES ENDPOINT. This is
+   the one described in the documentation:
+   [/external-api/endpoints.md#availabilities](/external-api/endpoints.md#availabilities)
+   
+   `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/`
+
+   Make sure the endpoint path contains the word `minimal`.
+   
+   Other versions of this endpoint are much slower, and are not
+   recommended.
+
+2. DECREASE THE DATE RANGE for which you are requesting availability
    data. For instance, if start-date and end-date are 60 days or 30
    days apart, try decreasing the interval to 15 days or even 10 days.
 
-2. If you are using the extended Availabilities schema, try switching
-   back to the (default) minimal schema.
 
 ## Question: 403 from FareHarbor External API
 
@@ -80,11 +101,12 @@ or booking B?
 
 ### Answer
 
-Cancelling either one via API will cancel the booking. Regardless of
-which you cancel, booking A will wind up with `"status":"rebooked"`
-and booking B will wind up with `"status":"cancelled"`. So depending
-how your system is set up, the path of least confusion on your side
-may be to CANCEL THE MOST RECENT BOOKING.
+Cancelling either one via API will cause FareHarbor to cancel the
+booking. Regardless of which you cancel, booking A will wind up with
+`"status":"rebooked"` and booking B will wind up with
+`"status":"cancelled"`. So cancel whichever you like. In many cases,
+depending how your system is set up, the path of least confusion on
+your side may be to CANCEL THE MOST RECENT BOOKING.
 
 # FH Webhook/API Integration Best Practices
 
@@ -99,10 +121,10 @@ integration this way will be quicker, easier, more reliable, and less
 expensive than doing it yourself with your own servers and custom
 software.
 
-In order to integrate with FareHarbor webhooks and API directly, you
-will need time from experienced software engineers. If you do not have
-these on staff, you may need to contract them and manage them. This is
-not always easy.
+In order to integrate with the FareHarbor API and webhooks directly,
+you will need time from experienced software engineers. If you do not
+have them on staff, you may need to contract them and manage
+them. This is not always easy.
 
 ## Understand what kinds of events trigger webhooks
 
@@ -111,6 +133,12 @@ examples include changes to contact details, check-ins, text message
 reminders sent, and so on. Many of these may not be relevant to your
 particular integration. Each webhook contains complete data about the
 booking.
+
+You may receive multiple identical or nearly ideantical webhooks for
+the same booking. This may happen occasionally or regularly. This is
+normal. Keep reading to learn how to know how to handle this situation
+and stay in sync with the Bookings that exist in the FareHarbor
+system.
 
 ## The data model
 
@@ -126,26 +154,41 @@ instance, you will receive one when it's created, and you may receive
 another if the contact information is updated, or if a customer
 checkin occurs.
 
+For any given uuid, the most recent webhook received will contain the
+most up-to-date data.
+
+ you can always retrieve the most recent details for a booking
+using the Retrive Bookings endpoint,
+[/endpoints.md#bookings](/endpoints.md#bookings):
+
+    GET /companies/<shortname>/bookings/<Booking.uuid>/
+
 ### The Customer PK
 
 Another important field is the "customers" field. This field contains
 a list of customers. Each customer will have its own "pk". The PK is a
 globally-unique identifier for the customer. 
 
-As long as the booking is not rebooked, the pk will not change, and
-can be used as an ID within your system, directly or indirectly. 
+The details of a booking may change, but as long as it is not
+rebooked, the customer PK will not change, and can be used as an ID
+within your system, directly or indirectly.
 
-If you receive a new webhook for a booking that is already
-represented in your system, this new webhook may contain updated
+If you receive a webhook from FareHarbor for a booking that is already
+recorded in your system, this new webhook may contain updated
 information. Using the PK, you can check each customer's data to see
 if any piece of that customer's data has changed--the contents of a
 custom field, for instance.
 
 When a rebooking occurs, customer PKs are reassigned. For most
-practical purposes, you can treat a rebooking event the same as a
-cancellation and a new booking. Data associated with the old booking
-are no longer relevant.
+practical purposes, you can treat a rebooking event the same as
+cancellation of the old booking and creation of the new booking. Data
+associated with the old booking are no longer relevant.
 
+### Retrieving Bookings for an Availability
 
-
-
+FareHarbor has implemented an endpoint that allows you to retrieve all
+bookings on a particular availability. This can be useful if you think
+you may have missed one or more webhooks (or if you are not using
+webhooks at all). See the Availability Bookings endpoint in
+[/external-api/endpoints.md#availability-bookings](/external-api/endpoints.md#availability-bookings).
+    
