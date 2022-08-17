@@ -22,7 +22,9 @@ server logs around the time when that webhook was sent. This should
 reveal the problem.
 
 It is up to folks on your side to resolve the problem. It may involve
-a reconfiguration or modification of your server software.
+a reconfiguration or modification of your server software. Also,
+ensure that your server's SSL certificate is valid and has not
+expired.
 
 It is unlikely that the problem lies with FareHarbor. As a general
 policy, FareHarbor does not make changes to the API and webhooks that
@@ -44,7 +46,7 @@ is a chance that the webhooks won't be delivered.
 In this case, the missing bookings can be retrieved using the
 Availability Bookings endpoint, which allows you to retieve a list of
 all Bookings for a particular Availability. See
-[/external-api/endpoints.md#availabilities](/external-api/endpoints.md#availability-bookings). If
+[/external-api/endpoints.md#availability-bookings](/external-api/endpoints.md#availability-bookings). If
 you need more details than are provided by this endpoint, then you can
 call the Retrieve Booking Endpoint to retrieve the full details for
 each booking.
@@ -168,7 +170,7 @@ a list of customers. Each customer will have its own "pk". The PK is a
 globally-unique identifier for the customer. 
 
 The details of a booking may change, but as long as it is not
-rebooked, the customer pk will not change, and can be used as an ID
+rebooked, the customer PK will not change, and can be used as an ID
 within your system, directly or indirectly.
 
 If you receive a webhook from FareHarbor for a booking that is already
