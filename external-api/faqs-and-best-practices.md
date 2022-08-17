@@ -62,7 +62,7 @@ There are a couple of things you can do:
 1. BE SURE YOU ARE USING THE MINIMAL AVAILABILITIES ENDPOINT. This is
    the one described in the documentation:
    
-   [](/external-api/endpoints.md#availabilities)
+   [/external-api/endpoints.md#availabilities](/external-api/endpoints.md#availabilities)
    
     GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/
     
