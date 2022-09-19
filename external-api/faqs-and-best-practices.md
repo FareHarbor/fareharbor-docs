@@ -32,8 +32,8 @@ would break existing partner implementations.
 
 ## Question: Missed bookings
 
-FareHarbor failed to send me webhooks for some bookings. What should I
-do?
+FareHarbor failed to send me webhooks for some bookings, rebookings,
+and/or cancellations. What should I do?
 
 ### Answer
 
@@ -59,6 +59,42 @@ I receive each webhook TWICE.
 
 Do you have TWO api keys configured to send webhooks? 
 
+## Question: Webhook security
+
+How can I guarantee that the webhook we receive is from FareHarbor,
+and not from someone else who somehow guessed the URL?
+
+### Answer
+
+#### Choose a hard-to-guess path
+
+You are free to use whatever path you like in the webhook address you
+provide to FareHarbor. For instance, if you use:
+
+    https://mycompany.com/EE5746FDB4054852/fareharbor-webhook/
+    
+then it will be very hard to guess.
+
+Or if you prefer, you can use something like
+    
+    https://mycompany.com/fareharbor-webhook/?key=EE5746FDB4054852
+    
+and check that you receive the expected query parameter.
+
+#### Call the External API to verify booking data
+
+Another security strategy: 
+
+Whenever you receive a webhook, call the Retrieve Booking Endpoint of
+the External API to retrieve the Booking data:
+[/external-api/endpoints.md#retrieve-booking-endpoint](/external-api/endpoints.md#retrieve-booking-endpoint).
+
+Then use the retrieved data rather than the webhook payload data. 
+
+This eliminates the potential negative impact of any "forged"
+webhook. So even if someone does ascertain your webhook URL, they will
+not be able to compromise your data integrity.
+    
 ## Question: Slow /availabilities/date-range/ endpoint
 
 The Availabilities Date Range endpoint takes too long to return, or
