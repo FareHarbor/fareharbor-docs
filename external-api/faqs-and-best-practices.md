@@ -102,9 +102,10 @@ booking.
 
 You may receive multiple identical or nearly ideantical webhooks for
 the same booking. This may happen occasionally or regularly. This is
-normal. Keep reading to learn how to know how to handle this situation
-and stay in sync with the bookings that exist in the FareHarbor
-system.
+normal. Your software must be prepared to receive identical webhooks
+without malfunctioning. Keep reading to learn how to know how to
+handle this situation and stay in sync with the bookings that exist in
+the FareHarbor system.
 
 ## Question: Webhook security
 
