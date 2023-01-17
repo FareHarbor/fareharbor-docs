@@ -131,7 +131,7 @@ and check that you receive the expected query parameter.
 
 #### Call the External API to verify booking data
 
-*NOTE:External API access is required and reserved for resellers not operators*
+    *(NOTE: External API access is available upon request.)*
 
 
 
