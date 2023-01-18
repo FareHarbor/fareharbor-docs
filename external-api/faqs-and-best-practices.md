@@ -131,7 +131,7 @@ and check that you receive the expected query parameter.
 
 #### Call the External API to verify booking data
 
-*NOTE: External API access is granted on a on a case by case basis. To request access please contact your Account Manager or FareHarbor Support.*
+*NOTE: External API access is granted on a on a case by case basis. To request access please contact your Account Manager or [FareHarbor Support](https://fareharbor.com/help/).*
 
 
 Another security strategy: 
