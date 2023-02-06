@@ -29,7 +29,7 @@ renewed as needed.)
 When a booking-related event occurs, FareHarbor sends a `POST` request to
 the webhook URL that you have provided.
 
-Depending on how your webhooks are configured, these `POST` reqeusts will be sent for:
+Depending on how your webhooks are configured, these `POST` requests will be sent for:
 
 * all changes to bookings (including creations, modifications, and cancellations);
 * creations only; or
