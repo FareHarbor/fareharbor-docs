@@ -146,6 +146,12 @@ This eliminates the potential negative impact of any "forged"
 webhook. So even if someone does ascertain your webhook URL, they will
 not be able to compromise your data integrity.
     
+#### Using IP address-based ACLs or allowlists to validate the source of webhooks
+
+Because FareHarbor uses distributed cloud computing, our servers' IP
+addresses may change at any moment without notice. Therefore **we do
+not recommend that our partners use ACLs or allowlists for security**.
+
 ## Question: Slow /availabilities/date-range/ endpoint
 
 The Availabilities Date Range endpoint takes too long to return, or
