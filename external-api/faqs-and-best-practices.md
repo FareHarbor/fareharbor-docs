@@ -274,8 +274,8 @@ integration this way will be quicker, easier, more reliable, and less
 expensive than doing it yourself with your own servers and custom
 software.
 
-In order to integrate with the FareHarbor API and webhooks directly
-(without using Zapier or the like), you will need time from
+In order to integrate with the FareHarbor webhooks and/or API
+directly, without using Zapier or the like, you will need time from
 experienced software engineers. If you do not have them on staff, you
 may need to contract them and manage them. This is not always easy.
 

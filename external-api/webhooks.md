@@ -1,3 +1,12 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [What is a webhook](#what-is-a-webhook)
+- [Configuring webhooks](#configuring-webhooks)
+    - [Booking notifications](#booking-notifications)
+    - [Third-party servers](#third-party-servers)
+
+<!-- markdown-toc end -->
 # What is a webhook
 
 A webhook is an HTTPS request sent from FareHarbor to a server of your
@@ -97,3 +106,16 @@ times, with a significant pause between attempts.
 
 If you do not have your own servers, you can use third-party services
 that receive webhooks on your behalf.
+
+## Failing webhooks
+
+Sometimes FareHarbor sends a webhook to your server and there is a
+failure of one sort or another. (See
+[/external-api/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks](/external-api/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks)
+for a discussion of why this might happen and how you can fix it.)
+
+If FareHarbor detects too many failures within a short period of time,
+we may deactivate the webhook and contact you.
+
+Ultimately, it is your responsibility to make sure that your webhook
+is working.
