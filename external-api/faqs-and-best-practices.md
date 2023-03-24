@@ -49,7 +49,7 @@ malfunctioning in some way. If this happens too often, FareHarbor
 might deactivate your webhook. See
 [/external-api/webhooks.md#failing-webhooks](/external-api/webhooks.md#failing-webhooks)
 
-This is standard practice for webhooks.
+This is standard practice for webhooks. This is not REST.
 
 ## Question: 500s and 40x responses from webhooks
 
