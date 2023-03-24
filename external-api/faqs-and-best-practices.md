@@ -31,6 +31,24 @@
 
 # Frequently Asked Questions
 
+## Question: Webhook return status
+
+I am implementing a webhook receiver on my server. What HTTP status
+should it return?
+
+### Answer
+
+Your webhook receiver should always return a 200 status, to
+acknowledge that the payload was received and understood. If it does
+not return a 200 status, then FareHarbor may resend the webhook some
+number of times, and if there is still no 200, FareHarbor will
+interpret this to mean that your webhook receiver is misconfigured or
+malfunctioning in some way. If this happens too often, FareHarbor
+might deactivate your webhook. See
+[/external-api/webhooks.md#failing-webhooks](/external-api/webhooks.md#failing-webhooks)
+
+This is standard practice for webhooks.
+
 ## Question: 500s and 40x responses from webhooks
 
 I have FareHarbor webhooks configured. I am seeing things in my

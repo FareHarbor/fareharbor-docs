@@ -108,13 +108,16 @@ that receive webhooks on your behalf.
 
 ## Failing webhooks
 
+If your webhook is functioning normally, it should always return a 200
+HTTP status.
+
 Sometimes FareHarbor sends a webhook to your server and there is a
 failure of one sort or another. See
 [/external-api/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks](/external-api/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks)
 for a discussion of why this might happen and how you can fix it.
 
-If FareHarbor detects too many failures within a short period of time,
-we may deactivate the webhook and contact you.
+If FareHarbor detects too many failures (non-200 statuses) within a
+short period of time, we may deactivate the webhook and contact you.
 
 Ultimately, it is your responsibility to make sure that the webhook
 is working.
