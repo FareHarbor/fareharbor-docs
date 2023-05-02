@@ -29,7 +29,8 @@
     - [The data model](#the-data-model)
         - [The Booking UUID](#the-booking-uuid)
         - [The Customer PK](#the-customer-pk)
-        - [Retrieving Bookings for an Availability](#retrieving-bookings-for-an-availability)
+    - [Retrieving All Existing Bookings](#retrieving-all-existing-bookings)
+
 
 # Frequently Asked Questions
 
@@ -357,4 +358,4 @@ In pseudocode, it looks like this:
         for each availability,
           retrieve a list of bookings via the [Availability Bookings endpoint](/endpoints.md#availability-bookings)
 
-There is sample python code to retrieve all bookings [here](/../examples/retrieve_bookings.py).
+There is sample python code to retrieve all bookings [here](/examples/retrieve_bookings.py).
