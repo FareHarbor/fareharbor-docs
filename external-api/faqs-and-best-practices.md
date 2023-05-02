@@ -343,11 +343,18 @@ practical purposes, you can treat a rebooking event the same as
 cancellation of the old booking and creation of the new booking. Data
 associated with the old booking are no longer relevant.
 
-### Retrieving Bookings for an Availability
+## Retrieving All Existing Bookings
 
-FareHarbor has implemented an endpoint that allows you to retrieve all
-bookings on a particular availability. This can be useful if you think
-you may have missed one or more webhooks (or if you are not using
-webhooks at all). See the Availability Bookings endpoint in
-[/external-api/endpoints.md#availability-bookings](/external-api/endpoints.md#availability-bookings).
-    
+Using the External API, it is possible to retrieve all existing bookings.
+
+In pseudocode, it looks like this:
+
+    retrieve a list of companies via the [Companies endpoint](/endpoints.md#companies)
+    for each company,
+      retrieve a list of items via the [Items endpoint](/endpoints.md#items)
+      for each item,
+        retrieve lists of availabilities via the [Availabilities endpoint](/endpoints.md#availabilities)
+        for each availability,
+          retrieve a list of bookings via the [Availability Bookings endpoint](/endpoints.md#availability-bookings)
+
+There is sample python code to retrieve all bookings [here](/../examples/retrieve_bookings.py).
