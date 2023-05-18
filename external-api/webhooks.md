@@ -134,6 +134,8 @@ changed.  The activity log can be used to see what has been changed and when.
       }
     }
 
+Contact <support@fareharbor.com> to have the item webhook turned on for your account.
+
 ## Third-party servers
 
 If you do not have your own servers, you can use third-party services
