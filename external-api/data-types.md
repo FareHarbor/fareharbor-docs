@@ -746,6 +746,48 @@ Example:
       ]
     }
 
+### Cost
+
+A cost object represents the different facets that might have an impact on how
+individual line items affect the price of a booking, such as taxes, fees, etc.
+
+* `price`: `number`
+
+  The line item price.
+
+* `tax`: `number`
+
+  The tax price.
+
+* `taxable`: `number`
+
+  The portion of the price that is subject to taxes.
+
+* `feeable`: `number`
+
+  The portion of the price the is subject to fees.
+
+* `tax_by_type`:
+
+  A breakdown of taxes by tax type.
+
+* `total`: `number`
+
+  The total cost after taxes and fees.
+
+Example:
+
+    "total_cost": {
+      "price": 38900,
+      "tax": 0,
+      "taxable": 38900,
+      "feeable": 38900,
+      "tax_by_type": {
+        53558: 0
+      },
+      "total": 38900
+    }
+
 ### Availability
 
 Availability objects represent particular datetimes that an item goes out.
@@ -957,6 +999,16 @@ When `with_payments=yes` is specified as a query string to the bookings endpoint
 
           The checkin status' type. Supported types are: `checked-in` and `no-show`.
 
+    * `invoice_cost`: `Cost`
+
+      The `invoice_cost` will be included only if the permission *View invoice
+      prices* is enabled, otherwise it will be `null`.
+
+    * `total_cost`: `Cost`
+
+      The `total_cost` will be included only if the permission *View amounts* is
+      enabled, otherwise it will be `null`.
+
     * `customer_type_rate`: `CustomerTypeRate`
 
       The customer type rate to which this customer corresponds.
@@ -978,7 +1030,7 @@ When `with_payments=yes` is specified as a query string to the bookings endpoint
 * `confirmation_url`: `string`
 
   The booking's confirmation page URL.
-  
+
 * `external_id`: `string`
 
   An additional identifier if necessary.  Max Length 128.
@@ -1088,6 +1140,26 @@ Example:
             "name": "checked in",
             "type": "checked-in"
           },
+          "invoice_cost": {
+            "price": 20000,
+            "tax": 0,
+            "taxable": 0,
+            "feeable": 20000,
+            "tax_by_type": {
+              53558: 0
+            },
+            "total": 20000
+          },
+          "total_cost": {
+            "price": 20000,
+            "tax": 0,
+            "taxable": 20000,
+            "feeable": 20000,
+            "tax_by_type": {
+              53558: 0
+            },
+            "total": 20000
+          },
           "customer_type_rate": {
             "pk": 65675,
             "total": 20000,
@@ -1106,6 +1178,26 @@ Example:
           "checkin_status": {
             "name": "checked in",
             "type": "checked-in"
+          },
+          "invoice_cost": {
+            "price": 20000,
+            "tax": 0,
+            "taxable": 0,
+            "feeable": 20000,
+            "tax_by_type": {
+              53558: 0
+            },
+            "total": 20000
+          },
+          "total_cost": {
+            "price": 20000,
+            "tax": 0,
+            "taxable": 20000,
+            "feeable": 20000,
+            "tax_by_type": {
+              53558: 0
+            },
+            "total": 20000
           },
           "customer_type_rate": {
             "pk": 65675,
