@@ -13,6 +13,7 @@ choice as a result of an event.
 
 FareHarbor can send webhooks when bookings are created, updated,
 rebooked, or cancelled, when a contact changes, when a checkin occurs,
+when items are updated,
 etc.
 
 For ideas about how to use webhooks in concert with the External API,
@@ -26,11 +27,18 @@ webhooks and one for test webhooks.
 Contact <support@fareharbor.com> to configure these.
 
 (Note: The server for the production webhook URL must have a valid SSL
-certificate. It doesn't have one, then the webhook will not be
+certificate. If it doesn't have one, then the webhook will not be
 delivered. It is up to you to ensure that your SSL certificates get
 renewed as needed.)
 
 (Note: Companies in demo mode do not trigger webhooks.)
+
+Your server should respond to the webhook with an HTTP success
+response code. If FareHarbor receives an HTTP error response or no
+response at all, then the webhook will be retried some number of
+times, with a significant pause between attempts. If FareHarbor detects
+too many failures (non-200 statuses) within a short period of time, we
+may deactivate the webhook and contact you.
 
 ## Booking notifications
 
@@ -96,10 +104,37 @@ as well.
 When the payment is not an in-store payment, the
 `in_store_payment_type` in the response is `null`.
 
-Your server should respond to the webhook with an HTTP success
-response code. If FareHarbor receives an HTTP error response or no
-response at all, then the webhook will be retried some number of
-times, with a significant pause between attempts. 
+## Item notifications
+
+When an item-related event occurs, FareHarbor sends a `POST` request to
+the webhook URL that you have provided.
+
+The body of this request contains a JSON representation of
+some of the details that will help you identify the item that
+was updated. For further details on what actually changed on the item,
+the webhook contains the external API URL and the dashboard URL.
+
+* The `external_api_url` found in the JSON can be used by interested
+parties to make an additional External API call to the particular item
+which will return the most up to date item information.
+* The `dashboard_url` found in the JSON can be used to find out what has
+changed.  The activity log can be used to see what has been changed and when.
+
+    {
+      "item": {
+        "pk": 1867,
+        "name": "Jet Ski Tour",
+        "company": {
+          "name": "Hawaiian Adventures",
+          "shortname": "hawaiianadventures",
+          "currency": "usd"
+        },
+        "external_api_url": "https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/1867",
+        "dashboard_url": "https://fareharbor.com/hawaiianadventures/dashboard/items/1867/"
+      }
+    }
+
+Contact <support@fareharbor.com> to have the item webhook turned on for your account.
 
 ## Third-party servers
 
