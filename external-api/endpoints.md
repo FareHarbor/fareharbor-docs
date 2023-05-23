@@ -549,7 +549,7 @@ Example response:
         ]
       }
     }
-    
+
 ## Bookings
 
 Create a booking:
@@ -646,6 +646,26 @@ Example response:
               "name": "checked in",
               "type": "checked-in"
             },
+            "invoice_cost": {
+              "price": 32996,
+              "tax": 0,
+              "taxable": 0,
+              "feeable": 32996,
+              "tax_by_type": {
+                53558: 0
+              },
+              "total": 32996
+            },
+            "total_cost": {
+              "price": 38900,
+              "tax": 0,
+              "taxable": 38900,
+              "feeable": 38900,
+              "tax_by_type": {
+                53558: 0
+              },
+              "total": 38900
+            },
             "customer_type_rate": {
               "pk": 65675,
               "total": 20000,
@@ -697,6 +717,18 @@ Example response:
         "is_subscribed_for_sms_updates": false
       }
     }
+
+Permissions affect the visibility of certain fields:
+
+* The `invoice_cost` will be included if the permission *View invoice prices*
+is enabled.
+* The `invoice_cost` will be `null` if *View invoice prices* is disabled.
+* The `total_cost` will be included if the permission *View amounts* is enabled.
+* The `total_cost` will be `null` if *View amounts* is disabled.
+
+`invoice_cost` represents the invoice price of the customer type.
+`total_cost` represents the total cost of the customer type, including any
+priced custom fields.
 
 Check in a booking based on UUID:
 
@@ -765,6 +797,26 @@ Example response:
             "checkin_status": {
               "name": "checked in",
               "type": "checked-in"
+            },
+            "invoice_cost": {
+              "price": 32996,
+              "tax": 0,
+              "taxable": 0,
+              "feeable": 32996,
+              "tax_by_type": {
+                53558: 0
+              },
+              "total": 32996
+            },
+            "total_cost": {
+              "price": 38900,
+              "tax": 0,
+              "taxable": 38900,
+              "feeable": 38900,
+              "tax_by_type": {
+                53558: 0
+              },
+              "total": 38900
             },
             "customer_type_rate": {
               "pk": 65675,
