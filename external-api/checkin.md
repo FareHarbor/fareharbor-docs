@@ -1,3 +1,11 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Checkin via QR Code](#checkin-via-qr-code)
+- [Check-in via Booking UUID](#check-in-via-booking-uuid)
+
+<!-- markdown-toc end -->
+
 # Checkin via QR Code
 
 ```

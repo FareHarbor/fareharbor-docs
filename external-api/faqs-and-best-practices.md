@@ -1,3 +1,4 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -31,6 +32,7 @@
         - [The Customer PK](#the-customer-pk)
     - [Retrieving All Existing Bookings](#retrieving-all-existing-bookings)
 
+<!-- markdown-toc end -->
 
 # Frequently Asked Questions
 

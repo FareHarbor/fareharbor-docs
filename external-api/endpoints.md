@@ -1,3 +1,45 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Endpoints](#endpoints)
+    - [Companies](#companies)
+    - [Company](#company)
+    - [Check in with QR Code](#check-in-with-qr-code)
+    - [Check in Statuses](#check-in-statuses)
+    - [Agents](#agents)
+    - [Desks](#desks)
+    - [Lodgings](#lodgings)
+    - [Availability Lodgings](#availability-lodgings)
+    - [Items](#items)
+    - [Availabilities](#availabilities)
+    - [Availability](#availability)
+    - [Bookings](#bookings)
+        - [Request Schema](#request-schema)
+        - [Custom Field Values](#custom-field-values)
+        - [Bookability](#bookability)
+        - [Party Size Restrictions](#party-size-restrictions)
+            - [Availability Restrictions](#availability-restrictions)
+            - [Customer Type Rate Restrictions](#customer-type-rate-restrictions)
+        - [Errors](#errors)
+        - [Validation](#validation)
+        - [Cancellation](#cancellation)
+            - [Cancellation Policies](#cancellation-policies)
+                - [Effective Cancellation Policies](#effective-cancellation-policies)
+                    - [Items Endpoint](#items-endpoint)
+                    - [Availability Endpoints](#availability-endpoints)
+                    - [Retrieve Booking Endpoint](#retrieve-booking-endpoint)
+        - [Note](#note)
+        - [Rebooking](#rebooking)
+        - [Cancelling a Rebooked Booking](#cancelling-a-rebooked-booking)
+        - [Agents and desks](#agents-and-desks)
+        - [Transportation](#transportation)
+            - [Pickup Information](#pickup-information)
+            - [Arrival Information](#arrival-information)
+        - [Orders](#orders)
+    - [Availability Bookings](#availability-bookings)
+
+<!-- markdown-toc end -->
+
 # Endpoints
 
 All endpoints are rooted at `https://fareharbor.com/api/external/v1/`.

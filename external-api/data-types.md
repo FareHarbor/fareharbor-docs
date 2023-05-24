@@ -1,3 +1,44 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Data Types](#data-types)
+    - [Fields](#fields)
+        - [Markdown fields](#markdown-fields)
+        - [Amount fields](#amount-fields)
+        - [Datetime fields](#datetime-fields)
+    - [Schemas](#schemas)
+        - [Address](#address)
+        - [Company](#company)
+            - [Minimal Representation](#minimal-representation)
+            - [Extended Representation](#extended-representation)
+        - [Agent](#agent)
+        - [Desk](#desk)
+        - [Lodging](#lodging)
+        - [Image](#image)
+        - [Location](#location)
+        - [Cancellation Policy](#cancellation-policy)
+        - [Tag](#tag)
+        - [Item](#item)
+            - [Item Details](#item-details)
+        - [Customer Type](#customer-type)
+        - [Customer Prototype](#customer-prototype)
+        - [Customer Type Rate](#customer-type-rate)
+            - [Minimal Representation](#minimal-representation-1)
+            - [Extended Representation](#extended-representation-1)
+        - [Cost](#cost)
+        - [Availability](#availability)
+            - [Minimal Representation](#minimal-representation-2)
+            - [Extended Representation](#extended-representation-2)
+        - [Order](#order)
+        - [Booking](#booking)
+        - [Capacities](#capacities)
+        - [Extended Option](#extended-option)
+        - [Custom Field](#custom-field)
+        - [Custom Field Instance](#custom-field-instance)
+        - [Custom Field Value](#custom-field-value)
+
+<!-- markdown-toc end -->
+
 # Data Types
 
 ## Fields

@@ -1,3 +1,18 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Interchange Format](#interchange-format)
+- [Requests](#requests)
+    - [Request Body](#request-body)
+    - [Authentication](#authentication)
+- [Responses](#responses)
+    - [General Structure](#general-structure)
+        - [Success responses](#success-responses)
+        - [Error responses](#error-responses)
+    - [HTTP Codes](#http-codes)
+
+<!-- markdown-toc end -->
+
 # Interchange Format
 
 All interactions with the API are done via JSON.

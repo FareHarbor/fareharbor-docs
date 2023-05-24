@@ -1,3 +1,11 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [FareHarbor External API](#fareharbor-external-api)
+    - [Questions](#questions)
+
+<!-- markdown-toc end -->
+
 # FareHarbor External API
 
 * Getting Started

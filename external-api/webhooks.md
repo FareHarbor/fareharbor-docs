@@ -1,10 +1,14 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
 - [What is a webhook](#what-is-a-webhook)
 - [Configuring webhooks](#configuring-webhooks)
     - [Booking notifications](#booking-notifications)
+    - [Item notifications](#item-notifications)
     - [Third-party servers](#third-party-servers)
     - [Failing webhooks](#failing-webhooks)
+
+<!-- markdown-toc end -->
 
 # What is a webhook
 

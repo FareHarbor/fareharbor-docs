@@ -1,3 +1,22 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [-](#-)
+- [Setup](#setup)
+    - [Dependencies](#dependencies)
+    - [Request headers](#request-headers)
+    - [Root URL](#root-url)
+- [Listing companies](#listing-companies)
+- [Listing items for a company](#listing-items-for-a-company)
+- [Listing availabilities for an item](#listing-availabilities-for-an-item)
+- [Listing customer type rates for an availability](#listing-customer-type-rates-for-an-availability)
+- [Creating a booking for an availability](#creating-a-booking-for-an-availability)
+- [Retrieving a booking](#retrieving-a-booking)
+- [Entire script](#entire-script)
+
+<!-- markdown-toc end -->
+
+
 FareHarbor External Integration API
 -----------------------------------
 

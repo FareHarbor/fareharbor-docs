@@ -1,3 +1,18 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Overview](#overview)
+    - [Custom Fields](#custom-fields)
+    - [Custom Field Instances](#custom-field-instances)
+    - [Custom Field Types](#custom-field-types)
+    - [Customer and Booking Level Custom Fields](#customer-and-booking-level-custom-fields)
+    - [Example](#example)
+        - [Customer Level Custom Field](#customer-level-custom-field)
+        - [Booking level Custom Field](#booking-level-custom-field)
+        - [Booking Creation](#booking-creation)
+
+<!-- markdown-toc end -->
+
 # Overview
 
 ## Custom Fields

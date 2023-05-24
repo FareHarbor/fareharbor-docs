@@ -1,3 +1,13 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [FareHarbor External API Error Codes](#fareharbor-external-api-error-codes)
+    - [-](#-)
+    - [Booking creation error](#booking-creation-error)
+    - [Booking cancellation error](#booking-cancellation-error)
+
+<!-- markdown-toc end -->
+
 # FareHarbor External API Error Codes
 
 This document provides more information about the following types of error codes and messages:

@@ -1,3 +1,13 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Authentication](#authentication)
+    - [Keys sent as headers (recommended)](#keys-sent-as-headers-recommended)
+    - [Keys sent as parameters](#keys-sent-as-parameters)
+    - [Requesting Keys](#requesting-keys)
+
+<!-- markdown-toc end -->
+
 # Authentication
 
 An app key and a user key are required to authenticate all requests to

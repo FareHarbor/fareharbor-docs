@@ -1,3 +1,20 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Getting Started](#getting-started)
+    - [Rate Limits](#rate-limits)
+    - [TLS Version](#tls-version)
+    - [Determining User Keys](#determining-user-keys)
+    - [Structuring Requests and Responses](#structuring-requests-and-responses)
+    - [Interacting with the API](#interacting-with-the-api)
+        - [Retrieve a list of available companies](#retrieve-a-list-of-available-companies)
+        - [Retrieve a list of bookable items](#retrieve-a-list-of-bookable-items)
+        - [Retrieve a list of availabilities for an item](#retrieve-a-list-of-availabilities-for-an-item)
+        - [Create a booking for an availability](#create-a-booking-for-an-availability)
+        - [Retrieve a booking](#retrieve-a-booking)
+
+<!-- markdown-toc end -->
+
 # Getting Started
 
 To get started as a FareHarbor External API partner, first contact <support@fareharbor.com>
