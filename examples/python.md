@@ -1,8 +1,7 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [-](#-)
-- [Set up](#set-up)
+- [Setup](#setup)
     - [Dependencies](#dependencies)
     - [Request headers](#request-headers)
     - [Root URL](#root-url)
@@ -16,9 +15,7 @@
 
 <!-- markdown-toc end -->
 
-FareHarbor External Integration API
------------------------------------
-# Set up
+# Setup
 
 ## Dependencies
 
