@@ -2,7 +2,7 @@
 **Table of Contents**
 
 - [FareHarbor External API Error Codes](#fareharbor-external-api-error-codes)
-    - [-](#-)
+    - [Bookability error](#bookability-error)
     - [Booking creation error](#booking-creation-error)
     - [Booking cancellation error](#booking-cancellation-error)
 
@@ -51,7 +51,7 @@ This document provides more information about the following types of error codes
 | 429  |Too Many Requests | [You have sent too many requests in too short a time interval](getting-started.md#rate-limits) |
 
 
-### Bookability error
+## Bookability error
 | Message | Description |
 | ------- | ------      |
 | Auto-open time not reached  |Please contact api-support@fareharbor.com |
@@ -75,7 +75,7 @@ This document provides more information about the following types of error codes
 | Under minimum for customer type |Your selected quantity does not meet the minimum set by the supplier |
 
 
-### Booking creation error
+## Booking creation error
 | Message | Description |
 | ------- | ------      |
 | Affiliates cannot be changed while rebooking without first refunding all affiliate payments. |Please contact api-support@fareharbor.com |
@@ -97,7 +97,7 @@ This document provides more information about the following types of error codes
 | Unable to satisfy resources. |Insufficient inventory for supplier to operate the product for your selections |
 
 
-### Booking cancellation error
+## Booking cancellation error
 | Message | Description |
 | ------- | ------      |
 | This booking has already been cancelled. | Cannot cancel a cancelled booking |
