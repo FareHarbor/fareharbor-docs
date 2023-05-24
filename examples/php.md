@@ -16,7 +16,6 @@
 
 <!-- markdown-toc end -->
 
-
 FareHarbor External Integration API
 -----------------------------------
 
