@@ -58,6 +58,32 @@ Depending on how your webhooks are configured, these `POST` requests will be sen
 The body of this request contains an up-to-date JSON representation of
 the booking.
 
+There are four booking data types that can be sent to a webhook: A full set of data
+contained in the booking fields, as well as optimized versions of each type to reduce
+the amount of fields, thereby decreasing the amount of data you need to store and
+process (filter).
+
+* **Bookings only** (default setting). The data returned in this data type includes:
+*Contact Name*, *Phone*, *Email*, *Activity*, *Availability*, *Customer Types*,
+*Custom Fields*, *Subtotal*, *Tax*, *Total* and *Amount paid* from a booking. Note
+that payment and refund information is not included with this data type.
+* **Bookings only (Optimized)**: This data type returns a smaller group of fields
+as compared to **Bookings only**, in order to improve performance and give you only
+the data that is of most importance to you. Note that these fields also **do not**
+include payment or refund information.
+The following data fields are returned using this data type: *Item*, *Company*,
+*Contact*, *Availability*, *Customers*, *Custom field values*, *Effective cancellation
+policy*, *Invoice*, *Receipt*, *Amount paid*, *Agent*, *Desk*, *Status* and *Rebooked*.
+* **Bookings + payments**: If you want to send payment and refund data, in addition
+to what is sent with Bookings only, select this type for all bookings fields and
+including payment information.
+* **Bookings + payments (Optimized)**: Use this data type when you want to receive
+a subset of bookings data, as compared to the full **Bookings + payments** output.
+The data returned for the optimized call will also include payment and refund
+information. Sending data using an optimized connection can enhance server performance
+during the API call by filtering out only the most frequently used fields. This will
+also allow you to more effectively manage only the data that is of interest.
+
 Some of the fields are described here: [/external-api/endpoints.md](/external-api/endpoints.md) and
 here: [/external-api/data-types.md#booking](/external-api/data-types.md#booking).
 
