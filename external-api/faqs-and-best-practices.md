@@ -31,7 +31,7 @@ Another security strategy:
 
 Whenever you receive a webhook, call the Retrieve Booking Endpoint of
 the External API to retrieve the booking data:
-[/external-api/endpoints.md#retrieve-booking-endpoint](/external-api/endpoints.md#retrieve-booking-endpoint).
+[/external-api/endpoints/endpoints.md#retrieve-booking-endpoint](/external-api/endpoints/endpoints.md#retrieve-booking-endpoint).
 
 Then use the retrieved data rather than the webhook payload data. 
 
@@ -56,7 +56,7 @@ There are a couple of things you can do:
 
 1. BE SURE YOU ARE USING THE MINIMAL AVAILABILITIES ENDPOINT. This is
    the one described in the documentation:
-   [/external-api/endpoints.md#availabilities](/external-api/endpoints.md#availabilities)
+   [/external-api/endpoints/endpoints.md#availabilities](/external-api/endpoints/endpoints.md#availabilities)
    
    `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/`
 
@@ -171,4 +171,4 @@ In pseudocode, it looks like this:
         for each availability,
           retrieve a list of bookings via the [Availability Bookings endpoint](/endpoints.md#availability-bookings)
 
-There is sample python code to retrieve all bookings [here](/examples/retrieve_bookings.py).
+There is sample python code to retrieve all bookings [here](external-api/examples/retrieve_bookings.py).
