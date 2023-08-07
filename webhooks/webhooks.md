@@ -21,7 +21,7 @@ when items are updated,
 etc.
 
 For ideas about how to use webhooks in concert with the External API,
-see [/external-api/faqs-and-best-practices.md](/external-api/faqs-and-best-practices.md).
+see [/external-api/faqs-and-best-practices.md](/webhooks/faqs-and-best-practices.md).
 
 # Configuring webhooks
 
@@ -84,8 +84,8 @@ information. Sending data using an optimized connection can enhance server perfo
 during the API call by filtering out only the most frequently used fields. This will
 also allow you to more effectively manage only the data that is of interest.
 
-Some of the fields are described here: [/external-api/endpoints.md](/external-api/endpoints.md) and
-here: [/external-api/data-types.md#booking](/external-api/data-types.md#booking).
+Some of the fields are described here: [/external-api/endpoints.md](/external-api/endpoints/endpoints.md) and
+here: [/external-api/data-types.md#booking](/external-api/endpoints/data-types.md#booking).
 
 Depending how your webhook is configured and what fields you are
 allowed to view, there may also be a `payments` property:
