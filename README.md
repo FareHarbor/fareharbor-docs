@@ -1,11 +1,5 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-# FareHarbor External API & Webhooks
-
-**Table of Contents**
-
-- [FareHarbor External API](#fareharbor-external-api)
-    - [Questions](#questions)
-
+# FareHarbor External API & Webhooks Documentation
 <!-- markdown-toc end -->
 
 # FareHarbor External API
@@ -25,6 +19,4 @@ If you need help or have a feature request, please contact your Account Manager 
 
 
 Note that we don't currently accept pull requests for this repo.
-
-(End of document.)
 
