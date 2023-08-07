@@ -178,7 +178,7 @@ HTTP status.
 
 Sometimes FareHarbor sends a webhook to your server and there is a
 failure of one sort or another. See
-[/external-api/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks](/external-api/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks)
+[/webhooks/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks](/webhooks/faqs-and-best-practices.md#question-500s-and-40x-responses-from-webhooks)
 for a discussion of why this might happen and how you can fix it.
 
 If FareHarbor detects too many failures (non-200 statuses) within a
