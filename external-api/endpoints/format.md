@@ -26,7 +26,7 @@ The body should consist entirely of a JSON object.
 
 ## Authentication
 
-You'll need to authenticate every request you make the API; see [`authentication.md`](authentication.md).
+You'll need to authenticate every request you make the API; see [`authentication.md`](external-api/authentication.md).
 
 # Responses
 
@@ -113,7 +113,7 @@ are the ones you are most likely to encounter.
 
   You do not have permission to access this endpoint in this way.
 
-  Review [`authentication.md`](authentication.md) and verify that you are sending the
+  Review [`authentication.md`](external-api/authentication.md) and verify that you are sending the
   correct API keys, and that you do indeed have permission to access to
   endpoint you are attempting to access.
 
