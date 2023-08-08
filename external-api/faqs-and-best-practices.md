@@ -131,8 +131,8 @@ For any given uuid, the most recent webhook received will contain the
 most up-to-date data.
 
 You can always retrieve the most recent details for a booking using
-the Retrive Bookings endpoint,
-[/endpoints.md#bookings](/endpoints.md#bookings):
+the Retrieve Bookings endpoint,
+[/endpoints.md#bookings](external-api/endpoints/endpoints.md#bookings):
 
     GET /companies/<shortname>/bookings/<Booking.uuid>/
 
