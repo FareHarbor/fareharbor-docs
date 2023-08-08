@@ -1257,7 +1257,7 @@ The `type` property will specify the effective cancellation policy type. The fol
 * "always" - bookings are eligible for cancellation up until a cutoff that is determined by the availability (usually the availability start time).
 * "never" - bookings are never eligible for cancellation (e.g. no effective cancellation policy, insufficient privileges, cancellation disallowed by policy).
 
-The `cutoff_hours_before` property will specify the number of hours for the "hours-before-start" and "hours-before-midnight" types. Note: this value can be negative indicating that bookings can be cancelled some number of hours after availability start time (when type is "hours-before-start") or some number of hours after midnight on availability start date (when type is "hours-before-midnight"). The `cutoff_hours_before` property will provide `null` when no cutoff is applicable (when bookings are never elgible for cancellation).
+The `cutoff_hours_before` property will specify the number of hours for the "hours-before-start" and "hours-before-midnight" types. Note: this value can be negative indicating that bookings can be cancelled some number of hours after availability start time (when type is "hours-before-start") or some number of hours after midnight on availability start date (when type is "hours-before-midnight"). The `cutoff_hours_before` property will provide `null` when no cutoff is applicable (when bookings are never eligible for cancellation).
 
 ###### Availability Endpoints
 
