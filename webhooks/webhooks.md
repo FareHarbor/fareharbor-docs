@@ -78,7 +78,7 @@ policy*, *Invoice*, *Receipt*, *Amount paid*, *Agent*, *Desk*, *Status* and *Reb
 to what is sent with Bookings only, select this type for all bookings fields and
 including payment information.
 * **Bookings + payments (Optimized)**: Use this data type when you want to receive
-a subset of bookings data, as compared to the full **Bookings + payments** output.
+a subset of bookings data, as compared to the full. **Bookings + payments** output.
 The data returned for the optimized call will also include payment and refund
 information. Sending data using an optimized connection can enhance server performance
 during the API call by filtering out only the most frequently used fields. This will
