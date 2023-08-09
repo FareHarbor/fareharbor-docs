@@ -132,7 +132,7 @@ most up-to-date data.
 
 You can always retrieve the most recent details for a booking using
 the Retrieve Bookings endpoint,
-[/endpoints.md#bookings](external-api/endpoints/endpoints.md#bookings):
+[/endpoints.md#bookings](/external-api/endpoints/endpoints.md#bookings):
 
     GET /companies/<shortname>/bookings/<Booking.uuid>/
 
