@@ -44,7 +44,7 @@ number of times, and if there is still no 200, FareHarbor will
 interpret this to mean that your webhook receiver is misconfigured or
 malfunctioning in some way. If this happens too often, FareHarbor
 might deactivate your webhook. See
-[/external-api/webhooks.md#failing-webhooks](/external-api/webhooks.md#failing-webhooks)
+[/webhooks/webhooks.md#failing-webhooks](/webhooks/webhooks.md#failing-webhooks)
 
 This is standard practice for webhooks. This is not REST.
 
