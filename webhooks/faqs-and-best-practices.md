@@ -267,7 +267,7 @@ most up-to-date data.
 
 You can always retrieve the most recent details for a booking using
 the Retrive Bookings endpoint,
-[/external-api/endpoints/endpoints.md#bookings](external-api/endpoints//endpoints.md#bookings):
+[/external-api/endpoints/endpoints.md#bookings](external-api/endpoints/endpoints.md#bookings):
 
     GET /companies/<shortname>/bookings/<Booking.uuid>/
 
@@ -306,4 +306,4 @@ In pseudocode, it looks like this:
         for each availability,
           retrieve a list of bookings via the [Availability Bookings endpoint](/endpoints.md#availability-bookings)
 
-There is sample python code to retrieve all bookings [here](/examples/retrieve_bookings.py).
+There is sample python code to retrieve all bookings [here](/external-api/examples/retrieve_bookings.py).
