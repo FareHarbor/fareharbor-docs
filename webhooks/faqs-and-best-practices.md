@@ -137,7 +137,7 @@ is a chance that the webhooks won't be delivered.
 In this case, the missing bookings can be retrieved using the
 Availability Bookings endpoint, which allows you to retieve a list of
 all bookings for a particular Availability. See
-[/external-api/endpoints.md#availability-bookings](/external-api/endpoints.md#availability-bookings). If
+[/external-api/endpoints/endpoints.md#availability-bookings](/external-api/endpoints/endpoints.md#availability-bookings). If
 you need more details than are provided by this endpoint, then you can
 call the Retrieve Booking Endpoint to retrieve the full details for
 each booking.
@@ -197,7 +197,7 @@ Another security strategy:
 
 Whenever you receive a webhook, call the Retrieve Booking Endpoint of
 the External API to retrieve the booking data:
-[/external-api/endpoints.md#retrieve-booking-endpoint](/external-api/endpoints.md#retrieve-booking-endpoint).
+[/external-api/endpoints/endpoints.md#retrieve-booking-endpoint](/external-api/endpoints/endpoints.md#retrieve-booking-endpoint).
 
 Then use the retrieved data rather than the webhook payload data. 
 
@@ -267,7 +267,7 @@ most up-to-date data.
 
 You can always retrieve the most recent details for a booking using
 the Retrive Bookings endpoint,
-[/endpoints.md#bookings](/endpoints.md#bookings):
+[/external-api/endpoints/endpoints.md#bookings](external-api/endpoints//endpoints.md#bookings):
 
     GET /companies/<shortname>/bookings/<Booking.uuid>/
 
