@@ -46,7 +46,7 @@ You can find more information about the authentication process [here](authentica
 
 ## Structuring Requests and Responses
 
-All requests and responses are simple JSON objects; see [`format.md`](format.md).
+All requests and responses are simple JSON objects; see [`format.md`](external-api/endpoints/format.md).
 
 ## Interacting with the API
 
