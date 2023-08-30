@@ -3,13 +3,13 @@
 
 - [Frequently Asked Questions](#frequently-asked-questions)
     - [Question: Slow /availabilities/date-range/ endpoint](#question-slow-availabilitiesdate-range-endpoint)
-        - [Answer](#answer-6)
+        - [Answer](#answer-1)
     - [Question: 403 from FareHarbor External API](#question-403-from-fareharbor-external-api)
         - [Answer](#answer-7)
     - [Question: Cancelling rebooked bookings](#question-cancelling-rebooked-bookings)
         - [Answer](#answer-8)
-    - [Question: Integrating FareHarbor webhooks with third-party APIs](#question-integrating-fareharbor-webhooks-with-third-party-apis)
-        - [Answer](#answer-9)
+   - [Question: Supporting Language Translations](#question-supporitng-language-translations)
+        - [Answer](#answer-10)
 - [FH API Integration Best Practices](#fh-webhookapi-integration-best-practices)
     - [Consider using Zapier, or a similar service.](#consider-using-zapier-or-a-similar-service)
     - [The data model](#the-data-model)
@@ -93,6 +93,18 @@ booking. Regardless of which you cancel, booking A will wind up with
 `"status":"cancelled"`. So cancel whichever you like. In many cases,
 depending how your system is set up, the path of least confusion on
 your side may be to CANCEL THE MOST RECENT BOOKING.
+
+## Question: Supporting Language Translations
+
+Does the External API support company language translations?
+
+### Answer
+
+Yes, language translations are supported in the External API to match the configured language translations in the requested dashboard. To view the supported language translation a parameter can be set on the API request to return content in the desired language. FareHarbor currently supports the following translations if those are "active" in the dashboard: Supported Languages
+
+Example Request: Get /Companies/<comapny-shortname>/items/&language=es
+
+To Note: Using languages in the request will only provide translations for content and will not provide proper formatting or localization.
 
 
 # FH API Integration Best Practices
