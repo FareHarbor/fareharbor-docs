@@ -2,15 +2,17 @@
 **Table of Contents**
 
 - [Frequently Asked Questions](#frequently-asked-questions)
+    - [-](#-)
+    - [Using IP address-based ACLs or allowlists to validate the source of webhooks](#using-ip-address-based-acls-or-allowlists-to-validate-the-source-of-webhooks)
     - [Question: Slow /availabilities/date-range/ endpoint](#question-slow-availabilitiesdate-range-endpoint)
-        - [Answer](#answer-6)
+        - [Answer](#answer)
     - [Question: 403 from FareHarbor External API](#question-403-from-fareharbor-external-api)
-        - [Answer](#answer-7)
+        - [Answer](#answer-1)
     - [Question: Cancelling rebooked bookings](#question-cancelling-rebooked-bookings)
-        - [Answer](#answer-8)
-    - [Question: Integrating FareHarbor webhooks with third-party APIs](#question-integrating-fareharbor-webhooks-with-third-party-apis)
-        - [Answer](#answer-9)
-- [FH API Integration Best Practices](#fh-webhookapi-integration-best-practices)
+        - [Answer](#answer-2)
+    - [Question: Translations](#question-translations)
+        - [Answer](#answer-3)
+- [FH API Integration Best Practices](#fh-api-integration-best-practices)
     - [Consider using Zapier, or a similar service.](#consider-using-zapier-or-a-similar-service)
     - [The data model](#the-data-model)
         - [The Booking UUID](#the-booking-uuid)
@@ -20,30 +22,6 @@
 <!-- markdown-toc end -->
 
 # Frequently Asked Questions
-
-
-#### Call the External API to verify booking data
-
-*NOTE: External API access is granted on a on a case by case basis. To request access please contact your Account Manager or [FareHarbor Support](https://fareharbor.com/help/).*
-
-
-Another security strategy: 
-
-Whenever you receive a webhook, call the Retrieve Booking Endpoint of
-the External API to retrieve the booking data:
-[/external-api/endpoints/endpoints.md#retrieve-booking-endpoint](/external-api/endpoints/endpoints.md#retrieve-booking-endpoint).
-
-Then use the retrieved data rather than the webhook payload data. 
-
-This eliminates the potential negative impact of any "forged"
-webhook. So even if someone does ascertain your webhook URL, they will
-not be able to compromise your data integrity.
-    
-#### Using IP address-based ACLs or allowlists to validate the source of webhooks
-
-Because FareHarbor uses distributed cloud computing, our servers' IP
-addresses may change at any moment without notice. Therefore **we do
-not recommend that our partners use ACLs or allowlists for security**.
 
 ## Question: Slow /availabilities/date-range/ endpoint
 
@@ -58,7 +36,7 @@ There are a couple of things you can do:
    the one described in the documentation:
    [/external-api/endpoints/endpoints.md#availabilities](/external-api/endpoints/endpoints.md#availabilities)
    
-   `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/`
+   GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/
 
    Make sure the endpoint path contains the word `minimal`.
    
@@ -68,7 +46,6 @@ There are a couple of things you can do:
 2. DECREASE THE DATE RANGE for which you are requesting availability
    data. For instance, if start-date and end-date are 60 days or 30
    days apart, try decreasing the interval to 15 days or even 10 days.
-
 
 ## Question: 403 from FareHarbor External API
 
@@ -94,6 +71,17 @@ booking. Regardless of which you cancel, booking A will wind up with
 depending how your system is set up, the path of least confusion on
 your side may be to CANCEL THE MOST RECENT BOOKING.
 
+## Question: Translations
+
+Can I use the FareHarbor External API to retrieve translated content?
+
+### Answer
+
+Yes. You can retrieve translated content provided by the dashboard company in any language that is "active" in their dashboard, in the Translation Languages section. To retrieve a particular language, add a `language` query parameter to the API request:
+
+    GET /companies/<shortname>/items/?language=es
+
+Doing this gives you company-provided translations. It does not translate field names etc., and it does not change currency formatting or provide other localization.
 
 # FH API Integration Best Practices
 
