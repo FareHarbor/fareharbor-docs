@@ -2,15 +2,17 @@
 **Table of Contents**
 
 - [Frequently Asked Questions](#frequently-asked-questions)
+    - [-](#-)
+    - [Using IP address-based ACLs or allowlists to validate the source of webhooks](#using-ip-address-based-acls-or-allowlists-to-validate-the-source-of-webhooks)
     - [Question: Slow /availabilities/date-range/ endpoint](#question-slow-availabilitiesdate-range-endpoint)
-        - [Answer](#answer-1)
+        - [Answer](#answer)
     - [Question: 403 from FareHarbor External API](#question-403-from-fareharbor-external-api)
-        - [Answer](#answer-7)
+        - [Answer](#answer-1)
     - [Question: Cancelling rebooked bookings](#question-cancelling-rebooked-bookings)
-        - [Answer](#answer-8)
-   - [Question: Supporting Language Translations](#question-supporitng-language-translations)
-        - [Answer](#answer-10)
-- [FH API Integration Best Practices](#fh-webhookapi-integration-best-practices)
+        - [Answer](#answer-2)
+    - [Question: Translations](#question-translations)
+        - [Answer](#answer-3)
+- [FH API Integration Best Practices](#fh-api-integration-best-practices)
     - [Consider using Zapier, or a similar service.](#consider-using-zapier-or-a-similar-service)
     - [The data model](#the-data-model)
         - [The Booking UUID](#the-booking-uuid)
@@ -58,7 +60,7 @@ There are a couple of things you can do:
    the one described in the documentation:
    [/external-api/endpoints/endpoints.md#availabilities](/external-api/endpoints/endpoints.md#availabilities)
    
-   `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/`
+   GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/
 
    Make sure the endpoint path contains the word `minimal`.
    
@@ -94,18 +96,17 @@ booking. Regardless of which you cancel, booking A will wind up with
 depending how your system is set up, the path of least confusion on
 your side may be to CANCEL THE MOST RECENT BOOKING.
 
-## Question: Supporting Language Translations
+## Question: Translations
 
-Does the External API support company language translations?
+Can I use the External API to retrieve translated content?
 
 ### Answer
 
-Yes, language translations are supported in the External API to match the configured language translations in the requested dashboard. To view the supported language translation a parameter can be set on the API request to return content in the desired language. FareHarbor currently supports the following translations if those are "active" in the dashboard: Supported Languages
+Yes. You can retrieve content provided by the dashboard company in a language that is enabled in their dashboard. You do this by adding a query parameter to the API request:
 
-Example Request: Get /Companies/<comapny-shortname>/items/&language=es
+    GET /companies/<shortname>/items/?language=es
 
-To Note: Using languages in the request will only provide translations for content and will not provide proper formatting or localization.
-
+Doing this gives you company-provided translations. It does not translate field names etc., and it does not change currency formatting or provide other localization.
 
 # FH API Integration Best Practices
 
