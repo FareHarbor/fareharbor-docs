@@ -23,30 +23,6 @@
 
 # Frequently Asked Questions
 
-
-#### Call the External API to verify booking data
-
-*NOTE: External API access is granted on a on a case by case basis. To request access please contact your Account Manager or [FareHarbor Support](https://fareharbor.com/help/).*
-
-
-Another security strategy: 
-
-Whenever you receive a webhook, call the Retrieve Booking Endpoint of
-the External API to retrieve the booking data:
-[/external-api/endpoints/endpoints.md#retrieve-booking-endpoint](/external-api/endpoints/endpoints.md#retrieve-booking-endpoint).
-
-Then use the retrieved data rather than the webhook payload data. 
-
-This eliminates the potential negative impact of any "forged"
-webhook. So even if someone does ascertain your webhook URL, they will
-not be able to compromise your data integrity.
-    
-#### Using IP address-based ACLs or allowlists to validate the source of webhooks
-
-Because FareHarbor uses distributed cloud computing, our servers' IP
-addresses may change at any moment without notice. Therefore **we do
-not recommend that our partners use ACLs or allowlists for security**.
-
 ## Question: Slow /availabilities/date-range/ endpoint
 
 The Availabilities Date Range endpoint takes too long to return, or
@@ -70,7 +46,6 @@ There are a couple of things you can do:
 2. DECREASE THE DATE RANGE for which you are requesting availability
    data. For instance, if start-date and end-date are 60 days or 30
    days apart, try decreasing the interval to 15 days or even 10 days.
-
 
 ## Question: 403 from FareHarbor External API
 
@@ -98,7 +73,7 @@ your side may be to CANCEL THE MOST RECENT BOOKING.
 
 ## Question: Translations
 
-Can I use the External API to retrieve translated content?
+Can I use the FareHarbor External API to retrieve translated content?
 
 ### Answer
 
