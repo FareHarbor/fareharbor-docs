@@ -77,7 +77,7 @@ Can I use the FareHarbor External API to retrieve translated content?
 
 ### Answer
 
-Yes. You can retrieve content provided by the dashboard company in a language that is enabled in their dashboard. You do this by adding a query parameter to the API request:
+Yes. You can retrieve translated content provided by the dashboard company in any language that is "active" in their dashboard, in the Translation Languages section, by adding a query parameter to the API request:
 
     GET /companies/<shortname>/items/?language=es
 
