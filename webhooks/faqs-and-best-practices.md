@@ -14,8 +14,9 @@
         - [Answer](#answer-4)
     - [Question: Webhook security](#question-webhook-security)
         - [Answer](#answer-5)
-            - [Choose a hard-to-guess path](#choose-a-hard-to-guess-path)
+            - [Choose a hard-to-guess path or query parameter](#choose-a-hard-to-guess-path-or-query-parameter)
             - [Call the External API to verify booking data](#call-the-external-api-to-verify-booking-data)
+            - [Incoroprating authorization headers into the webhook](#incoroprating-authorization-headers-into-the-webhook)
             - [Using IP address-based ACLs or allowlists to validate the source of webhooks](#using-ip-address-based-acls-or-allowlists-to-validate-the-source-of-webhooks)
     - [Question: Integrating FareHarbor webhooks with third-party APIs](#question-integrating-fareharbor-webhooks-with-third-party-apis)
         - [Answer](#answer-6)
@@ -173,7 +174,7 @@ and not from someone else who somehow guessed the URL?
 
 ### Answer
 
-#### Choose a hard-to-guess path
+#### Choose a hard-to-guess path or query parameter
 
 You are free to use whatever path you like in the webhook address you
 provide to FareHarbor. For instance, if you use:
@@ -190,8 +191,9 @@ and check that you receive the expected query parameter.
 
 #### Call the External API to verify booking data
 
-*NOTE: External API access is granted on a on a case by case basis. To request access please contact your Account Manager or [FareHarbor Support](https://fareharbor.com/help/).*
-
+*NOTE: External API access is granted on a on a case by case basis. To
+request access please contact your Account Manager or [FareHarbor
+Support](https://fareharbor.com/help/).*
 
 Another security strategy: 
 
@@ -205,6 +207,14 @@ This eliminates the potential negative impact of any "forged"
 webhook. So even if someone does ascertain your webhook URL, they will
 not be able to compromise your data integrity.
     
+#### Incoroprating authorization headers into the webhook
+
+FareHarbor does not provide a way to incorporate custom headers into
+the webhook that is sent. If you wish to use a shared secret to
+increase security, the secret can be included in the webhook URL
+itself, either as part of the path or as a query parameter (see
+[above](#choose-a-hard-to-guess-path-or-query-parameter)).
+
 #### Using IP address-based ACLs or allowlists to validate the source of webhooks
 
 Because FareHarbor uses distributed cloud computing, our servers' IP
