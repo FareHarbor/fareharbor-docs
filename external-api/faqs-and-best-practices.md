@@ -160,3 +160,26 @@ In pseudocode, it looks like this:
           retrieve a list of bookings via the [Availability Bookings endpoint](/endpoints.md#availability-bookings)
 
 There is sample python code to retrieve all bookings [here](/external-api/examples/retrieve_bookings.py).
+
+## Collecting Phone Numbers
+
+It is recommended to collect a customers phone number and/or phone country while creating a booking to allow for communication between the operator and the customer. 
+
+The phone number should be in the [E164 format](https://www.twilio.com/docs/glossary/what-e164) 
+
+Example POST:
+
+    /companies/<shortname>/availabilities/<Availability.pk>/bookings/
+
+Example Request: 
+
+    $ curl -X POST \
+    -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
+    -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
+    -d \
+    '{
+       "contact": {
+         "name": "John Doe",
+         "phone": "+1-415-789-4563",
+         "phone_country": "US",
+         "email": "johndoe@example.com"
