@@ -596,7 +596,7 @@ Example response:
 
 Create a booking:
 
-* `POST /companies/<shortname>/availabilities/<Availability.pk>/bookings/`
+* `POST /companies/<shortname>/availabilities/<availability.pk>/bookings/`
 
 Retrieve a booking:
 
@@ -1153,7 +1153,7 @@ it has been closed or removed, or has run out of capacity.  For example:
 
 ### Validation
 
-* `POST /companies/<shortname>/availabilities/<Availability.pk>/bookings/validate/`
+* `POST /companies/<shortname>/availabilities/<availability.pk>/bookings/validate/`
 
 Checks bookability and provides booking level pricing information.
 
@@ -1568,7 +1568,7 @@ Note that there is not currently a way to create orders via the API.
 
 Fetch a list of all bookings (in simplified format) for an availability:
 
-* `GET /companies/<shortname>/availabilities/<Availability.pk>/bookings/`
+* `GET /companies/<shortname>/availabilities/<availability.pk>/bookings/`
 
 The result will be a list of simplified booking objects.
 

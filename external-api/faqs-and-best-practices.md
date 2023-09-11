@@ -2,8 +2,6 @@
 **Table of Contents**
 
 - [Frequently Asked Questions](#frequently-asked-questions)
-    - [-](#-)
-    - [Using IP address-based ACLs or allowlists to validate the source of webhooks](#using-ip-address-based-acls-or-allowlists-to-validate-the-source-of-webhooks)
     - [Question: Slow /availabilities/date-range/ endpoint](#question-slow-availabilitiesdate-range-endpoint)
         - [Answer](#answer)
     - [Question: 403 from FareHarbor External API](#question-403-from-fareharbor-external-api)
@@ -18,6 +16,7 @@
         - [The Booking UUID](#the-booking-uuid)
         - [The Customer PK](#the-customer-pk)
     - [Retrieving All Existing Bookings](#retrieving-all-existing-bookings)
+    - [Collecting Phone Numbers](#collecting-phone-numbers)
 
 <!-- markdown-toc end -->
 
@@ -163,13 +162,15 @@ There is sample python code to retrieve all bookings [here](/external-api/exampl
 
 ## Collecting Phone Numbers
 
-It is recommended to collect a customers phone number and/or phone country while creating a booking to allow for communication between the operator and the customer. 
+We recommend that you collect customers' phone numbers, including
+country code, when creating bookings, to allow for communication
+between the operator and the customer.
 
-The phone number should be in the [E164 format](https://www.twilio.com/docs/glossary/what-e164) 
+The phone numbers should be in the [E164 format](https://www.twilio.com/docs/glossary/what-e164) 
 
 Example POST:
 
-    /companies/<shortname>/availabilities/<Availability.pk>/bookings/
+    /companies/<shortname>/availabilities/<availability.pk>/bookings/
 
 Example Request: 
 
