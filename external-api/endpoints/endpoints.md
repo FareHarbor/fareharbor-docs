@@ -177,6 +177,9 @@ Example response:
           "pk": 4786,
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "Auto close",
           "capacity": 10,
           "item": {
             "pk": 1867,
@@ -504,6 +507,9 @@ Example response:
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
           "capacity": 10,
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "Auto close",
           "customer_type_rates": [
             {
               "pk": 65675,
@@ -526,6 +532,8 @@ Example response:
       ]
     }
 
+[Online Booking Status](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/): Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `Auto close`, which automatically prevents online customers from booking after a certain time cutoff, based on  [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
+
 ## Availability
 
 `GET /companies/<shortname>/availabilities/<availability.pk>/`
@@ -544,6 +552,9 @@ Example response:
         "start_at": "2015-01-22T11:30:00-1000",
         "end_at": "2015-01-22T13:30:00-1000",
         "capacity": 10,
+        "minimum_party_size": 1,
+        "maximum_party_size": null,
+        "online_booking_status": "Auto close",
         "item": {
           "pk": 1867,
           "name": "Jet Ski Tour"
@@ -591,6 +602,8 @@ Example response:
         ]
       }
     }
+
+[Online Booking Status](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/): Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `Auto close`, which automatically prevents online customers from booking after a certain time cutoff, based on  [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
 
 ## Bookings
 
@@ -650,6 +663,9 @@ Example response:
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
           "capacity": 10,
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "Auto close",
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour"
@@ -802,6 +818,9 @@ Example response:
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
           "capacity": 10,
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "Auto close",
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour"
