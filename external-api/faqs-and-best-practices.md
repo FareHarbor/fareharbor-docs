@@ -2,8 +2,6 @@
 **Table of Contents**
 
 - [Frequently Asked Questions](#frequently-asked-questions)
-    - [-](#-)
-    - [Using IP address-based ACLs or allowlists to validate the source of webhooks](#using-ip-address-based-acls-or-allowlists-to-validate-the-source-of-webhooks)
     - [Question: Slow /availabilities/date-range/ endpoint](#question-slow-availabilitiesdate-range-endpoint)
         - [Answer](#answer)
     - [Question: 403 from FareHarbor External API](#question-403-from-fareharbor-external-api)
@@ -18,6 +16,7 @@
         - [The Booking UUID](#the-booking-uuid)
         - [The Customer PK](#the-customer-pk)
     - [Retrieving All Existing Bookings](#retrieving-all-existing-bookings)
+    - [Collecting Phone Numbers](#collecting-phone-numbers)
 
 <!-- markdown-toc end -->
 
@@ -160,3 +159,28 @@ In pseudocode, it looks like this:
           retrieve a list of bookings via the [Availability Bookings endpoint](/endpoints.md#availability-bookings)
 
 There is sample python code to retrieve all bookings [here](/external-api/examples/retrieve_bookings.py).
+
+## Collecting Phone Numbers
+
+We recommend that you collect customers' phone numbers, including
+country code, when creating bookings, to allow for communication
+between the operator and the customer.
+
+The phone numbers should be in the [E164 format](https://www.twilio.com/docs/glossary/what-e164) 
+
+Example POST:
+
+    /companies/<shortname>/availabilities/<availability.pk>/bookings/
+
+Example Request: 
+
+    $ curl -X POST \
+    -H "X-FareHarbor-API-App: YOUR-APP-KEY" \
+    -H "X-FareHarbor-API-User: YOUR-USER-KEY" \
+    -d \
+    '{
+       "contact": {
+         "name": "John Doe",
+         "phone": "+1-415-789-4563",
+         "phone_country": "US",
+         "email": "johndoe@example.com"
