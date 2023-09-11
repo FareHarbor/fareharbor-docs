@@ -663,7 +663,7 @@ Example:
     {
       "pk": 589,
       "singular": "Adult",
-      "plural"; "Adults",
+      "plural": "Adults",
       "note": "At least 18 years old."
     }
 
@@ -728,7 +728,7 @@ Example:
       "customer_type": {
         "pk": 589,
         "singular": "Adult",
-        "plural"; "Adults",
+        "plural": "Adults",
         "note": "At least 18 years old.",
         "customer_prototype": {
           "pk": 2522,
@@ -766,7 +766,7 @@ Example:
       "customer_type": {
         "pk": 589,
         "singular": "Adult",
-        "plural"; "Adults",
+        "plural": "Adults",
         "note": "At least 18 years old.",
         "customer_prototype": {
           "pk": 2522,
@@ -868,7 +868,7 @@ Example:
           "customer_type": {
             "pk": 978,
             "singular": "Adult",
-            "plural"; "Adults",
+            "plural": "Adults",
             "note": "At least 18 years old.",
             "customer_prototype": {
               "pk": 2522,
@@ -920,7 +920,7 @@ Example:
           "customer_type": {
             "pk": 978,
             "singular": "Adult",
-            "plural"; "Adults",
+            "plural": "Adults",
             "note": "At least 18 years old.",
             "customer_prototype": {
               "pk": 2522,
@@ -1161,7 +1161,7 @@ Example:
             "customer_type": {
               "pk": 978,
               "singular": "Adult",
-              "plural"; "Adults",
+              "plural": "Adults",
               "note": "At least 18 years old.""
             }
           }
@@ -1209,7 +1209,7 @@ Example:
             "customer_type": {
               "pk": 978,
               "singular": "Adult",
-              "plural"; "Adults",
+              "plural": "Adults",
               "note": "At least 18 years old.""
             }
           }
@@ -1248,7 +1248,7 @@ Example:
             "customer_type": {
               "pk": 978,
               "singular": "Adult",
-              "plural"; "Adults",
+              "plural": "Adults",
               "note": "At least 18 years old.""
             }
           }
