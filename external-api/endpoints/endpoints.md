@@ -177,9 +177,6 @@ Example response:
           "pk": 4786,
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
-          "minimum_party_size": 1,
-          "maximum_party_size": null,
-          "online_booking_status": "Auto close",
           "capacity": 10,
           "item": {
             "pk": 1867,
@@ -503,13 +500,13 @@ Example response:
     {
       "availabilities": [
         {
-          "pk": 4786,
-          "start_at": "2015-01-22T11:30:00-1000",
-          "end_at": "2015-01-22T13:30:00-1000",
-          "capacity": 10,
+          "pk": 50291151,
+          "start_at": "2023-08-18T00:30:00-0600",
+          "end_at": "2023-08-18T03:30:00-0600",
+          "capacity": 3,
           "minimum_party_size": 1,
           "maximum_party_size": null,
-          "online_booking_status": "Auto close",
+          "online_booking_status": "auto",
           "customer_type_rates": [
             {
               "pk": 65675,
@@ -548,13 +545,13 @@ Example response:
 
     {
       "availability": {
-        "pk": 4786,
-        "start_at": "2015-01-22T11:30:00-1000",
-        "end_at": "2015-01-22T13:30:00-1000",
-        "capacity": 10,
+        "pk": 50291151,
+        "start_at": "2023-08-18T00:30:00-0600",
+        "end_at": "2023-08-18T03:30:00-0600",
+        "capacity": 3,
         "minimum_party_size": 1,
         "maximum_party_size": null,
-        "online_booking_status": "Auto close",
+        "online_booking_status": "auto",
         "item": {
           "pk": 1867,
           "name": "Jet Ski Tour"
@@ -663,9 +660,6 @@ Example response:
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
           "capacity": 10,
-          "minimum_party_size": 1,
-          "maximum_party_size": null,
-          "online_booking_status": "Auto close",
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour"
@@ -818,9 +812,6 @@ Example response:
           "start_at": "2015-01-22T11:30:00-1000",
           "end_at": "2015-01-22T13:30:00-1000",
           "capacity": 10,
-          "minimum_party_size": 1,
-          "maximum_party_size": null,
-          "online_booking_status": "Auto close",
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour"
