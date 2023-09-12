@@ -1155,6 +1155,7 @@ Example:
         "start_at": "2015-01-22T11:30:00-1000",
         "end_at": "2015-01-22T13:30:00-1000",
         "capacity": 10,
+        "online_booking_status": "auto",
         "item": {
           "pk": 1867,
           "name": "Jet Ski Tour"
