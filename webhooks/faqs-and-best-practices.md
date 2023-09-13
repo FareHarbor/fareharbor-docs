@@ -20,6 +20,8 @@
             - [Using IP address-based ACLs or allowlists to validate the source of webhooks](#using-ip-address-based-acls-or-allowlists-to-validate-the-source-of-webhooks)
     - [Question: Integrating FareHarbor webhooks with third-party APIs](#question-integrating-fareharbor-webhooks-with-third-party-apis)
         - [Answer](#answer-6)
+    - [Question: Online Booking Statuses](#question-online-booking-statuses)
+        - [Answer](#answer-7)
 - [FH Webhook Best Practices](#fh-webhook-best-practices)
     - [Consider using Zapier, or a similar service.](#consider-using-zapier-or-a-similar-service)
     - [The data model](#the-data-model)
@@ -239,6 +241,16 @@ If the service you need (your CRM or whatever) is not on this list,
 that means that they do not work with Zapier. Consider contacting them
 and asking them to integrate with Zapier. See below for more about
 Zapier.
+
+## Question: Online Booking Statuses
+
+What are online bookings statuses?
+
+### Answer
+
+[Online Booking Status](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/): Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to Auto close, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/). The other statuses include open override, cancelled, closed & call to book, and closed & hidden.
+
+These statuses are included in the **Bookings only** and **Booking + payments** webhooks.
 
 # FH Webhook Best Practices
 

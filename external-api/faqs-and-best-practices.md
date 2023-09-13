@@ -12,6 +12,8 @@
         - [Answer](#answer-2)
     - [Question: Translations](#question-translations)
         - [Answer](#answer-3)
+    - [Question: Online Booking Statuses](#question-online-booking-statuses)
+        - [Answer](#answer-4)
 - [FH API Integration Best Practices](#fh-api-integration-best-practices)
     - [Consider using Zapier, or a similar service.](#consider-using-zapier-or-a-similar-service)
     - [The data model](#the-data-model)
@@ -82,6 +84,19 @@ Yes. You can retrieve translated content provided by the dashboard company in an
     GET /companies/<shortname>/items/?language=es
 
 Doing this gives you company-provided translations. It does not translate field names etc., and it does not change currency formatting or provide other localization.
+
+## Question: Online Booking Statuses
+
+What are online bookings statuses?
+
+### Answer
+
+[Online Booking Status](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/): Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to Auto close, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/). The other statuses include open override, cancelled, closed & call to book, and closed & hidden.
+
+These statuses are included in:
+* `GET /companies/<shortname>/availabilities/<availability.pk>/`
+* `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date/<date>/`
+* `GET /companies/<shortname>/items/<item.pk>/minimal/availabilities/date-range/<start-date>/<end-date>/`
 
 # FH API Integration Best Practices
 
