@@ -248,9 +248,11 @@ What are online bookings statuses?
 
 ### Answer
 
-[Online Booking Status](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/): Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to Auto close, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/). The other statuses include open override, cancelled, closed & call to book, and closed & hidden.
+Online Booking Status: Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `auto`, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/). The other statuses include `open`, `call`, `closed`, `cancelled`.
 
 These statuses are included in the **Bookings only** and **Booking + payments** webhooks.
+
+For a complete description of these statuses and their meaning, go to [https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/).
 
 # FH Webhook Best Practices
 

@@ -532,7 +532,9 @@ Example response:
       ]
     }
 
-[Online Booking Status](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/): Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `Auto close`, which automatically prevents online customers from booking after a certain time cutoff, based on  [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
+Online Booking Status: Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `auto`, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
+
+For a complete description of these statuses and their meaning, go to [https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/).
 
 ## Availability
 
@@ -603,7 +605,9 @@ Example response:
       }
     }
 
-[Online Booking Status](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/): Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `Auto close`, which automatically prevents online customers from booking after a certain time cutoff, based on  [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
+Online Booking Status: Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `auto`, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
+
+For a complete description of these statuses and their meaning, go to [https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/).
 
 ## Bookings
 
