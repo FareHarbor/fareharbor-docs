@@ -40,6 +40,7 @@ Consider the following example availability response (the ellipses represent pro
         {
           "start_at": "2016-05-10T10:30:00-1000",
           "end_at": "2016-05-10T11:00:00-1000",
+          "online_booking_status": "auto",
           "item": {
             "pk": 5000,
             "name": "Glider Rides"

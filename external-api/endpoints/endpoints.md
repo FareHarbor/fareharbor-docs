@@ -174,10 +174,13 @@ Example response:
         "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
         "status": "booked",
         "availability": {
-          "pk": 4786,
-          "start_at": "2015-01-22T11:30:00-1000",
-          "end_at": "2015-01-22T13:30:00-1000",
-          "capacity": 10,
+          "pk": 50291151,
+          "start_at": "2023-08-18T00:30:00-0600",
+          "end_at": "2023-08-18T03:30:00-0600",
+          "capacity": 3,
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "auto",
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour"
@@ -500,10 +503,13 @@ Example response:
     {
       "availabilities": [
         {
-          "pk": 4786,
-          "start_at": "2015-01-22T11:30:00-1000",
-          "end_at": "2015-01-22T13:30:00-1000",
-          "capacity": 10,
+          "pk": 50291151,
+          "start_at": "2023-08-18T00:30:00-0600",
+          "end_at": "2023-08-18T03:30:00-0600",
+          "capacity": 3,
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "auto",
           "customer_type_rates": [
             {
               "pk": 65675,
@@ -526,6 +532,10 @@ Example response:
       ]
     }
 
+Online Booking Status: Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `auto`, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
+
+For a complete description of these statuses and their meaning, go to [https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/).
+
 ## Availability
 
 `GET /companies/<shortname>/availabilities/<availability.pk>/`
@@ -540,10 +550,13 @@ Example response:
 
     {
       "availability": {
-        "pk": 4786,
-        "start_at": "2015-01-22T11:30:00-1000",
-        "end_at": "2015-01-22T13:30:00-1000",
-        "capacity": 10,
+        "pk": 50291151,
+        "start_at": "2023-08-18T00:30:00-0600",
+        "end_at": "2023-08-18T03:30:00-0600",
+        "capacity": 3,
+        "minimum_party_size": 1,
+        "maximum_party_size": null,
+        "online_booking_status": "auto",
         "item": {
           "pk": 1867,
           "name": "Jet Ski Tour"
@@ -591,6 +604,10 @@ Example response:
         ]
       }
     }
+
+Online Booking Status: Each availability has an online booking status, which controls how it can be viewed and booked by online customers. In most cases, the status will be set to `auto`, which automatically prevents online customers from booking after a certain time cutoff, based on [item’s settings](https://help.fareharbor.com/dashboard/items/online-booking-settings/).
+
+For a complete description of these statuses and their meaning, go to [https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/](https://help.fareharbor.com/dashboard/availabilities/updating/online-booking-status/).
 
 ## Bookings
 
@@ -646,10 +663,13 @@ Example response:
         "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
         "status": "booked",
         "availability": {
-          "pk": 4786,
-          "start_at": "2015-01-22T11:30:00-1000",
-          "end_at": "2015-01-22T13:30:00-1000",
-          "capacity": 10,
+          "pk": 50291151,
+          "start_at": "2023-08-18T00:30:00-0600",
+          "end_at": "2023-08-18T03:30:00-0600",
+          "capacity": 3,
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "auto",
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour"
@@ -798,10 +818,13 @@ Example response:
         "uuid": "d75102be-9732-4523-90a8-c698eff2b983",
         "status": "booked",
         "availability": {
-          "pk": 4786,
-          "start_at": "2015-01-22T11:30:00-1000",
-          "end_at": "2015-01-22T13:30:00-1000",
-          "capacity": 10,
+          "pk": 50291151,
+          "start_at": "2023-08-18T00:30:00-0600",
+          "end_at": "2023-08-18T03:30:00-0600",
+          "capacity": 3,
+          "minimum_party_size": 1,
+          "maximum_party_size": null,
+          "online_booking_status": "auto",
           "item": {
             "pk": 1867,
             "name": "Jet Ski Tour"

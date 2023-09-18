@@ -135,7 +135,8 @@ Response:
             "pk": 28
           },
           "pk": 3267113,
-          "start_at": "2015-02-01T07:00:00-1000"
+          "start_at": "2015-02-01T07:00:00-1000",
+          "online_booking_status": "auto"
         }
       ]
     }
@@ -172,7 +173,8 @@ Response:
           },
           "headline": "Epic Wreck & Reef Dive",
           "pk": 3267113,
-          "start_at": "2015-02-01T07:00:00-1000"
+          "start_at": "2015-02-01T07:00:00-1000",
+          "online_booking_status": "auto"
         },
         {
           "capacity": 20,
@@ -196,7 +198,8 @@ Response:
           },
           "headline": "Epic Wreck & Reef Dive",
           "pk": 3267913,
-          "start_at": "2015-02-13T07:00:00-1000"
+          "start_at": "2015-02-13T07:00:00-1000",
+          "online_booking_status": "auto"
         }
       ]
     }
@@ -253,7 +256,8 @@ Response:
             "pk": 28
           },
           "pk": 3267113,
-          "start_at": "2015-02-01T07:00:00-1000"
+          "start_at": "2015-02-01T07:00:00-1000",
+          "online_booking_status": "auto"
         }
         "contact": {
           "phone": "+1-415-789-4563",
@@ -322,7 +326,8 @@ Response:
             "pk": 28
           },
           "pk": 3267113,
-          "start_at": "2015-02-01T07:00:00-1000"
+          "start_at": "2015-02-01T07:00:00-1000",
+          "online_booking_status": "auto"
         }
         "contact": {
           "phone": "+1-415-789-4563",
