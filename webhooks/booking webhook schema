@@ -1,4 +1,4 @@
-## Bookign Webhook Schema:
+## Booking Webhook Schema:
   
   {
     "$schema": "http://json-schema.org/draft-04/schema#",
