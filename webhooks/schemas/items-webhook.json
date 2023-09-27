@@ -1,0 +1,259 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/item"
+      }
+    }
+  },
+  "required": ["items"],
+  "additionalProperties": false,
+
+  "definitions": {
+    "tag": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "short_name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "short_name"
+      ],
+      "additionalProperties": false
+    },
+
+    "image": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "number"
+        },
+        "gallery": {
+          "type": "string"
+        },
+        "image_cdn_url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pk",
+        "gallery",
+        "image_cdn_url"
+      ],
+      "additionalProperties": false
+    },
+
+    "location": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "note_safe_html": {
+          "type": "string"
+        },
+        "address": {
+          "type": "object"
+        },
+        "longitude": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "latitude": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "google_place_id": {
+          "type": "string"
+        },
+        "tripadvisor_url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pk",
+        "type",
+        "note",
+        "note_safe_html",
+        "address",
+        "longitude",
+        "latitude",
+        "google_place_id",
+        "tripadvisor_url"
+      ],
+      "additionalProperties": false
+    },
+
+    "item": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tax_percentage": {
+          "type": "number"
+        },
+        "headline": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "description_safe_html": {
+          "type": "string"
+        },
+        "description_text": {
+          "type": "string"
+        },
+        "description_bullets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cancellation_policy": {
+          "type": "string"
+        },
+        "cancellation_policy_safe_html": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/location"
+          }
+        },
+        "image_cdn_url": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/image"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tag"
+          }
+        },
+        "customer_prototypes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/customer_prototype"
+          }
+        },
+        "is_pickup_ever_available": {
+          "type": "boolean"
+        },
+        "effective_cancellation_policy": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string"
+            },
+            "cutoff_hours_before": {
+              "oneOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "cutoff_hours_before"
+          ],
+          "additionalProperties": false
+        },
+        "health_and_safety_policy": {
+          "type": "string"
+        },
+        "health_and_safety_policy_safe_html": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pk",
+        "name",
+        "tax_percentage",
+        "headline",
+        "booking_notes",
+        "booking_notes_safe_html",
+        "description",
+        "description_safe_html",
+        "description_text",
+        "description_bullets",
+        "cancellation_policy",
+        "cancellation_policy_safe_html",
+        "location",
+        "locations",
+        "image_cdn_url",
+        "images",
+        "customer_prototypes",
+        "is_pickup_ever_available",
+        "health_and_safety_policy",
+        "health_and_safety_policy_safe_html"
+      ]
+    },
+
+    "customer_prototype": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "number"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "total": {
+          "type": "number"
+        },
+        "total_including_tax": {
+          "type": "number"
+        }
+      },
+      "required": ["pk", "display_name", "note", "total"],
+      "additionalProperties": false
+    }
+  }
+}
