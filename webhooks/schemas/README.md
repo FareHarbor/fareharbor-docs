@@ -5,3 +5,4 @@
   payments](booking-optimized-with-payments-webhook.json)
 * [Webhook for bookings](booking-webhook.json)
 * [Webhook for bookings with payments](booking-with-payments-webhook.json)
+* [Webhook for item updates](item-webhook.json)

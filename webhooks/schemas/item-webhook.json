@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "item": {
+      "$ref": "#/definitions/item"
+    }
+  },
+  "required": ["item"],
+  "additionalProperties": false,
+
+  "definitions": {
+    "item": {
+      "type": "object",
+      "properties": {
+        "pk": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "company": {
+          "$ref": "#/definitions/company"
+        },
+        "external_api_url": {
+          "type": "string"
+        },
+        "dashboard_url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pk",
+        "name",
+        "company",
+        "external_api_url",
+        "dashboard_url"
+      ]
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "shortname": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "shortname",
+        "currency"
+      ]
+    }
+  }
+}
