@@ -63,10 +63,32 @@ Example response:
       "companies": [
         {
           "shortname": "hawaiianadventures",
-          "name": "Hawaiian Adventures"
+          "name": "Hawaiian Adventures",
+          "currency": "usd",
+          "affiliated_since": "2022-07-01T19:38:58+0000",
+          "primary_location": {
+            "pk": "1234",
+            "type": "primary",
+            "note": "",
+            "note_safe_html": "",
+            "address": {
+              "street": "123 Main St",
+              "city": "Honolulu",
+              "province": "HI",
+              "country": "US",
+              "postal_code": "96821"
+            },
+            "latitude": 21.309871,
+            "longitude": -157.858142,
+            "google_place_id": "ChIJTUbDjDsYAHwRbJen81_1KEs",
+            "tripadvisor_url": "https://tripadvisor.com/url"
+          }
         }, {
           "shortname": "surflessonshawaii",
           "name": "Surf Lessons Hawaii"
+          "currency": "usd",
+          "affiliated_since": "2023-10-11T15:23:24+0000",
+          "primary_location": null,
         }
       ]
     }
