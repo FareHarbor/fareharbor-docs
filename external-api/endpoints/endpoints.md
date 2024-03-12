@@ -423,6 +423,8 @@ note that this may include items that have no bookable availabilities.
 
 Returns an array of `Item` objects.
 
+When `require_future_availabilities=yes` is specified, only `Item` objects with bookable future availabilities are returned.
+
 Example request:
 
     $ curl -H "X-FareHarbor-API-App: YOUR-APP-KEY" -H "X-FareHarbor-API-User: YOUR-USER-KEY" https://fareharbor.com/api/external/v1/companies/hawaiianadventures/items/
