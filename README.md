@@ -4,4 +4,4 @@
 
 Our docs have a new home!  Please go to:
 
-https://fareharbor.com/api/external/v1/
+https://developer.fareharbor.com/
